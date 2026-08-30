@@ -1,0 +1,113 @@
+{
+  "id": "0b748b00-6b24-477f-8930-7057b9a8b773",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": null,
+  "year": 2017,
+  "status": "ACTIVE",
+  "title_french": "Article 2 - Code de la fiscalité locale, textes d'applications et textes connexes",
+  "title_arabic": "المادة 2 - مجلة الجباية المحلية، النصوص التطبيقية والنصوص ذات الصلة",
+  "chapter": null,
+  "section": null,
+  "article_number": "2",
+  "content_french": "ARTICLE 2 – Les ministres chargés de l’Intérieur, des Finances et de l’Environnement sont responsables, chacun en ce qui le concerne, de l’exécution des dispositions du Code de la fiscalité locale ainsi que de ses textes d’application et des textes connexes. Ils veillent à la bonne application des mesures relatives à la fiscalité locale conformément à la législation en vigueur.",
+  "content_arabic": "المادة 2 – يتولى الوزراء المكلفون بالداخلية والمالية والبيئة، كل فيما يخصه، تنفيذ أحكام مجلة الجباية المحلية والنصوص التطبيقية والنصوص ذات الصلة. ويشرفون على حسن تطبيق الإجراءات المتعلقة بالجباية المحلية طبقاً للتشريع الجاري به العمل.",
+  "content_combined": "ARTICLE 2 – Les ministres chargés de l’Intérieur, des Finances et de l’Environnement sont responsables, chacun en ce qui le concerne, de l’exécution des dispositions du Code de la fiscalité locale ainsi que de ses textes d’application et des textes connexes. Ils veillent à la bonne application des mesures relatives à la fiscalité locale conformément à la législation en vigueur. المادة 2 – يتولى الوزراء المكلفون بالداخلية والمالية والبيئة، كل فيما يخصه، تنفيذ أحكام مجلة الجباية المحلية والنصوص التطبيقية والنصوص ذات الصلة. ويشرفون على حسن تطبيق الإجراءات المتعلقة بالجباية المحلية طبقاً للتشريع الجاري به العمل.",
+  "content_hash_sha256": "0db563838273dc6dde8b04c8b43c3f99a040af91f8273e8bfac762754ac05e68",
+  "summary": "L'article 2 du Code de la fiscalité locale de 2017 mentionne les ministres responsables de l'application des dispositions relatives à la fiscalité locale. Il s'agit notamment des ministres de l'Intérieur, des Finances et de l'Environnement.",
+  "summary_french": "L’article 2 du Code de la fiscalité locale de 2017 désigne les ministres de l’Intérieur, des Finances et de l’Environnement comme responsables de l’exécution des dispositions relatives à la fiscalité locale. Ils sont chargés de veiller à l’application correcte des textes d’application et des textes connexes.",
+  "summary_arabic": "تنص المادة 2 من مجلة الجباية المحلية لسنة 2017 على أن الوزراء المكلفين بالداخلية والمالية والبيئة مسؤولون عن تنفيذ أحكام المجلة والنصوص التطبيقية والنصوص ذات الصلة، ويشرفون على حسن تطبيق الإجراءات المتعلقة بالجباية المحلية طبقاً للتشريع الجاري به العمل.",
+  "search_content": "Article 2 - Code de la fiscalité locale, textes d'applications et textes connexes. Les ministres chargés de l’Intérieur, des Finances et de l’Environnement sont responsables de l’exécution des dispositions du Code de la fiscalité locale ainsi que de ses textes d’application et des textes connexes. قانون Law",
+  "keywords": [
+    "fiscalité locale",
+    "ministres responsables",
+    "application des textes",
+    "Code de la fiscalité locale",
+    "textes d'application",
+    "textes connexes",
+    "article 2"
+  ],
+  "legal_domains": [
+    "Droit fiscal",
+    "Droit administratif"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Collectivités locales",
+    "Ministères",
+    "Professionnels du droit",
+    "Entreprises",
+    "Citoyens"
+  ],
+  "related_laws": [
+    "Code de la fiscalité locale",
+    "Loi de finances"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 2,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": "Ministère des Finances",
+  "institutions": [
+    "Ministère de l'Intérieur",
+    "Ministère des Finances",
+    "Ministère de l'Environnement"
+  ],
+  "source_name": "JORT",
+  "source_number": "101",
+  "source_url": "https://www.pist.tn/jort/2017/2017F/Jo1012017.pdf",
+  "source_date": "2017-12-19T00:00:00Z",
+  "publication_date": "2017-12-19T00:00:00Z",
+  "effective_date": "2017-12-19T00:00:00Z",
+  "relation_target_ids": [
+    "Code de la fiscalité locale"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Ministère de l'Intérieur",
+    "Ministère des Finances",
+    "Ministère de l'Environnement",
+    "Environnement sont responsa"
+  ],
+  "entity_types": [
+    "MINISTRY",
+    "MINISTRY",
+    "MINISTRY",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-ministere-de-l-interieur",
+    "tn-org-ministere-des-finances",
+    "tn-org-ministere-de-l-environnement",
+    "tn-org-environnement-sont-responsa"
+  ],
+  "community_id": "tn-fiscal",
+  "community_label": "Droit fiscal",
+  "community_summary": "Réglementation de la fiscalité, impôts, taxes, procédures et obligations fiscales en Tunisie.",
+  "parent_document_id": "tn-loi-nodoc",
+  "preceding_article_id": "tn-loi-nodoc-art-1",
+  "following_article_id": "tn-loi-nodoc-art-3",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-28T00:00:00Z",
+  "next_check": "2026-09-28T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Article 2 - Code de la fiscalité locale, textes d'applications et textes connexes\nL’article 2 du Code de la fiscalité locale de 2017 désigne les ministres de l’Intérieur, des Finances et de l’Environnement comme responsables de l’exécution des dispositions relatives à la fiscalité locale. Ils sont chargés de veiller à l’application correcte des textes d’application et des textes connexes.\nتنص المادة 2 من مجلة الجباية المحلية لسنة 2017 على أن الوزراء المكلفين بالداخلية والمالية والبيئة مسؤولون عن تنفيذ أحكام المجلة والنصوص التطبيقية والنصوص ذات الصلة، ويشرفون على حسن تطبيق الإجراءات المتعلقة بالجباية المحلية طبقاً للتشريع الجاري به العمل.\nARTICLE 2 – Les ministres chargés de l’Intérieur, des Finances et de l’Environnement sont responsables, chacun en ce qui le concerne, de l’exécution des dispositions du Code de la fiscalité locale ainsi que de ses textes d’application et des textes connexes. Ils veillent à la bonne application des mesures relatives à la fiscalité locale conformément à la législation en vigueur. المادة 2 – يتولى الوزراء المكلفون بالداخلية والمالية والبيئة، كل فيما يخصه، تنفيذ أحكام مجلة الجباية المحلية والنصوص التطبيقية والنصوص ذات الصلة. ويشرفون على حسن تطبيق الإجراءات المتعلقة بالجباية المحلية طبقاً للتشريع الجاري به العمل.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

@@ -1,0 +1,114 @@
+{
+  "id": "0afb4e46-5d74-4092-9704-514d69e61577",
+  "jurisdiction": "TUNISIA",
+  "institution": "Présidence de la République",
+  "law_type": "Décret",
+  "law_number": "2022-317",
+  "year": 2022,
+  "status": "ACTIVE",
+  "title_french": "Décret présidentiel n°2022-317 du 8 avril 2022",
+  "title_arabic": "مرسوم رئاسي رقم 2022-317 بتاريخ 8 أبريل 2022",
+  "chapter": null,
+  "section": null,
+  "article_number": "4",
+  "content_french": "Article 4 : Sont ajoutées, aux deux listes des autorisations relatives aux activités du transport terrestre, maritime et aérien et aux activités du secteur bancaire et financier, de l'assurance et du marché financier de l'annexe 1 du décret gouvernemental n°2018-417 du 11 mai 2018 susvisé, les deux autorisations suivantes : 19 bis- Transport des travailleurs agricoles. 49 bis- L'agrément pour la mise en place des systèmes de paiement et de compensation. Les délais, les procédures, les conditions de leur octroi sont fixés conformément à l’annexe 1 jointe au présent décret Présidentiel.",
+  "content_arabic": "المادة 4: يتم إضافة، إلى قائمتين من التراخيص المتعلقة بأنشطة النقل البري والبحري والجوي وأنشطة القطاع المصرفي والمالي، التأمين وسوق المال من الملحق 1 للمرسوم الحكومي رقم 2018-417 بتاريخ 11 مايو 2018 المذكور أعلاه، الترخيصين التاليين: 19 مكرر - نقل العمال الزراعيين. 49 مكرر - الموافقة على إنشاء أنظمة الدفع والتسوية. الآجال والإجراءات وشروط منحها محددة وفقاً للملحق 1 المرفق بالمرسوم الرئاسي الحالي.",
+  "content_combined": "Article 4 : Sont ajoutées, aux deux listes des autorisations relatives aux activités du transport terrestre, maritime et aérien et aux activités du secteur bancaire et financier, de l'assurance et du marché financier de l'annexe 1 du décret gouvernemental n°2018-417 du 11 mai 2018 susvisé, les deux autorisations suivantes : 19 bis- Transport des travailleurs agricoles. 49 bis- L'agrément pour la mise en place des systèmes de paiement et de compensation. Les délais, les procédures, les conditions de leur octroi sont fixés conformément à l’annexe 1 jointe au présent décret Présidentiel. المادة 4: يتم إضافة، إلى قائمتين من التراخيص المتعلقة بأنشطة النقل البري والبحري والجوي وأنشطة القطاع المصرفي والمالي، التأمين وسوق المال من الملحق 1 للمرسوم الحكومي رقم 2018-417 بتاريخ 11 مايو 2018 المذكور أعلاه، الترخيصين التاليين: 19 مكرر - نقل العمال الزراعيين. 49 مكرر - الموافقة على إنشاء أنظمة الدفع والتسوية. الآجال والإجراءات وشروط منحها محددة وفقاً للملحق 1 المرفق بالمرسوم الرئاسي الحالي.",
+  "content_hash_sha256": "5ef428ff901e36ba191f95ba5e4c1c40730c26c5913bd868a737e21c31340112",
+  "summary": "Ce décret présidentiel ajoute deux nouvelles autorisations aux listes relatives au transport terrestre, maritime et aérien, ainsi qu'au secteur bancaire et financier. Il précise que les délais, procédures et conditions d'octroi de ces autorisations sont fixés conformément à l'annexe 1 jointe au décret.",
+  "summary_french": "Ce décret présidentiel ajoute deux nouvelles autorisations à l’annexe 1 du décret gouvernemental n°2018-417 : le transport des travailleurs agricoles et l’agrément pour la mise en place des systèmes de paiement et de compensation. Les délais, procédures et conditions d’octroi sont fixés par l’annexe jointe au présent décret.",
+  "summary_arabic": "ينص هذا المرسوم الرئاسي على إضافة ترخيصين جديدين إلى الملحق 1 للمرسوم الحكومي عدد 2018-417: الأول يتعلق بنقل العمال الزراعيين، والثاني بالموافقة على إنشاء أنظمة الدفع والتسوية. تحدد الآجال والإجراءات وشروط منح هذه التراخيص وفقاً للملحق المرفق بالمرسوم.",
+  "search_content": "2022-317 transport financier autorisation décret présidentiel annexe 1 مرسوم نقل العمال الزراعيين أنظمة الدفع المرسوم الحكومي 2018-417",
+  "keywords": [
+    "transport des travailleurs agricoles",
+    "systèmes de paiement",
+    "agrément",
+    "annexe 1",
+    "décret gouvernemental n°2018-417",
+    "secteur bancaire",
+    "secteur financier",
+    "assurance",
+    "marché financier",
+    "procédures d'octroi"
+  ],
+  "legal_domains": [
+    "droit des transports",
+    "droit bancaire",
+    "droit financier",
+    "droit administratif"
+  ],
+  "business_impact": "MEDIUM",
+  "target_audience": [
+    "entreprises de transport",
+    "banques",
+    "institutions financières",
+    "compagnies d'assurance",
+    "exploitants agricoles"
+  ],
+  "related_laws": [
+    "Décret gouvernemental n°2018-417 du 11 mai 2018"
+  ],
+  "legal_concepts": [
+    "autorisation administrative",
+    "réglementation du transport",
+    "systèmes de paiement",
+    "procédures d'octroi",
+    "compétence réglementaire"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 4,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": true,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Présidence de la République",
+  "institution_secondary": null,
+  "institutions": [
+    "Présidence de la République"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=2022-317&Annee=2022&TypeLoi=Décret",
+  "source_date": "2022-04-08T00:00:00Z",
+  "publication_date": "2022-04-08T00:00:00Z",
+  "effective_date": "2022-04-08T00:00:00Z",
+  "relation_target_ids": [
+    "Décret gouvernemental n°2018-417 art. Annexe 1"
+  ],
+  "relation_types": [
+    "AMENDS"
+  ],
+  "entity_names": [
+    "Présidence de la République",
+    "Ministère des Transports",
+    "Ministère des Finances"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "MINISTRY",
+    "MINISTRY"
+  ],
+  "entity_ids": [
+    "tn-org-presidence-de-la-republique",
+    "tn-org-ministere-des-transports",
+    "tn-org-ministere-des-finances"
+  ],
+  "community_id": "tn-transport",
+  "community_label": "Droit des transports",
+  "community_summary": "Réglementation des activités de transport terrestre, maritime et aérien, et des autorisations y afférentes en Tunisie.",
+  "parent_document_id": "tn-dcret-2022-317",
+  "preceding_article_id": "tn-dcret-2022-317-art-3",
+  "following_article_id": "tn-dcret-2022-317-art-5",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-17T00:00:00Z",
+  "next_check": "2026-09-17T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Décret présidentiel n°2022-317 du 8 avril 2022\nCe décret présidentiel ajoute deux nouvelles autorisations à l’annexe 1 du décret gouvernemental n°2018-417 : le transport des travailleurs agricoles et l’agrément pour la mise en place des systèmes de paiement et de compensation. Les délais, procédures et conditions d’octroi sont fixés par l’annexe jointe au présent décret.\nينص هذا المرسوم الرئاسي على إضافة ترخيصين جديدين إلى الملحق 1 للمرسوم الحكومي عدد 2018-417: الأول يتعلق بنقل العمال الزراعيين، والثاني بالموافقة على إنشاء أنظمة الدفع والتسوية. تحدد الآجال والإجراءات وشروط منح هذه التراخيص وفقاً للملحق المرفق بالمرسوم.\nArticle 4 : Sont ajoutées, aux deux listes des autorisations relatives aux activités du transport terrestre, maritime et aérien et aux activités du secteur bancaire et financier, de l'assurance et du marché financier de l'annexe 1 du décret gouvernemental n°2018-417 du 11 mai 2018 susvisé, les deux autorisations suivantes : 19 bis- Transport des travailleurs agricoles. 49 bis- L'agrément pour la mise en place des systèmes de paiement et de compensation. Les délais, les procédures, les conditions de leur octroi sont fixés conformément à l’annexe 1 jointe au présent décret Présidentiel. المادة 4: يتم إضافة، إلى قائمتين من التراخيص المتعلقة بأنشطة النقل البري والبحري والجوي وأنشطة القطاع المصرفي والمالي، التأمين وسوق المال من الملحق 1 للمرسوم الحكومي رقم 2018-417 بتاريخ 11 مايو 2018 المذكور أعلاه، الترخيصين التاليين: 19 مكرر - نقل العمال الزراعيين. 49 مكرر - الموافقة على إنشاء أنظمة الدفع والتسوية. الآجال والإجراءات وشروط منحها محددة وفقاً للملحق 1 المرفق بالمرسوم الرئاسي الحالي.\nautorisation administrative | réglementation du transport | systèmes de paiement | procédures d'octroi | compétence réglementaire"
+}

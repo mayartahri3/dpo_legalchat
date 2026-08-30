@@ -1,0 +1,106 @@
+{
+  "id": "0b0d51ee-3334-4cf3-9b74-4929ba45823e",
+  "jurisdiction": "TUNISIA",
+  "institution": "Ministère des Finances",
+  "law_type": "Décret",
+  "law_number": null,
+  "year": null,
+  "status": "ACTIVE",
+  "title_french": "LES TEXTES D'APPLICATION",
+  "title_arabic": "النصوص التطبيقية",
+  "chapter": null,
+  "section": null,
+  "article_number": "12",
+  "content_french": "Article 12.- Le ministre des Finances est chargé de l'exécution du présent décret qui sera publié au Journal Officiel de la République Tunisienne. Cette disposition précise l'autorité responsable de la mise en œuvre du décret et officialise sa publication conformément aux procédures légales tunisiennes relatives à l'entrée en vigueur des textes réglementaires.",
+  "content_arabic": "المادة 12.- يتولى وزير المالية تنفيذ هذا المرسوم الذي سيتم نشره في الرائد الرسمي للجمهورية التونسية. يحدد هذا النص الجهة المسؤولة عن تنفيذ المرسوم ويؤكد على ضرورة نشره بالرائد الرسمي حتى يكتسب الصبغة القانونية ويدخل حيز التنفيذ وفق الإجراءات المعمول بها في التشريع التونسي.",
+  "content_combined": "Article 12.- Le ministre des Finances est chargé de l'exécution du présent décret qui sera publié au Journal Officiel de la République Tunisienne. Cette disposition précise l'autorité responsable de la mise en œuvre du décret et officialise sa publication conformément aux procédures légales tunisiennes relatives à l'entrée en vigueur des textes réglementaires. المادة 12.- يتولى وزير المالية تنفيذ هذا المرسوم الذي سيتم نشره في الرائد الرسمي للجمهورية التونسية. يحدد هذا النص الجهة المسؤولة عن تنفيذ المرسوم ويؤكد على ضرورة نشره بالرائد الرسمي حتى يكتسب الصبغة القانونية ويدخل حيز التنفيذ وفق الإجراءات المعمول بها في التشريع التونسي.",
+  "content_hash_sha256": "02a63f3430632a5b9f06ec57f65d2b8889b0a145ffe9cf1f6ff77dd7eb380504",
+  "summary": "L'article 12 du décret stipule que le ministre des Finances est responsable de son exécution. Ce décret sera publié au Journal Officiel de la République Tunisienne.",
+  "summary_french": "L’article 12 du décret confie au ministre des Finances la responsabilité de l’exécution du texte. Il précise que le décret sera publié au Journal Officiel de la République Tunisienne, condition nécessaire à son entrée en vigueur et à son opposabilité, conformément aux règles de publication des actes réglementaires en droit tunisien.",
+  "summary_arabic": "ينص الفصل 12 من هذا المرسوم على أن وزير المالية مكلف بتنفيذ أحكامه، ويؤكد على ضرورة نشر المرسوم في الرائد الرسمي للجمهورية التونسية حتى يصبح نافذاً وملزماً. يحدد النص الجهة التنفيذية ويبرز أهمية النشر الرسمي في تفعيل النصوص القانونية وفق التشريع التونسي.",
+  "search_content": "LES TEXTES D'APPLICATION, Article 12.- Le ministre des Finances est chargé de l'exécution du présent décret qui sera publié au Journal Officiel de la République Tunisienne. المادة 12.- يتولى وزير المالية تنفيذ هذا المرسوم الذي سيتم نشره في الرائد الرسمي للجمهورية التونسية.",
+  "keywords": [
+    "exécution du décret",
+    "ministre des Finances",
+    "publication au Journal Officiel",
+    "entrée en vigueur",
+    "acte réglementaire",
+    "responsabilité ministérielle",
+    "texte d'application"
+  ],
+  "legal_domains": [
+    "Droit administratif",
+    "Droit des assurances"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Ministère des Finances",
+    "Juristes",
+    "Institutions publiques",
+    "Professionnels du droit",
+    "Citoyens"
+  ],
+  "related_laws": [
+    "Code des assurances",
+    "Décrets relatifs aux assurances"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 12,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Ministère des Finances",
+  "institution_secondary": "Journal Officiel de la République Tunisienne",
+  "institutions": [
+    "Ministère des Finances",
+    "Journal Officiel de la République Tunisienne"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=N/A&Annee=0&TypeLoi=Décret",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Code des assurances"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Ministère des Finances",
+    "Journal Officiel de la République Tunisienne"
+  ],
+  "entity_types": [
+    "MINISTRY",
+    "INSTITUTION"
+  ],
+  "entity_ids": [
+    "tn-org-ministere-des-finances",
+    "tn-org-journal-officiel-de-la-republique-tunisienne"
+  ],
+  "community_id": "tn-administratif",
+  "community_label": "Droit administratif et public",
+  "community_summary": "Règles relatives à l’organisation, l’exécution et la publication des actes administratifs et réglementaires en Tunisie.",
+  "parent_document_id": "tn-dcret-nodoc",
+  "preceding_article_id": "tn-dcret-nodoc-art-11",
+  "following_article_id": "tn-dcret-nodoc-art-13",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-06T00:00:00Z",
+  "next_check": "2026-10-06T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "LES TEXTES D'APPLICATION\nL’article 12 du décret confie au ministre des Finances la responsabilité de l’exécution du texte. Il précise que le décret sera publié au Journal Officiel de la République Tunisienne, condition nécessaire à son entrée en vigueur et à son opposabilité, conformément aux règles de publication des actes réglementaires en droit tunisien.\nينص الفصل 12 من هذا المرسوم على أن وزير المالية مكلف بتنفيذ أحكامه، ويؤكد على ضرورة نشر المرسوم في الرائد الرسمي للجمهورية التونسية حتى يصبح نافذاً وملزماً. يحدد النص الجهة التنفيذية ويبرز أهمية النشر الرسمي في تفعيل النصوص القانونية وفق التشريع التونسي.\nArticle 12.- Le ministre des Finances est chargé de l'exécution du présent décret qui sera publié au Journal Officiel de la République Tunisienne. Cette disposition précise l'autorité responsable de la mise en œuvre du décret et officialise sa publication conformément aux procédures légales tunisiennes relatives à l'entrée en vigueur des textes réglementaires. المادة 12.- يتولى وزير المالية تنفيذ هذا المرسوم الذي سيتم نشره في الرائد الرسمي للجمهورية التونسية. يحدد هذا النص الجهة المسؤولة عن تنفيذ المرسوم ويؤكد على ضرورة نشره بالرائد الرسمي حتى يكتسب الصبغة القانونية ويدخل حيز التنفيذ وفق الإجراءات المعمول بها في التشريع التونسي.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

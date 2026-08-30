@@ -1,0 +1,109 @@
+{
+  "id": "00a4a788-44eb-429d-9430-9710958630c3",
+  "jurisdiction": "TUNISIA",
+  "institution": "Présidence du Gouvernement",
+  "law_type": "Décret",
+  "law_number": "2002-2016",
+  "year": 2002,
+  "status": "ACTIVE",
+  "title_french": "Dispositions relatives à l'installation de l'équipement G.P.L",
+  "title_arabic": "أحكام تتعلق بتركيب معدات الغاز النفطي المسال",
+  "chapter": null,
+  "section": null,
+  "article_number": "28",
+  "content_french": "Article 28 - L'équipement G.P.L doit être installé de telle manière qu'il soit le mieux possible protégé contre les détériorations dues, par exemple, au déplacement d'éléments du véhicule, aux chocs, à la poussière de la route ou aux opérations de chargement et déchargement des véhicules ou à des mouvements de la charge transportée. L'installation doit respecter les normes techniques en vigueur et garantir la sécurité des usagers et du public.",
+  "content_arabic": "المادة 28 - يجب تركيب معدات الغاز النفطي المسال بطريقة تضمن حمايتها بأفضل شكل ممكن من التلف الناتج، على سبيل المثال، عن تحرك أجزاء المركبة، أو الصدمات، أو الغبار الناتج عن الطريق، أو عمليات تحميل وتفريغ المركبات، أو تحركات الحمولة المنقولة. كما يجب أن يتم التركيب وفقًا للمعايير الفنية المعتمدة لضمان سلامة المستخدمين والعموم.",
+  "content_combined": "Article 28 - L'équipement G.P.L doit être installé de telle manière qu'il soit le mieux possible protégé contre les détériorations dues, par exemple, au déplacement d'éléments du véhicule, aux chocs, à la poussière de la route ou aux opérations de chargement et déchargement des véhicules ou à des mouvements de la charge transportée. L'installation doit respecter les normes techniques en vigueur et garantir la sécurité des usagers et du public. المادة 28 - يجب تركيب معدات الغاز النفطي المسال بطريقة تضمن حمايتها بأفضل شكل ممكن من التلف الناتج، على سبيل المثال، عن تحرك أجزاء المركبة، أو الصدمات، أو الغبار الناتج عن الطريق، أو عمليات تحميل وتفريغ المركبات، أو تحركات الحمولة المنقولة. كما يجب أن يتم التركيب وفقًا للمعايير الفنية المعتمدة لضمان سلامة المستخدمين والعموم.",
+  "content_hash_sha256": "24cbf10f25bff0af1ac04432e1a21d4e50b892c6cdfb8affe03ef5a70a728543",
+  "summary": "Ce décret précise les exigences relatives à l'installation des équipements G.P.L dans les véhicules. L'article 28 stipule que ces équipements doivent être protégés contre les détériorations causées par divers facteurs tels que les chocs ou les mouvements de la charge transportée.",
+  "summary_french": "L'article 28 du décret 2002-2016 impose que l'équipement G.P.L soit installé de façon à être protégé contre toute détérioration résultant de chocs, mouvements du véhicule, poussière, opérations de chargement ou déchargement. L'installation doit respecter les normes techniques pour assurer la sécurité des usagers et du public.",
+  "summary_arabic": "تنص المادة 28 من هذا المرسوم على ضرورة تركيب معدات الغاز النفطي المسال بطريقة تضمن حمايتها المثلى من التلف الناتج عن تحرك أجزاء المركبة أو الصدمات أو الغبار أو عمليات التحميل والتفريغ. كما تشترط الالتزام بالمعايير الفنية لضمان سلامة المستخدمين والعموم.",
+  "search_content": "Dispositions relatives à l'installation de l'équipement G.P.L. Article 28 - L'équipement G.P.L doit être installé de telle manière qu'il soit le mieux possible protégé contre les détériorations dues, par exemple, au déplacement d'éléments du véhicule, aux chocs, à la poussière de la route ou aux opérations de chargement et déchargement des véhicules ou à des mouvements de la charge transportée. Normes techniques, sécurité, installation, protection, véhicules, G.P.L. مرسوم Decree",
+  "keywords": [
+    "équipement G.P.L",
+    "installation",
+    "protection contre détérioration",
+    "normes techniques",
+    "sécurité des véhicules",
+    "article 28",
+    "chargement",
+    "déchargement"
+  ],
+  "legal_domains": [
+    "Droit des transports",
+    "Réglementation technique"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Constructeurs automobiles",
+    "Entreprises de transport",
+    "Ateliers de maintenance",
+    "Autorités de régulation",
+    "Propriétaires de véhicules"
+  ],
+  "related_laws": [
+    "Loi 2004-72 relative à la sécurité routière",
+    "Décret 2000-1234 sur les normes techniques des véhicules"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 28,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Présidence du Gouvernement",
+  "institution_secondary": "Ministère du Transport",
+  "institutions": [
+    "Présidence du Gouvernement",
+    "Ministère du Transport"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=2002-2016&Annee=2002&TypeLoi=Décret",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Loi 2004-72 art. 1",
+    "Décret 2000-1234"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Présidence du Gouvernement",
+    "Ministère du Transport"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "MINISTRY"
+  ],
+  "entity_ids": [
+    "tn-org-presidence-du-gouvernement",
+    "tn-org-ministere-du-transport"
+  ],
+  "community_id": "tn-transport",
+  "community_label": "Droit des transports",
+  "community_summary": "Réglementation des transports, sécurité routière, normes techniques et obligations liées aux véhicules et équipements.",
+  "parent_document_id": "tn-dcret-2002-2016",
+  "preceding_article_id": "tn-dcret-2002-2016-art-27",
+  "following_article_id": "tn-dcret-2002-2016-art-29",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-02T00:00:00Z",
+  "next_check": "2026-10-02T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Dispositions relatives à l'installation de l'équipement G.P.L\nL'article 28 du décret 2002-2016 impose que l'équipement G.P.L soit installé de façon à être protégé contre toute détérioration résultant de chocs, mouvements du véhicule, poussière, opérations de chargement ou déchargement. L'installation doit respecter les normes techniques pour assurer la sécurité des usagers et du public.\nتنص المادة 28 من هذا المرسوم على ضرورة تركيب معدات الغاز النفطي المسال بطريقة تضمن حمايتها المثلى من التلف الناتج عن تحرك أجزاء المركبة أو الصدمات أو الغبار أو عمليات التحميل والتفريغ. كما تشترط الالتزام بالمعايير الفنية لضمان سلامة المستخدمين والعموم.\nArticle 28 - L'équipement G.P.L doit être installé de telle manière qu'il soit le mieux possible protégé contre les détériorations dues, par exemple, au déplacement d'éléments du véhicule, aux chocs, à la poussière de la route ou aux opérations de chargement et déchargement des véhicules ou à des mouvements de la charge transportée. L'installation doit respecter les normes techniques en vigueur et garantir la sécurité des usagers et du public. المادة 28 - يجب تركيب معدات الغاز النفطي المسال بطريقة تضمن حمايتها بأفضل شكل ممكن من التلف الناتج، على سبيل المثال، عن تحرك أجزاء المركبة، أو الصدمات، أو الغبار الناتج عن الطريق، أو عمليات تحميل وتفريغ المركبات، أو تحركات الحمولة المنقولة. كما يجب أن يتم التركيب وفقًا للمعايير الفنية المعتمدة لضمان سلامة المستخدمين والعموم.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

@@ -1,0 +1,112 @@
+{
+  "id": "00b1edd0-9667-4304-9dcb-606f298ee36c",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Finance Law / قانون مالية",
+  "law_number": null,
+  "year": 2025,
+  "status": "ACTIVE",
+  "title_french": "Tableau C - Dépenses du budget de l'État 2026 - Ministère de l'Équipement et du Logement",
+  "title_arabic": "الجدول ت - نفقات ميزانية الدولة 2026 - مهمة التجهيز والإسكان",
+  "chapter": null,
+  "section": null,
+  "article_number": "C-18",
+  "content_french": "Le présent tableau détaille les crédits alloués au Ministère de l'Équipement et du Logement pour l'exercice budgétaire 2026. Les dépenses totales s'élèvent à 262 880 000 dinars, réparties entre les dépenses de financement (1 600 000 dinars), d'investissement (1 764 160 000 dinars) et opérationnelles (121 700 000 dinars), conformément à la loi de finances de l'État.",
+  "content_arabic": "يبين هذا الجدول الاعتمادات المخصصة لمهمة التجهيز والإسكان ضمن ميزانية الدولة لسنة 2026. تبلغ جملة الاعتمادات 262.880.000 دينار، موزعة على نفقات التمويل (1.600.000 دينار)، نفقات الاستثمار (1.764.160.000 دينار) ونفقات العمليات (121.700.000 دينار)، وذلك طبقاً لأحكام قانون المالية.",
+  "content_combined": "Le présent tableau détaille les crédits alloués au Ministère de l'Équipement et du Logement pour l'exercice budgétaire 2026. Les dépenses totales s'élèvent à 262 880 000 dinars, réparties entre les dépenses de financement (1 600 000 dinars), d'investissement (1 764 160 000 dinars) et opérationnelles (121 700 000 dinars), conformément à la loi de finances de l'État. يبين هذا الجدول الاعتمادات المخصصة لمهمة التجهيز والإسكان ضمن ميزانية الدولة لسنة 2026. تبلغ جملة الاعتمادات 262.880.000 دينار، موزعة على نفقات التمويل (1.600.000 دينار)، نفقات الاستثمار (1.764.160.000 دينار) ونفقات العمليات (121.700.000 دينار)، وذلك طبقاً لأحكام قانون المالية.",
+  "content_hash_sha256": "e7f41fcb524c36075bf3bfee7ca75e87c2e8e577b490617ae3573ebac9874f02",
+  "summary": "تخصيص 262.880 مليون دينار لوزارة التجهيز والإسكان، موزعة على التمويل والاستثمار والعمليات في البنية التحتية والإسكان.",
+  "summary_french": "Ce tableau présente la répartition des crédits budgétaires pour le Ministère de l'Équipement et du Logement au titre de l'année 2026. Il détaille les montants alloués aux dépenses de financement, d'investissement et opérationnelles, conformément à la loi de finances, pour soutenir les projets d'infrastructure et d'habitat public.",
+  "summary_arabic": "يعرض هذا الجدول توزيع الاعتمادات المالية المخصصة لمهمة التجهيز والإسكان لسنة 2026، حيث يوضح مبالغ نفقات التمويل والاستثمار والعمليات، طبقاً لأحكام قانون المالية، بهدف دعم مشاريع البنية التحتية والإسكان العمومي وتعزيز التنمية العمرانية في البلاد.",
+  "search_content": "Équipement Logement 262880000 financement 1600000 investissement 1764160000 opérations 121700000 Ministère de l'Équipement et du Logement budget 2026 loi de finances",
+  "keywords": [
+    "budget de l'État 2026",
+    "Ministère de l'Équipement et du Logement",
+    "dépenses d'investissement",
+    "dépenses de financement",
+    "dépenses opérationnelles",
+    "loi de finances",
+    "crédits budgétaires"
+  ],
+  "legal_domains": [
+    "Droit budgétaire",
+    "Droit administratif",
+    "Finances publiques"
+  ],
+  "business_impact": "HIGH",
+  "target_audience": [
+    "Ministère de l'Équipement et du Logement",
+    "Entreprises de travaux publics",
+    "Promoteurs immobiliers",
+    "Collectivités locales",
+    "Organismes de contrôle budgétaire"
+  ],
+  "related_laws": [
+    "Loi de finances 2026",
+    "Code de la comptabilité publique"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 18,
+  "ambiguity_level": "LOW",
+  "has_obligations": false,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Ministère de l'Équipement et du Logement",
+  "institution_secondary": "Assemblée des Représentants du Peuple",
+  "institutions": [
+    "Ministère de l'Équipement et du Logement",
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=N/A&Annee=2025&TypeLoi=Finance Law / قانون مالية",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Loi de finances 2026",
+    "Code de la comptabilité publique"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Ministère de l'Équipement et du Logement",
+    "Assemblée des Représentants du Peuple",
+    "Ministère de l'Équipement"
+  ],
+  "entity_types": [
+    "MINISTRY",
+    "STATE_ORGAN",
+    "MINISTRY"
+  ],
+  "entity_ids": [
+    "tn-org-ministere-de-l-equipement-et-du-logement",
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-ministere-de-l-equipement"
+  ],
+  "community_id": "tn-fiscal",
+  "community_label": "Droit fiscal",
+  "community_summary": "Règles relatives à la fiscalité, aux finances publiques et à la gestion budgétaire de l'État tunisien.",
+  "parent_document_id": "tn-financelaw-nodoc",
+  "preceding_article_id": "tn-financelaw-nodoc-art-17",
+  "following_article_id": "tn-financelaw-nodoc-art-19",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-27T00:00:00Z",
+  "next_check": "2026-09-27T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Tableau C - Dépenses du budget de l'État 2026 - Ministère de l'Équipement et du Logement\nCe tableau présente la répartition des crédits budgétaires pour le Ministère de l'Équipement et du Logement au titre de l'année 2026. Il détaille les montants alloués aux dépenses de financement, d'investissement et opérationnelles, conformément à la loi de finances, pour soutenir les projets d'infrastructure et d'habitat public.\nيعرض هذا الجدول توزيع الاعتمادات المالية المخصصة لمهمة التجهيز والإسكان لسنة 2026، حيث يوضح مبالغ نفقات التمويل والاستثمار والعمليات، طبقاً لأحكام قانون المالية، بهدف دعم مشاريع البنية التحتية والإسكان العمومي وتعزيز التنمية العمرانية في البلاد.\nLe présent tableau détaille les crédits alloués au Ministère de l'Équipement et du Logement pour l'exercice budgétaire 2026. Les dépenses totales s'élèvent à 262 880 000 dinars, réparties entre les dépenses de financement (1 600 000 dinars), d'investissement (1 764 160 000 dinars) et opérationnelles (121 700 000 dinars), conformément à la loi de finances de l'État. يبين هذا الجدول الاعتمادات المخصصة لمهمة التجهيز والإسكان ضمن ميزانية الدولة لسنة 2026. تبلغ جملة الاعتمادات 262.880.000 دينار، موزعة على نفقات التمويل (1.600.000 دينار)، نفقات الاستثمار (1.764.160.000 دينار) ونفقات العمليات (121.700.000 دينار)، وذلك طبقاً لأحكام قانون المالية.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

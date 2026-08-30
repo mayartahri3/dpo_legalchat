@@ -1,0 +1,103 @@
+{
+  "id": "00a4a572-0935-499e-9af0-aed05b3bcd3d",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "52-13",
+  "year": 1957,
+  "status": "ACTIVE",
+  "title_french": "TITRE II",
+  "title_arabic": "العنوان الثاني",
+  "chapter": "Chapitre III - Les crimes et délits d'ordre militaire",
+  "section": "Section I - Insoumission et désertion",
+  "article_number": "77",
+  "content_french": "Les peines édictées pour désertion sont applicables au déserteur qui appartient à une armée alliée opérant contre un ennemi commun. Cette disposition vise à assurer l'uniformité des sanctions en matière de désertion, même lorsque le militaire concerné sert dans une force alliée engagée aux côtés de la Tunisie contre un adversaire commun, conformément aux principes du code de justice militaire.",
+  "content_arabic": "العقوبات المقررة للفرار تنطبق على الفار الذي ينتمي إلى جيش حليف يعمل ضد عدو مشترك. تهدف هذه الأحكام إلى توحيد العقوبات المتعلقة بالفرار، حتى إذا كان العسكري المعني يخدم في قوة حليفة تشارك تونس في العمليات ضد عدو مشترك، وذلك طبقًا لمبادئ مجلة القضاء العسكري.",
+  "content_combined": "Les peines édictées pour désertion sont applicables au déserteur qui appartient à une armée alliée opérant contre un ennemi commun. Cette disposition vise à assurer l'uniformité des sanctions en matière de désertion, même lorsque le militaire concerné sert dans une force alliée engagée aux côtés de la Tunisie contre un adversaire commun, conformément aux principes du code de justice militaire. العقوبات المقررة للفرار تنطبق على الفار الذي ينتمي إلى جيش حليف يعمل ضد عدو مشترك. تهدف هذه الأحكام إلى توحيد العقوبات المتعلقة بالفرار، حتى إذا كان العسكري المعني يخدم في قوة حليفة تشارك تونس في العمليات ضد عدو مشترك، وذلك طبقًا لمبادئ مجلة القضاء العسكري.",
+  "content_hash_sha256": "114d01ba5262615bc618b3e77c618096ae045f58dc457e1b47f99e72c5319149",
+  "summary": "Cet article du Code de justice militaire prévoit que les peines applicables pour désertion s'étendent également aux militaires tunisiens servant dans une armée alliée opérant contre un ennemi commun. Il vise à garantir l'uniformité des sanctions pour désertion, indépendamment de la nationalité de l'armée alliée.",
+  "summary_french": "Cet article prévoit que les peines applicables pour désertion s’étendent également aux militaires tunisiens servant dans une armée alliée opérant contre un ennemi commun. Il vise à garantir l’uniformité des sanctions pour désertion, même lorsque le militaire sert dans une force alliée engagée aux côtés de la Tunisie.",
+  "summary_arabic": "ينص هذا الفصل على أن العقوبات المقررة للفرار تسري أيضًا على العسكريين التونسيين الذين يخدمون في جيش حليف يعمل ضد عدو مشترك. يهدف النص إلى ضمان توحيد العقوبات المتعلقة بالفرار، حتى إذا كان العسكري يخدم ضمن قوة حليفة مشاركة تونس في العمليات ضد عدو مشترك.",
+  "search_content": "désertion armée alliée ennemi commun peines code justice militaire العقوبات الفرار جيش حليف عدو مشترك مجلة القضاء العسكري قانون Loi 52-13 art. 77",
+  "keywords": [
+    "désertion",
+    "armée alliée",
+    "peines pour désertion",
+    "ennemi commun",
+    "code de justice militaire",
+    "article 77",
+    "uniformité des sanctions"
+  ],
+  "legal_domains": [
+    "droit militaire",
+    "droit pénal"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "militaires",
+    "juristes militaires",
+    "institutions de défense"
+  ],
+  "related_laws": [
+    "Code de justice militaire"
+  ],
+  "legal_concepts": [
+    "désertion",
+    "coopération militaire",
+    "sanctions pénales",
+    "justice militaire"
+  ],
+  "article_type": "PENAL",
+  "article_order": 77,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": true,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=52-13&Annee=1957&TypeLoi=Loi",
+  "source_date": "1957-01-10T00:00:00Z",
+  "publication_date": "1957-01-10T00:00:00Z",
+  "effective_date": "1957-01-10T00:00:00Z",
+  "relation_target_ids": [
+    "Code de justice militaire"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Code de justice militaire"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "COURT"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-code-de-justice-militaire"
+  ],
+  "community_id": "tn-penal",
+  "community_label": "Droit pénal",
+  "community_summary": "Normes relatives aux infractions, sanctions et procédures pénales en Tunisie, incluant le droit militaire et disciplinaire.",
+  "parent_document_id": "tn-loi-52-13",
+  "preceding_article_id": "tn-loi-52-13-art-76",
+  "following_article_id": "tn-loi-52-13-art-78",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-09T00:00:00Z",
+  "next_check": "2026-09-09T00:00:00Z",
+  "chapter_normalized": "chapitre_iii_les_crimes_et_delits_d_ordre_militaire",
+  "embedding_text": "TITRE II\nCet article prévoit que les peines applicables pour désertion s’étendent également aux militaires tunisiens servant dans une armée alliée opérant contre un ennemi commun. Il vise à garantir l’uniformité des sanctions pour désertion, même lorsque le militaire sert dans une force alliée engagée aux côtés de la Tunisie.\nينص هذا الفصل على أن العقوبات المقررة للفرار تسري أيضًا على العسكريين التونسيين الذين يخدمون في جيش حليف يعمل ضد عدو مشترك. يهدف النص إلى ضمان توحيد العقوبات المتعلقة بالفرار، حتى إذا كان العسكري يخدم ضمن قوة حليفة مشاركة تونس في العمليات ضد عدو مشترك.\nLes peines édictées pour désertion sont applicables au déserteur qui appartient à une armée alliée opérant contre un ennemi commun. Cette disposition vise à assurer l'uniformité des sanctions en matière de désertion, même lorsque le militaire concerné sert dans une force alliée engagée aux côtés de la Tunisie contre un adversaire commun, conformément aux principes du code de justice militaire. العقوبات المقررة للفرار تنطبق على الفار الذي ينتمي إلى جيش حليف يعمل ضد عدو مشترك. تهدف هذه الأحكام إلى توحيد العقوبات المتعلقة بالفرار، حتى إذا كان العسكري المعني يخدم في قوة حليفة تشارك تونس في العمليات ضد عدو مشترك، وذلك طبقًا لمبادئ مجلة القضاء العسكري.\ndésertion | coopération militaire | sanctions pénales | justice militaire"
+}

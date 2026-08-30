@@ -1,0 +1,104 @@
+{
+  "id": "0a4d7b6a-25fb-4eec-a324-07c8a6f2aff1",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "83-112",
+  "year": 1983,
+  "status": "ACTIVE",
+  "title_french": "DU PERSONNEL TEMPORAIRE",
+  "title_arabic": "عن العاملين المؤقتين",
+  "chapter": null,
+  "section": null,
+  "article_number": "102",
+  "content_french": "Les sanctions disciplinaires à l'encontre du personnel temporaire sont prononcées par le chef de l'administration concernée, sur la base d'un rapport d'enquête relatif aux faits reprochés à l'agent, ce dernier ayant été entendu. Les mesures disciplinaires doivent respecter les droits de la défense de l'agent concerné. Toute sanction doit être motivée et notifiée à l'intéressé, qui a le droit de présenter ses observations avant toute décision définitive.",
+  "content_arabic": "تُنطق العقوبات التأديبية من قبل رئيس الإدارة المعنية، بناءً على تقرير تحقيق حول الوقائع الموجهة للعامل، وذلك بعد الاستماع إليه بشكل صحيح. يجب أن تراعي الإجراءات التأديبية حقوق الدفاع للعامل المؤقت، ويجب تعليل وإبلاغ كل عقوبة للطرف المعني. للعامل الحق في تقديم ملاحظاته قبل اتخاذ أي قرار نهائي.",
+  "content_combined": "Les sanctions disciplinaires à l'encontre du personnel temporaire sont prononcées par le chef de l'administration concernée, sur la base d'un rapport d'enquête relatif aux faits reprochés à l'agent, ce dernier ayant été entendu. Les mesures disciplinaires doivent respecter les droits de la défense de l'agent concerné. Toute sanction doit être motivée et notifiée à l'intéressé, qui a le droit de présenter ses observations avant toute décision définitive. تُنطق العقوبات التأديبية من قبل رئيس الإدارة المعنية، بناءً على تقرير تحقيق حول الوقائع الموجهة للعامل، وذلك بعد الاستماع إليه بشكل صحيح. يجب أن تراعي الإجراءات التأديبية حقوق الدفاع للعامل المؤقت، ويجب تعليل وإبلاغ كل عقوبة للطرف المعني. للعامل الحق في تقديم ملاحظاته قبل اتخاذ أي قرار نهائي.",
+  "content_hash_sha256": "40413df1f647f40563a22ae2206d347cb677fac2faf06605f81788df746be9fe",
+  "summary": "Cet article précise que les sanctions disciplinaires à l'encontre du personnel temporaire sont décidées par le chef de l'administration concernée, sur la base d'un rapport d'enquête et après audition de l'agent. Il garantit le respect des droits de la défense et la notification motivée de toute sanction.",
+  "summary_french": "Cet article précise que les sanctions disciplinaires visant le personnel temporaire doivent être décidées par le chef de l'administration, après enquête et audition de l'agent concerné. Il impose le respect des droits de la défense, la motivation et la notification de toute sanction, ainsi que la possibilité pour l'agent de présenter ses observations avant toute décision définitive.",
+  "summary_arabic": "ينص هذا الفصل على أن العقوبات التأديبية بحق العاملين المؤقتين تصدر عن رئيس الإدارة المختصة، بعد إجراء تحقيق وسماع العامل المعني. ويشدد على ضرورة احترام حقوق الدفاع، وتعليل وإبلاغ كل عقوبة للطرف المعني، مع منح العامل الحق في تقديم ملاحظاته قبل اتخاذ أي قرار نهائي بشأنه.",
+  "search_content": "sanctions disciplinaires, personnel temporaire, rapport d'enquête, droits de la défense, chef de l'administration, audition de l'agent, Loi 83-112 art. 102 قانون Law",
+  "keywords": [
+    "sanctions disciplinaires",
+    "personnel temporaire",
+    "rapport d'enquête",
+    "droits de la défense",
+    "chef de l'administration",
+    "audition de l'agent",
+    "notification de sanction",
+    "Loi 83-112 art. 102"
+  ],
+  "legal_domains": [
+    "droit administratif",
+    "droit du travail"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "agents publics temporaires",
+    "chefs d'administration",
+    "juristes"
+  ],
+  "related_laws": [
+    "Loi 83-112"
+  ],
+  "legal_concepts": [
+    "procédure disciplinaire",
+    "droits de la défense",
+    "fonction publique",
+    "notification des sanctions"
+  ],
+  "article_type": "PENAL",
+  "article_order": 102,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": true,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=83-112&Annee=1983&TypeLoi=Loi",
+  "source_date": "1983-12-13T00:00:00Z",
+  "publication_date": "1983-12-13T00:00:00Z",
+  "effective_date": "1983-12-13T00:00:00Z",
+  "relation_target_ids": [
+    "Loi 83-112"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Toute sa"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-toute-sa"
+  ],
+  "community_id": "tn-travail",
+  "community_label": "Droit du travail et sécurité sociale",
+  "community_summary": "Règles relatives au droit du travail, à la protection sociale et aux relations professionnelles en Tunisie.",
+  "parent_document_id": "tn-loi-83-112",
+  "preceding_article_id": "tn-loi-83-112-art-101",
+  "following_article_id": "tn-loi-83-112-art-103",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-17T00:00:00Z",
+  "next_check": "2026-09-17T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "DU PERSONNEL TEMPORAIRE\nCet article précise que les sanctions disciplinaires visant le personnel temporaire doivent être décidées par le chef de l'administration, après enquête et audition de l'agent concerné. Il impose le respect des droits de la défense, la motivation et la notification de toute sanction, ainsi que la possibilité pour l'agent de présenter ses observations avant toute décision définitive.\nينص هذا الفصل على أن العقوبات التأديبية بحق العاملين المؤقتين تصدر عن رئيس الإدارة المختصة، بعد إجراء تحقيق وسماع العامل المعني. ويشدد على ضرورة احترام حقوق الدفاع، وتعليل وإبلاغ كل عقوبة للطرف المعني، مع منح العامل الحق في تقديم ملاحظاته قبل اتخاذ أي قرار نهائي بشأنه.\nLes sanctions disciplinaires à l'encontre du personnel temporaire sont prononcées par le chef de l'administration concernée, sur la base d'un rapport d'enquête relatif aux faits reprochés à l'agent, ce dernier ayant été entendu. Les mesures disciplinaires doivent respecter les droits de la défense de l'agent concerné. Toute sanction doit être motivée et notifiée à l'intéressé, qui a le droit de présenter ses observations avant toute décision définitive. تُنطق العقوبات التأديبية من قبل رئيس الإدارة المعنية، بناءً على تقرير تحقيق حول الوقائع الموجهة للعامل، وذلك بعد الاستماع إليه بشكل صحيح. يجب أن تراعي الإجراءات التأديبية حقوق الدفاع للعامل المؤقت، ويجب تعليل وإبلاغ كل عقوبة للطرف المعني. للعامل الحق في تقديم ملاحظاته قبل اتخاذ أي قرار نهائي.\nprocédure disciplinaire | droits de la défense | fonction publique | notification des sanctions"
+}

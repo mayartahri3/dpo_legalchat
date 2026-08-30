@@ -1,0 +1,110 @@
+{
+  "id": "0b0bc61e-313c-4d9b-9d3d-cf28a7771f73",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "0119-0139",
+  "year": 2025,
+  "status": "ACTIVE",
+  "title_french": "Titre IV - De l’ordre des créanciers et de la distribution des deniers",
+  "title_arabic": "العنوان الرابع - من ترتيب الدائنين وتوزيع الأموال",
+  "chapter": "Chapitre II - De la distribution des deniers",
+  "section": "Section première - De la distribution des deniers dans la phase du redressement",
+  "article_number": "573",
+  "content_french": "Article 573.- En l’absence de toute contestation, le commissaire à l'exécution procède à la distribution du produit du prix aux créanciers dans un délai d'un mois à compter de l’expiration des délais de recours, ou de la date du jugement en cas de pourvoi en appel. En cas de litige, le juge-commissaire procède à la rédaction d’un rapport dans lequel il établit les oppositions soulevées. Le dossier de distribution est remis au tribunal saisi de la demande en règlement qui statue dans un délai d’un mois sur la distribution et les oppositions, en présence du ministère public et après convocation des créanciers. En cas de recours, la Cour d’appel statue dans un délai d’un mois à compter de la date de dépôt dudit recours.",
+  "content_arabic": "المادة 573.- في غياب أي اعتراض، يقوم المفوض بالتنفيذ بتوزيع منتج السعر على الدائنين في غضون شهر واحد من انتهاء مهلة الطعن، أو من تاريخ الحكم في حالة الطعن بالاستئناف. في حالة وجود نزاع، يقوم القاضي المفوض بإعداد تقرير يحدد فيه الاعتراضات المثارة. يُسلم ملف التوزيع إلى المحكمة التي تتلقى طلب التسوية والتي تصدر حكمها في غضون شهر واحد على التوزيع والاعتراضات، بحضور النيابة العامة وبعد استدعاء الدائنين. في حالة الطعن، تصدر محكمة الاستئناف حكمها في غضون شهر واحد من تاريخ تقديم الطعن.",
+  "content_combined": "Article 573.- En l’absence de toute contestation, le commissaire à l'exécution procède à la distribution du produit du prix aux créanciers dans un délai d'un mois à compter de l’expiration des délais de recours, ou de la date du jugement en cas de pourvoi en appel. En cas de litige, le juge-commissaire procède à la rédaction d’un rapport dans lequel il établit les oppositions soulevées. Le dossier de distribution est remis au tribunal saisi de la demande en règlement qui statue dans un délai d’un mois sur la distribution et les oppositions, en présence du ministère public et après convocation des créanciers. En cas de recours, la Cour d’appel statue dans un délai d’un mois à compter de la date de dépôt dudit recours. المادة 573.- في غياب أي اعتراض، يقوم المفوض بالتنفيذ بتوزيع منتج السعر على الدائنين في غضون شهر واحد من انتهاء مهلة الطعن، أو من تاريخ الحكم في حالة الطعن بالاستئناف. في حالة وجود نزاع، يقوم القاضي المفوض بإعداد تقرير يحدد فيه الاعتراضات المثارة. يُسلم ملف التوزيع إلى المحكمة التي تتلقى طلب التسوية والتي تصدر حكمها في غضون شهر واحد على التوزيع والاعتراضات، بحضور النيابة العامة وبعد استدعاء الدائنين. في حالة الطعن، تصدر محكمة الاستئناف حكمها في غضون شهر واحد من تاريخ تقديم الطعن.",
+  "content_hash_sha256": "00cf3a73e8e5a0b1ec7a1e2501390b08a1186337e79b36881fe0a25bd1eb3157",
+  "summary": "N/A",
+  "summary_french": "L’article 573 organise la procédure de distribution des fonds issus de la réalisation d’actifs aux créanciers. En l’absence de contestation, le commissaire à l’exécution procède à la distribution dans un délai d’un mois. En cas de litige, le juge-commissaire rédige un rapport et le tribunal statue sur la distribution et les oppositions, avec possibilité de recours devant la Cour d’appel.",
+  "summary_arabic": "تنظم المادة 573 إجراءات توزيع الأموال الناتجة عن تصفية الأصول على الدائنين. في حال عدم وجود اعتراضات، يتولى المفوض بالتنفيذ التوزيع خلال شهر. عند وجود نزاع، يعد القاضي المفوض تقريراً بالاعتراضات، وتفصل المحكمة في التوزيع والاعتراضات خلال شهر، مع إمكانية الطعن أمام محكمة الاستئناف التي تبت في الطعن خلال شهر.",
+  "search_content": "distribution des deniers, créanciers, commissaire à l'exécution, juge-commissaire, tribunal, ministère public, Cour d’appel, article 573 قانون Law",
+  "keywords": [
+    "distribution des deniers",
+    "créanciers",
+    "commissaire à l'exécution",
+    "juge-commissaire",
+    "tribunal",
+    "ministère public",
+    "Cour d’appel",
+    "article 573"
+  ],
+  "legal_domains": [
+    "droit commercial",
+    "droit des faillites",
+    "droit civil"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "créanciers",
+    "commissaires à l'exécution",
+    "juges-commissaires",
+    "tribunaux",
+    "ministère public",
+    "Cour d’appel"
+  ],
+  "related_laws": [
+    "Code de commerce"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 573,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": true,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=0119-0139&Annee=2025&TypeLoi=Loi",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Code de commerce art. 573"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Cour d’appel",
+    "محكمة الاستئناف"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "ORGANIZATION",
+    "COURT"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-cour-d-appel",
+    "tn-org-default"
+  ],
+  "community_id": "tn-commercial",
+  "community_label": "Droit commercial et des affaires",
+  "community_summary": "Règles relatives aux opérations commerciales, procédures collectives et relations entre commerçants et créanciers.",
+  "parent_document_id": "tn-loi-0119-0139",
+  "preceding_article_id": "tn-loi-0119-0139-art-572",
+  "following_article_id": "tn-loi-0119-0139-art-574",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-08T00:00:00Z",
+  "next_check": "2026-10-08T00:00:00Z",
+  "chapter_normalized": "chapitre_ii_de_la_distribution_des_deniers",
+  "embedding_text": "Titre IV - De l’ordre des créanciers et de la distribution des deniers\nL’article 573 organise la procédure de distribution des fonds issus de la réalisation d’actifs aux créanciers. En l’absence de contestation, le commissaire à l’exécution procède à la distribution dans un délai d’un mois. En cas de litige, le juge-commissaire rédige un rapport et le tribunal statue sur la distribution et les oppositions, avec possibilité de recours devant la Cour d’appel.\nتنظم المادة 573 إجراءات توزيع الأموال الناتجة عن تصفية الأصول على الدائنين. في حال عدم وجود اعتراضات، يتولى المفوض بالتنفيذ التوزيع خلال شهر. عند وجود نزاع، يعد القاضي المفوض تقريراً بالاعتراضات، وتفصل المحكمة في التوزيع والاعتراضات خلال شهر، مع إمكانية الطعن أمام محكمة الاستئناف التي تبت في الطعن خلال شهر.\nArticle 573.- En l’absence de toute contestation, le commissaire à l'exécution procède à la distribution du produit du prix aux créanciers dans un délai d'un mois à compter de l’expiration des délais de recours, ou de la date du jugement en cas de pourvoi en appel. En cas de litige, le juge-commissaire procède à la rédaction d’un rapport dans lequel il établit les oppositions soulevées. Le dossier de distribution est remis au tribunal saisi de la demande en règlement qui statue dans un délai d’un mois sur la distribution et les oppositions, en présence du ministère public et après convocation des créanciers. En cas de recours, la Cour d’appel statue dans un délai d’un mois à compter de la date de dépôt dudit recours. المادة 573.- في غياب أي اعتراض، يقوم المفوض بالتنفيذ بتوزيع منتج السعر على الدائنين في غضون شهر واحد من انتهاء مهلة الطعن، أو من تاريخ الحكم في حالة الطعن بالاستئناف. في حالة وجود نزاع، يقوم القاضي المفوض بإعداد تقرير يحدد فيه الاعتراضات المثارة. يُسلم ملف التوزيع إلى المحكمة التي تتلقى طلب التسوية والتي تصدر حكمها في غضون شهر واحد على التوزيع والاعتراضات، بحضور النيابة العامة وبعد استدعاء الدائنين. في حالة الطعن، تصدر محكمة الاستئناف حكمها في غضون شهر واحد من تاريخ تقديم الطعن.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

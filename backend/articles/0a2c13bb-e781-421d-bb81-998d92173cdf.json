@@ -1,0 +1,112 @@
+{
+  "id": "0a2c13bb-e781-421d-bb81-998d92173cdf",
+  "jurisdiction": "TUNISIA",
+  "institution": "Ministère de la Santé Publique",
+  "law_type": "Décret",
+  "law_number": "2000-146",
+  "year": 2000,
+  "status": "ACTIVE",
+  "title_french": "Décret n° 2000-146 du 24 janvier 2000, relatif à la conduite sous l'empire d'un état alcoolique",
+  "title_arabic": "المرسوم عدد 2000-146 المؤرخ في 24 جانفي 2000 المتعلق بالقيادة تحت تأثير حالة سكر",
+  "chapter": "Chapitre II",
+  "section": null,
+  "article_number": "9",
+  "content_french": "Les vérifications cliniques médicales visées à l'article huit (8) sont assurées par un médecin de la Santé Publique ou de libre pratique requis par l'autorité compétente parmi les médecins dont la résidence est la plus proche du lieu où l'infraction a été constatée et qui procède au prélèvement sanguin conformément aux conditions et modalités prévues par le présent décret.",
+  "content_arabic": "تُجرى الفحوصات الطبية السريرية المشار إليها في المادة الثامنة (8) من قبل طبيب من الصحة العمومية أو طبيب حر يتم استدعاؤه من قبل السلطة المختصة من بين الأطباء الذين يقيمون بالقرب من مكان وقوع المخالفة، والذي يقوم بسحب الدم وفقًا للشروط والإجراءات المنصوص عليها في هذا المرسوم.",
+  "content_combined": "Les vérifications cliniques médicales visées à l'article huit (8) sont assurées par un médecin de la Santé Publique ou de libre pratique requis par l'autorité compétente parmi les médecins dont la résidence est la plus proche du lieu où l'infraction a été constatée et qui procède au prélèvement sanguin conformément aux conditions et modalités prévues par le présent décret. تُجرى الفحوصات الطبية السريرية المشار إليها في المادة الثامنة (8) من قبل طبيب من الصحة العمومية أو طبيب حر يتم استدعاؤه من قبل السلطة المختصة من بين الأطباء الذين يقيمون بالقرب من مكان وقوع المخالفة، والذي يقوم بسحب الدم وفقًا للشروط والإجراءات المنصوص عليها في هذا المرسوم.",
+  "content_hash_sha256": "62539e4f6e8d257055582d7e4ceb97c29ee13dc477662c00e80e0de9b5ca3263",
+  "summary": "Ce décret précise les conditions dans lesquelles un médecin, requis par l'autorité compétente, doit effectuer des prélèvements sanguins pour vérifier l'état alcoolique d'un conducteur. Ces prélèvements doivent être réalisés conformément aux modalités prévues par le décret.",
+  "summary_french": "Cet article du décret précise que les vérifications cliniques médicales, en cas de conduite sous l'empire d'un état alcoolique, doivent être réalisées par un médecin de la Santé Publique ou de libre pratique, requis par l'autorité compétente, et selon les conditions et modalités fixées par le décret.",
+  "summary_arabic": "ينص هذا الفصل من المرسوم على أن الفحوصات الطبية السريرية المتعلقة بالقيادة تحت تأثير حالة سكر تُجرى من قبل طبيب من الصحة العمومية أو طبيب حر يُستدعى من السلطة المختصة، ويقوم الطبيب بسحب الدم وفق الشروط والإجراءات المحددة في هذا المرسوم.",
+  "search_content": "Décret n° 2000-146 du 24 janvier 2000 relatif à la conduite sous l'empire d'un état alcoolique. Article 9 : Les vérifications cliniques médicales sont assurées par un médecin de la Santé Publique ou de libre pratique requis par l'autorité compétente. Prélèvement sanguin, conditions et modalités, sécurité routière. مرسوم Decree",
+  "keywords": [
+    "conduite sous l'empire d'un état alcoolique",
+    "prélèvement sanguin",
+    "médecin requis",
+    "autorité compétente",
+    "article 8",
+    "article 9",
+    "vérifications cliniques",
+    "décret 2000-146",
+    "sécurité routière",
+    "infraction routière"
+  ],
+  "legal_domains": [
+    "Droit pénal",
+    "Droit de la santé",
+    "Droit routier"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Médecins",
+    "Forces de l'ordre",
+    "Conducteurs",
+    "Juristes spécialisés en droit routier",
+    "Autorités publiques"
+  ],
+  "related_laws": [
+    "Code de la route tunisien",
+    "Décret 2000-146",
+    "Article 8 du même décret"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 9,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Ministère de la Santé Publique",
+  "institution_secondary": null,
+  "institutions": [
+    "Ministère de la Santé Publique"
+  ],
+  "source_name": "JORT",
+  "source_number": "8",
+  "source_url": "https://www.pist.tn/jort/2000/2000F/Jo0082000.pdf",
+  "source_date": "2000-01-24T00:00:00Z",
+  "publication_date": "2000-01-24T00:00:00Z",
+  "effective_date": null,
+  "relation_target_ids": [
+    "Décret 2000-146 art. 8",
+    "Code de la route tunisien"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Ministère de la Santé Publique",
+    "Autorité publique tunisienne"
+  ],
+  "entity_types": [
+    "MINISTRY",
+    "INSTITUTION"
+  ],
+  "entity_ids": [
+    "tn-org-ministere-de-la-sante-publique",
+    "tn-org-autorite-publique-tunisienne"
+  ],
+  "community_id": "tn-penal",
+  "community_label": "Droit pénal",
+  "community_summary": "Règles relatives aux infractions, sanctions et procédures pénales en droit tunisien, incluant la sécurité routière.",
+  "parent_document_id": "tn-dcret-2000-146",
+  "preceding_article_id": "tn-dcret-2000-146-art-8",
+  "following_article_id": "tn-dcret-2000-146-art-10",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-01T00:00:00Z",
+  "next_check": "2026-10-01T00:00:00Z",
+  "chapter_normalized": "chapitre_ii",
+  "embedding_text": "Décret n° 2000-146 du 24 janvier 2000, relatif à la conduite sous l'empire d'un état alcoolique\nCet article du décret précise que les vérifications cliniques médicales, en cas de conduite sous l'empire d'un état alcoolique, doivent être réalisées par un médecin de la Santé Publique ou de libre pratique, requis par l'autorité compétente, et selon les conditions et modalités fixées par le décret.\nينص هذا الفصل من المرسوم على أن الفحوصات الطبية السريرية المتعلقة بالقيادة تحت تأثير حالة سكر تُجرى من قبل طبيب من الصحة العمومية أو طبيب حر يُستدعى من السلطة المختصة، ويقوم الطبيب بسحب الدم وفق الشروط والإجراءات المحددة في هذا المرسوم.\nLes vérifications cliniques médicales visées à l'article huit (8) sont assurées par un médecin de la Santé Publique ou de libre pratique requis par l'autorité compétente parmi les médecins dont la résidence est la plus proche du lieu où l'infraction a été constatée et qui procède au prélèvement sanguin conformément aux conditions et modalités prévues par le présent décret. تُجرى الفحوصات الطبية السريرية المشار إليها في المادة الثامنة (8) من قبل طبيب من الصحة العمومية أو طبيب حر يتم استدعاؤه من قبل السلطة المختصة من بين الأطباء الذين يقيمون بالقرب من مكان وقوع المخالفة، والذي يقوم بسحب الدم وفقًا للشروط والإجراءات المنصوص عليها في هذا المرسوم.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

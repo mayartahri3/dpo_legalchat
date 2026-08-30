@@ -1,0 +1,106 @@
+{
+  "id": "00ff65ca-5d9d-47fd-835f-55209489c06c",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": null,
+  "year": "1944",
+  "status": "ACTIVE",
+  "title_french": "Convention aérienne de Chicago - Articles 78 et 79",
+  "title_arabic": "اتفاقية شيكاغو الجوية - المادتان 78 و79",
+  "chapter": null,
+  "section": null,
+  "article_number": "78, 79",
+  "content_french": "Article 78 : Le Conseil peut suggérer aux États contractants intéressés de former des organisations conjointes pour exploiter des services aériens sur toute route ou dans toute région. Article 79 : Un État peut participer à des organisations d'exploitation en commun ou à des arrangements de pool par l'intermédiaire de son gouvernement ou de compagnies de transport aérien désignées par son gouvernement.",
+  "content_arabic": "المادة 78: يمكن للمجلس أن يقترح على الدول المتعاقدة المهتمة تشكيل منظمات مشتركة لتشغيل خدمات جوية على أي طريق أو في أي منطقة. المادة 79: يمكن للدولة أن تشارك في منظمات التشغيل المشتركة أو في ترتيبات تجمع من خلال حكومتها أو من خلال شركة أو شركات نقل جوي معينة من قبل حكومتها.",
+  "content_combined": "Article 78 : Le Conseil peut suggérer aux États contractants intéressés de former des organisations conjointes pour exploiter des services aériens sur toute route ou dans toute région. Article 79 : Un État peut participer à des organisations d'exploitation en commun ou à des arrangements de pool par l'intermédiaire de son gouvernement ou de compagnies de transport aérien désignées par son gouvernement. المادة 78: يمكن للمجلس أن يقترح على الدول المتعاقدة المهتمة تشكيل منظمات مشتركة لتشغيل خدمات جوية على أي طريق أو في أي منطقة. المادة 79: يمكن للدولة أن تشارك في منظمات التشغيل المشتركة أو في ترتيبات تجمع من خلال حكومتها أو من خلال شركة أو شركات نقل جوي معينة من قبل حكومتها.",
+  "content_hash_sha256": "ce842a5a3390cc5f08f9b5d8592877a01ff814066afb5e7437c47a056825453e",
+  "summary": "N/A",
+  "summary_french": "Les articles 78 et 79 de la Convention de Chicago prévoient que le Conseil peut recommander la création d’organisations conjointes pour l’exploitation de services aériens. Ils permettent également à chaque État de participer à de telles organisations ou à des arrangements de pool, soit directement, soit par l’intermédiaire de compagnies aériennes désignées.",
+  "summary_arabic": "تنص المادتان 78 و79 من اتفاقية شيكاغو على أن المجلس يمكنه اقتراح تشكيل منظمات مشتركة بين الدول المتعاقدة لتشغيل خدمات جوية في أي منطقة. كما تتيح للدولة المشاركة في هذه المنظمات أو ترتيبات التجمع، سواء عبر حكومتها أو شركات نقل جوي تعينها الحكومة.",
+  "search_content": "Articles 78 et 79 de la Convention aérienne de Chicago concernant le rôle du Conseil et la participation des États aux organisations d'exploitation commune de services aériens. قانون Law",
+  "keywords": [
+    "Conseil",
+    "États contractants",
+    "organisations conjointes",
+    "services aériens",
+    "participation",
+    "arrangements de pool",
+    "compagnies de transport aérien",
+    "Convention de Chicago",
+    "article 78",
+    "article 79"
+  ],
+  "legal_domains": [
+    "droit aérien",
+    "droit international public",
+    "droit des transports"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "gouvernements",
+    "compagnies aériennes",
+    "organisations internationales"
+  ],
+  "related_laws": [
+    "Convention de Chicago"
+  ],
+  "legal_concepts": [
+    "régime juridique des sociétés",
+    "droits des associés",
+    "gouvernance d'entreprise"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 78,
+  "ambiguity_level": "LOW",
+  "has_obligations": false,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=N/A&Annee=0&TypeLoi=Loi",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Convention de Chicago"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Conseil de l'Organisation de l'aviation civile internationale",
+    "États contractants"
+  ],
+  "entity_types": [
+    "ORGANIZATION",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-conseil-de-l-organisation-de-l-aviation-civile-internationale",
+    "tn-org-etats-contractants"
+  ],
+  "community_id": "tn-transport",
+  "community_label": "Droit des transports",
+  "community_summary": "Réglementation du transport aérien, maritime, terrestre et organisation des activités de transport en Tunisie.",
+  "parent_document_id": "tn-loi-nodoc",
+  "preceding_article_id": "tn-loi-nodoc-art-77",
+  "following_article_id": "tn-loi-nodoc-art-79",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-02T00:00:00Z",
+  "next_check": "2026-10-02T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Convention aérienne de Chicago - Articles 78 et 79\nLes articles 78 et 79 de la Convention de Chicago prévoient que le Conseil peut recommander la création d’organisations conjointes pour l’exploitation de services aériens. Ils permettent également à chaque État de participer à de telles organisations ou à des arrangements de pool, soit directement, soit par l’intermédiaire de compagnies aériennes désignées.\nتنص المادتان 78 و79 من اتفاقية شيكاغو على أن المجلس يمكنه اقتراح تشكيل منظمات مشتركة بين الدول المتعاقدة لتشغيل خدمات جوية في أي منطقة. كما تتيح للدولة المشاركة في هذه المنظمات أو ترتيبات التجمع، سواء عبر حكومتها أو شركات نقل جوي تعينها الحكومة.\nArticle 78 : Le Conseil peut suggérer aux États contractants intéressés de former des organisations conjointes pour exploiter des services aériens sur toute route ou dans toute région. Article 79 : Un État peut participer à des organisations d'exploitation en commun ou à des arrangements de pool par l'intermédiaire de son gouvernement ou de compagnies de transport aérien désignées par son gouvernement. المادة 78: يمكن للمجلس أن يقترح على الدول المتعاقدة المهتمة تشكيل منظمات مشتركة لتشغيل خدمات جوية على أي طريق أو في أي منطقة. المادة 79: يمكن للدولة أن تشارك في منظمات التشغيل المشتركة أو في ترتيبات تجمع من خلال حكومتها أو من خلال شركة أو شركات نقل جوي معينة من قبل حكومتها.\nrégime juridique des sociétés | droits des associés | gouvernance d'entreprise"
+}

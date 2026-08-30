@@ -1,0 +1,102 @@
+{
+  "id": "0c2c0327-83f1-4993-8fa8-2053a7e1dcd4",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "99-9",
+  "year": 1999,
+  "status": "ACTIVE",
+  "title_french": "Loi n° 99-9 du 13 février 1999, relative à la défense contre les pratiques déloyales à l'importation",
+  "title_arabic": "القانون رقم 99-9 المؤرخ في 13 فبراير 1999 المتعلق بالدفاع ضد الممارسات غير العادلة في الاستيراد",
+  "chapter": null,
+  "section": null,
+  "article_number": "29",
+  "content_french": "Article 29. - Les droits compensateurs provisoires ainsi que les droits antidumping provisoires peuvent être représentés par des dépôts en espèces ou des cautionnements. Ces garanties sont exigées afin d'assurer le paiement des droits définitifs qui pourraient être établis à l'issue de l'enquête. Si les droits définitifs sont inférieurs aux garanties versées, la différence est restituée. Si aucun droit n'est établi, les garanties sont libérées ou restituées intégralement.",
+  "content_arabic": "المادة 29.- يمكن تمثيل الحقوق التعويضية المؤقتة وكذلك الحقوق المؤقتة المضادة للإغراق بالودائع النقدية أو الكفالات. تُطلب هذه الضمانات لضمان دفع الحقوق النهائية التي قد تُفرض في نهاية التحقيق. إذا كانت الحقوق النهائية أقل من الضمانات المقدمة، يُعاد الفرق. وإذا لم تُفرض أي حقوق، تُفرج أو تُعاد الضمانات بالكامل.",
+  "content_combined": "Article 29. - Les droits compensateurs provisoires ainsi que les droits antidumping provisoires peuvent être représentés par des dépôts en espèces ou des cautionnements. Ces garanties sont exigées afin d'assurer le paiement des droits définitifs qui pourraient être établis à l'issue de l'enquête. Si les droits définitifs sont inférieurs aux garanties versées, la différence est restituée. Si aucun droit n'est établi, les garanties sont libérées ou restituées intégralement. المادة 29.- يمكن تمثيل الحقوق التعويضية المؤقتة وكذلك الحقوق المؤقتة المضادة للإغراق بالودائع النقدية أو الكفالات. تُطلب هذه الضمانات لضمان دفع الحقوق النهائية التي قد تُفرض في نهاية التحقيق. إذا كانت الحقوق النهائية أقل من الضمانات المقدمة، يُعاد الفرق. وإذا لم تُفرض أي حقوق، تُفرج أو تُعاد الضمانات بالكامل.",
+  "content_hash_sha256": "58ff6e3df59df49eca2e1eca87e975e01d37b9a54e724a15a968c72cdc49d152",
+  "summary": "Cet article précise que les droits compensateurs et antidumping provisoires peuvent être garantis par des dépôts en espèces ou des cautionnements. Ces garanties assurent le paiement des droits définitifs à l'issue de l'enquête. Si aucun droit n'est établi ou si le montant est inférieur, les garanties sont restituées.",
+  "summary_french": "L'article 29 de la loi n° 99-9 précise que les droits compensateurs et antidumping provisoires peuvent être garantis par des dépôts en espèces ou des cautionnements. Ces garanties assurent le paiement des droits définitifs. Si aucun droit n'est établi ou si le montant est inférieur, les garanties sont restituées ou libérées.",
+  "summary_arabic": "تنص المادة 29 من القانون رقم 99-9 على أنه يمكن ضمان الحقوق التعويضية المؤقتة وحقوق مكافحة الإغراق المؤقتة بالودائع النقدية أو الكفالات. تُطلب هذه الضمانات لضمان دفع الحقوق النهائية. إذا كانت الحقوق النهائية أقل أو لم تُفرض، تُعاد أو تُفرج الضمانات بالكامل.",
+  "search_content": "Loi n° 99-9 du 13 février 1999, article 29, droits antidumping, droits compensateurs, dépôts en espèces, cautionnements, garanties, enquête, استيراد, مكافحة الإغراق, حقوق تعويضية, كفالات, ودائع نقدية قانون Law",
+  "keywords": [
+    "droits antidumping",
+    "droits compensateurs",
+    "dépôts en espèces",
+    "cautionnements",
+    "garanties provisoires",
+    "enquête",
+    "article 29 loi 99-9"
+  ],
+  "legal_domains": [
+    "commerce international",
+    "droit de la concurrence",
+    "régulation commerciale"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "importateurs",
+    "exportateurs",
+    "juristes",
+    "entreprises commerciales",
+    "organismes de régulation"
+  ],
+  "related_laws": [
+    "Code des sociétés commerciales"
+  ],
+  "legal_concepts": [
+    "garanties financières",
+    "procédure antidumping",
+    "droits compensateurs",
+    "régulation des importations"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 29,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=99-9&Annee=1999&TypeLoi=Loi",
+  "source_date": "1999-02-16T00:00:00Z",
+  "publication_date": "1999-02-16T00:00:00Z",
+  "effective_date": "1999-02-16T00:00:00Z",
+  "relation_target_ids": [],
+  "relation_types": [],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Ministère du Commerce"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "MINISTRY"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-ministere-du-commerce"
+  ],
+  "community_id": "tn-commercial",
+  "community_label": "Droit commercial et des affaires",
+  "community_summary": "Réglementation des activités commerciales, concurrence, pratiques déloyales et protection des opérateurs économiques en Tunisie.",
+  "parent_document_id": "tn-loi-99-9",
+  "preceding_article_id": "tn-loi-99-9-art-28",
+  "following_article_id": "tn-loi-99-9-art-30",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-13T00:00:00Z",
+  "next_check": "2026-09-13T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Loi n° 99-9 du 13 février 1999, relative à la défense contre les pratiques déloyales à l'importation\nL'article 29 de la loi n° 99-9 précise que les droits compensateurs et antidumping provisoires peuvent être garantis par des dépôts en espèces ou des cautionnements. Ces garanties assurent le paiement des droits définitifs. Si aucun droit n'est établi ou si le montant est inférieur, les garanties sont restituées ou libérées.\nتنص المادة 29 من القانون رقم 99-9 على أنه يمكن ضمان الحقوق التعويضية المؤقتة وحقوق مكافحة الإغراق المؤقتة بالودائع النقدية أو الكفالات. تُطلب هذه الضمانات لضمان دفع الحقوق النهائية. إذا كانت الحقوق النهائية أقل أو لم تُفرض، تُعاد أو تُفرج الضمانات بالكامل.\nArticle 29. - Les droits compensateurs provisoires ainsi que les droits antidumping provisoires peuvent être représentés par des dépôts en espèces ou des cautionnements. Ces garanties sont exigées afin d'assurer le paiement des droits définitifs qui pourraient être établis à l'issue de l'enquête. Si les droits définitifs sont inférieurs aux garanties versées, la différence est restituée. Si aucun droit n'est établi, les garanties sont libérées ou restituées intégralement. المادة 29.- يمكن تمثيل الحقوق التعويضية المؤقتة وكذلك الحقوق المؤقتة المضادة للإغراق بالودائع النقدية أو الكفالات. تُطلب هذه الضمانات لضمان دفع الحقوق النهائية التي قد تُفرض في نهاية التحقيق. إذا كانت الحقوق النهائية أقل من الضمانات المقدمة، يُعاد الفرق. وإذا لم تُفرض أي حقوق، تُفرج أو تُعاد الضمانات بالكامل.\ngaranties financières | procédure antidumping | droits compensateurs | régulation des importations"
+}

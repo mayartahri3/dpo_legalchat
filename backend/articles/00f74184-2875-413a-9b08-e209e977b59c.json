@@ -1,0 +1,108 @@
+{
+  "id": "00f74184-2875-413a-9b08-e209e977b59c",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "2000-93",
+  "year": 2000,
+  "status": "ACTIVE",
+  "title_french": "Titre Premier - Dispositions Générales",
+  "title_arabic": "العنوان الأول - الأحكام العامة",
+  "chapter": null,
+  "section": null,
+  "article_number": "9",
+  "content_french": "Article 9.- La forme, la durée, la raison ou la dénomination sociale, le siège social, l'objet social et le montant du capital social doivent être obligatoirement mentionnés dans les statuts de la société. Ces éléments constituent des informations essentielles permettant d'identifier la société et d'assurer la transparence de son fonctionnement. Toute omission de ces mentions peut entraîner la nullité des statuts ou engager la responsabilité des fondateurs.",
+  "content_arabic": "المادة 9.- يجب أن يتم ذكر الشكل، المدة، السبب أو التسمية الاجتماعية، المقر الاجتماعي، الغرض الاجتماعي ومبلغ رأس المال الاجتماعي بشكل إلزامي في النظام الأساسي للشركة. وتعد هذه العناصر ضرورية لتعريف الشركة وضمان شفافية نشاطها. ويؤدي إغفال أي من هذه البيانات إلى بطلان النظام الأساسي أو تحميل المؤسسين المسؤولية.",
+  "content_combined": "Article 9.- La forme, la durée, la raison ou la dénomination sociale, le siège social, l'objet social et le montant du capital social doivent être obligatoirement mentionnés dans les statuts de la société. Ces éléments constituent des informations essentielles permettant d'identifier la société et d'assurer la transparence de son fonctionnement. Toute omission de ces mentions peut entraîner la nullité des statuts ou engager la responsabilité des fondateurs. المادة 9.- يجب أن يتم ذكر الشكل، المدة، السبب أو التسمية الاجتماعية، المقر الاجتماعي، الغرض الاجتماعي ومبلغ رأس المال الاجتماعي بشكل إلزامي في النظام الأساسي للشركة. وتعد هذه العناصر ضرورية لتعريف الشركة وضمان شفافية نشاطها. ويؤدي إغفال أي من هذه البيانات إلى بطلان النظام الأساسي أو تحميل المؤسسين المسؤولية.",
+  "content_hash_sha256": "8fddafbc53e483af461e06a99892e66e784b4a895ea2f7c72fdd825bed1563ea",
+  "summary": "L'article 9 du Code des Sociétés Commerciales impose que les statuts de toute société mentionnent obligatoirement la forme, la durée, la dénomination sociale, le siège, l'objet et le capital social. L'absence de ces mentions peut entraîner la nullité des statuts ou la responsabilité des fondateurs.",
+  "summary_french": "L'article 9 de la Loi 2000-93 impose que les statuts de toute société mentionnent obligatoirement la forme, la durée, la dénomination sociale, le siège social, l'objet social et le capital social. L'omission de l'une de ces mentions peut entraîner la nullité des statuts ou engager la responsabilité des fondateurs.",
+  "summary_arabic": "يفرض الفصل 9 من القانون عدد 93 لسنة 2000 ضرورة تضمين الشكل، المدة، التسمية أو السبب الاجتماعي، المقر، الغرض ومبلغ رأس المال في النظام الأساسي للشركة. ويؤدي إغفال أي من هذه البيانات إلى بطلان النظام الأساسي أو تحميل المؤسسين المسؤولية القانونية.",
+  "search_content": "Article 9 - La forme, la durée, la dénomination sociale, le siège social, l'objet social et le capital social doivent être mentionnés dans les statuts de la société. Leur omission peut entraîner la nullité des statuts ou la responsabilité des fondateurs. المادة 9 - يجب ذكر الشكل، المدة، التسمية الاجتماعية، المقر، الغرض ومبلغ رأس المال في النظام الأساسي للشركة. قانون Law",
+  "keywords": [
+    "statuts de la société",
+    "forme juridique",
+    "dénomination sociale",
+    "siège social",
+    "objet social",
+    "capital social",
+    "nullité des statuts",
+    "responsabilité des fondateurs",
+    "Loi 2000-93 art. 9"
+  ],
+  "legal_domains": [
+    "Droit des sociétés",
+    "Droit commercial"
+  ],
+  "business_impact": "HIGH",
+  "target_audience": [
+    "Entrepreneurs",
+    "Juristes",
+    "Notaires",
+    "Comptables",
+    "Investisseurs"
+  ],
+  "related_laws": [
+    "Code des Sociétés Commerciales",
+    "Code des Obligations et des Contrats"
+  ],
+  "legal_concepts": [
+    "constitution de société",
+    "publicité légale",
+    "validité des statuts",
+    "identification des sociétés"
+  ],
+  "article_type": "PENAL",
+  "article_order": 9,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": true,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": "55",
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=2000-93&Annee=2000&TypeLoi=Loi",
+  "source_date": "2000-11-03T00:00:00Z",
+  "publication_date": "2000-11-03T00:00:00Z",
+  "effective_date": "2000-11-03T00:00:00Z",
+  "relation_target_ids": [
+    "Code des Sociétés Commerciales art. 9"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Tribunal de première instance"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "COURT"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-tribunal-de-premiere-instance"
+  ],
+  "community_id": "tn-societes",
+  "community_label": "Droit des sociétés",
+  "community_summary": "Règles relatives à la constitution, au fonctionnement et à la responsabilité dans les sociétés commerciales tunisiennes.",
+  "parent_document_id": "tn-loi-2000-93",
+  "preceding_article_id": "tn-loi-2000-93-art-8",
+  "following_article_id": "tn-loi-2000-93-art-10",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-13T00:00:00Z",
+  "next_check": "2026-09-13T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Titre Premier - Dispositions Générales\nL'article 9 de la Loi 2000-93 impose que les statuts de toute société mentionnent obligatoirement la forme, la durée, la dénomination sociale, le siège social, l'objet social et le capital social. L'omission de l'une de ces mentions peut entraîner la nullité des statuts ou engager la responsabilité des fondateurs.\nيفرض الفصل 9 من القانون عدد 93 لسنة 2000 ضرورة تضمين الشكل، المدة، التسمية أو السبب الاجتماعي، المقر، الغرض ومبلغ رأس المال في النظام الأساسي للشركة. ويؤدي إغفال أي من هذه البيانات إلى بطلان النظام الأساسي أو تحميل المؤسسين المسؤولية القانونية.\nArticle 9.- La forme, la durée, la raison ou la dénomination sociale, le siège social, l'objet social et le montant du capital social doivent être obligatoirement mentionnés dans les statuts de la société. Ces éléments constituent des informations essentielles permettant d'identifier la société et d'assurer la transparence de son fonctionnement. Toute omission de ces mentions peut entraîner la nullité des statuts ou engager la responsabilité des fondateurs. المادة 9.- يجب أن يتم ذكر الشكل، المدة، السبب أو التسمية الاجتماعية، المقر الاجتماعي، الغرض الاجتماعي ومبلغ رأس المال الاجتماعي بشكل إلزامي في النظام الأساسي للشركة. وتعد هذه العناصر ضرورية لتعريف الشركة وضمان شفافية نشاطها. ويؤدي إغفال أي من هذه البيانات إلى بطلان النظام الأساسي أو تحميل المؤسسين المسؤولية.\nconstitution de société | publicité légale | validité des statuts | identification des sociétés"
+}

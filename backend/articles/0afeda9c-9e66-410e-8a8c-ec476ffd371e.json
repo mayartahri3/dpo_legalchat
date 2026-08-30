@@ -1,0 +1,101 @@
+{
+  "id": "0afeda9c-9e66-410e-8a8c-ec476ffd371e",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": null,
+  "year": 2025,
+  "status": "ACTIVE",
+  "title_french": "TITRE VII - DU MANDAT",
+  "title_arabic": "العنوان السابع - الوكالة",
+  "chapter": "Chapitre premier - Du mandat en général",
+  "section": null,
+  "article_number": "1113",
+  "content_french": "Article 1113. - Le mandat peut être donné en une forme différente de celle qui est requise pour l'acte qui en est l'objet. Cette disposition signifie que la validité du mandat n'est pas conditionnée par la forme exigée pour l'acte principal, sauf disposition contraire de la loi. Le mandat peut donc être établi par écrit, verbalement ou par tout autre moyen, selon la volonté des parties.",
+  "content_arabic": "المادة 1113. - يمكن أن يُعطى الوكالة بشكل مختلف عن الشكل المطلوب للعمل الذي هو موضوعها. ويعني ذلك أن صحة الوكالة لا تتوقف على اتباع الشكل المفروض للعمل الأصلي، إلا إذا نص القانون على خلاف ذلك. يجوز إبرام الوكالة كتابة أو شفاهة أو بأي وسيلة أخرى حسب إرادة الأطراف.",
+  "content_combined": "Article 1113. - Le mandat peut être donné en une forme différente de celle qui est requise pour l'acte qui en est l'objet. Cette disposition signifie que la validité du mandat n'est pas conditionnée par la forme exigée pour l'acte principal, sauf disposition contraire de la loi. Le mandat peut donc être établi par écrit, verbalement ou par tout autre moyen, selon la volonté des parties. المادة 1113. - يمكن أن يُعطى الوكالة بشكل مختلف عن الشكل المطلوب للعمل الذي هو موضوعها. ويعني ذلك أن صحة الوكالة لا تتوقف على اتباع الشكل المفروض للعمل الأصلي، إلا إذا نص القانون على خلاف ذلك. يجوز إبرام الوكالة كتابة أو شفاهة أو بأي وسيلة أخرى حسب إرادة الأطراف.",
+  "content_hash_sha256": "b96af573ccb10cc7a48c2b4b40ef00fe31a732556294cdc7397534f509c9d125",
+  "summary": "N/A",
+  "summary_french": "Cet article du Code des obligations et des contrats précise que le mandat peut être établi dans une forme différente de celle requise pour l'acte principal. Ainsi, la validité du mandat n'est pas subordonnée à la forme de l'acte qu'il vise, sauf disposition légale contraire.",
+  "summary_arabic": "ينص هذا الفصل من مجلة الالتزامات والعقود على أن الوكالة يمكن أن تُمنح في شكل يختلف عن الشكل المطلوب للعمل الأصلي. بذلك، لا يشترط لصحة الوكالة اتباع نفس الشكل المفروض للعمل موضوعها، إلا إذا نص القانون على خلاف ذلك.",
+  "search_content": "mandat, forme, acte, obligations, contrats, article 1113, Code des obligations et des contrats قانون Law",
+  "keywords": [
+    "mandat",
+    "forme du mandat",
+    "acte juridique",
+    "article 1113",
+    "Code des obligations et des contrats"
+  ],
+  "legal_domains": [
+    "droit civil",
+    "droit des contrats",
+    "droit des obligations"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "avocats",
+    "juristes",
+    "étudiants en droit"
+  ],
+  "related_laws": [
+    "Code des obligations et des contrats"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 1113,
+  "ambiguity_level": "LOW",
+  "has_obligations": false,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": "044",
+  "source_url": "https://www.pist.tn/jort/2025/2025F/Jo0442025.pdf",
+  "source_date": "2025-04-10T00:00:00Z",
+  "publication_date": "2025-04-10T00:00:00Z",
+  "effective_date": "2025-04-10T00:00:00Z",
+  "relation_target_ids": [
+    "Code des obligations et des contrats art. 1113"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Tribunal de première instance"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "COURT"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-tribunal-de-premiere-instance"
+  ],
+  "community_id": "tn-civil",
+  "community_label": "Droit civil et obligations (contrats, responsabilité)",
+  "community_summary": "Règles relatives aux contrats, obligations civiles, responsabilité et relations juridiques entre particuliers.",
+  "parent_document_id": "tn-loi-nodoc",
+  "preceding_article_id": "tn-loi-nodoc-art-1112",
+  "following_article_id": "tn-loi-nodoc-art-1114",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-28T00:00:00Z",
+  "next_check": "2026-09-28T00:00:00Z",
+  "chapter_normalized": "chapitre_premier_du_mandat_en_general",
+  "embedding_text": "TITRE VII - DU MANDAT\nCet article du Code des obligations et des contrats précise que le mandat peut être établi dans une forme différente de celle requise pour l'acte principal. Ainsi, la validité du mandat n'est pas subordonnée à la forme de l'acte qu'il vise, sauf disposition légale contraire.\nينص هذا الفصل من مجلة الالتزامات والعقود على أن الوكالة يمكن أن تُمنح في شكل يختلف عن الشكل المطلوب للعمل الأصلي. بذلك، لا يشترط لصحة الوكالة اتباع نفس الشكل المفروض للعمل موضوعها، إلا إذا نص القانون على خلاف ذلك.\nArticle 1113. - Le mandat peut être donné en une forme différente de celle qui est requise pour l'acte qui en est l'objet. Cette disposition signifie que la validité du mandat n'est pas conditionnée par la forme exigée pour l'acte principal, sauf disposition contraire de la loi. Le mandat peut donc être établi par écrit, verbalement ou par tout autre moyen, selon la volonté des parties. المادة 1113. - يمكن أن يُعطى الوكالة بشكل مختلف عن الشكل المطلوب للعمل الذي هو موضوعها. ويعني ذلك أن صحة الوكالة لا تتوقف على اتباع الشكل المفروض للعمل الأصلي، إلا إذا نص القانون على خلاف ذلك. يجوز إبرام الوكالة كتابة أو شفاهة أو بأي وسيلة أخرى حسب إرادة الأطراف.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

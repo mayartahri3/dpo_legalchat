@@ -1,0 +1,113 @@
+{
+  "id": "0b0c8369-df32-4fe1-9bfa-1519dee5cb74",
+  "jurisdiction": "TUNISIA",
+  "institution": "Ministère des Finances",
+  "law_type": "Code",
+  "law_number": "1-122",
+  "year": null,
+  "status": "ACTIVE",
+  "title_french": "Article 148",
+  "title_arabic": "المادة 148",
+  "chapter": null,
+  "section": null,
+  "article_number": "148",
+  "content_french": "Article 148 du présent code : Jusqu'à la date du jugement définitif, tant qu'il n'a pas été exécuté, l'assureur est passible d'une amende équivalente à 10 % du montant du jugement, versée au Fonds de la Prévention des Accidents de la Circulation prévu à l'article 177 du présent code. Sous réserve des dispositions de l'article 10, l'assureur, tenu de présenter une offre de transaction amiable, doit payer l'indemnité dans un délai maximal.",
+  "content_arabic": "المادة 148 من هذا القانون: حتى تاريخ صدور الحكم النهائي طالما لم يتم تنفيذه بعد، يتحمل المؤمن غرامة تعادل 10٪ من مبلغ الحكم تُدفع إلى صندوق الوقاية من حوادث المرور المنصوص عليه في المادة 177 من هذا القانون. مع مراعاة أحكام المادة 10، يجب على المؤمن، الملزم بتقديم عرض التسوية الودية، دفع مبلغ التعويض في غضون أقصى مدة.",
+  "content_combined": "Article 148 du présent code : Jusqu'à la date du jugement définitif, tant qu'il n'a pas été exécuté, l'assureur est passible d'une amende équivalente à 10 % du montant du jugement, versée au Fonds de la Prévention des Accidents de la Circulation prévu à l'article 177 du présent code. Sous réserve des dispositions de l'article 10, l'assureur, tenu de présenter une offre de transaction amiable, doit payer l'indemnité dans un délai maximal. المادة 148 من هذا القانون: حتى تاريخ صدور الحكم النهائي طالما لم يتم تنفيذه بعد، يتحمل المؤمن غرامة تعادل 10٪ من مبلغ الحكم تُدفع إلى صندوق الوقاية من حوادث المرور المنصوص عليه في المادة 177 من هذا القانون. مع مراعاة أحكام المادة 10، يجب على المؤمن، الملزم بتقديم عرض التسوية الودية، دفع مبلغ التعويض في غضون أقصى مدة.",
+  "content_hash_sha256": "04b11cafd16a4cb1b209175124fe083c4d55d6ab5646f3ae50b964c388885f98",
+  "summary": "L'article 148 du Code des Assurances prévoit une amende de 10 % du montant du jugement pour l'assureur en cas de non-exécution avant le jugement définitif. Cette amende est versée au Fonds de la Prévention des Accidents de la Circulation. L'article 160 impose à l'assureur de payer l'indemnité dans un délai maximal après une offre de transaction amiable.",
+  "summary_french": "L'article 148 du Code des Assurances prévoit qu'en cas de non-exécution du jugement définitif, l'assureur doit verser une amende équivalente à 10 % du montant du jugement au Fonds de Prévention des Accidents de la Circulation. L'article impose également à l'assureur de payer l'indemnité dans un délai maximal après une offre de transaction amiable.",
+  "summary_arabic": "تنص المادة 148 من قانون التأمين على أنه إذا لم ينفذ الحكم النهائي، يتحمل المؤمن غرامة تعادل 10٪ من مبلغ الحكم تُدفع لصندوق الوقاية من حوادث المرور. كما تلزم المادة المؤمن، بعد تقديم عرض التسوية الودية، بدفع مبلغ التعويض في أجل أقصى يحدده القانون.",
+  "search_content": "Article 148 du Code des Assurances : amende de 10 % du montant du jugement pour l'assureur en cas de non-exécution avant le jugement définitif, versée au Fonds de Prévention des Accidents de la Circulation (article 177). Obligation de paiement de l'indemnité après offre de transaction amiable (article 10). مجلة Code",
+  "keywords": [
+    "amende de 10 %",
+    "Fonds de Prévention des Accidents de la Circulation",
+    "assureur",
+    "jugement définitif",
+    "indemnité",
+    "transaction amiable",
+    "article 148",
+    "article 160",
+    "article 177",
+    "article 10"
+  ],
+  "legal_domains": [
+    "Droit des assurances",
+    "Droit civil"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Compagnies d'assurance",
+    "Avocats spécialisés en assurances",
+    "Juges",
+    "Victimes d'accidents",
+    "Organismes de prévention routière"
+  ],
+  "related_laws": [
+    "Code des Assurances art. 10",
+    "Code des Assurances art. 160",
+    "Code des Assurances art. 177"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "PENAL",
+  "article_order": 148,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": true,
+  "has_deadlines": true,
+  "has_exceptions": true,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Ministère des Finances",
+  "institution_secondary": null,
+  "institutions": [
+    "Ministère des Finances"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=1-122&Annee=0&TypeLoi=Code",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Code des Assurances art. 10",
+    "Code des Assurances art. 160",
+    "Code des Assurances art. 177"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Ministère des Finances",
+    "Fonds de Prévention des Accidents de la Circulation"
+  ],
+  "entity_types": [
+    "MINISTRY",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-ministere-des-finances",
+    "tn-org-fonds-de-prevention-des-accidents-de-la-circulation"
+  ],
+  "community_id": "tn-assurances",
+  "community_label": "Droit des assurances",
+  "community_summary": "Réglementation des contrats, obligations et sanctions dans le secteur des assurances en Tunisie.",
+  "parent_document_id": "tn-code-1-122",
+  "preceding_article_id": "tn-code-1-122-art-147",
+  "following_article_id": "tn-code-1-122-art-149",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-08T00:00:00Z",
+  "next_check": "2026-10-08T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Article 148\nL'article 148 du Code des Assurances prévoit qu'en cas de non-exécution du jugement définitif, l'assureur doit verser une amende équivalente à 10 % du montant du jugement au Fonds de Prévention des Accidents de la Circulation. L'article impose également à l'assureur de payer l'indemnité dans un délai maximal après une offre de transaction amiable.\nتنص المادة 148 من قانون التأمين على أنه إذا لم ينفذ الحكم النهائي، يتحمل المؤمن غرامة تعادل 10٪ من مبلغ الحكم تُدفع لصندوق الوقاية من حوادث المرور. كما تلزم المادة المؤمن، بعد تقديم عرض التسوية الودية، بدفع مبلغ التعويض في أجل أقصى يحدده القانون.\nArticle 148 du présent code : Jusqu'à la date du jugement définitif, tant qu'il n'a pas été exécuté, l'assureur est passible d'une amende équivalente à 10 % du montant du jugement, versée au Fonds de la Prévention des Accidents de la Circulation prévu à l'article 177 du présent code. Sous réserve des dispositions de l'article 10, l'assureur, tenu de présenter une offre de transaction amiable, doit payer l'indemnité dans un délai maximal. المادة 148 من هذا القانون: حتى تاريخ صدور الحكم النهائي طالما لم يتم تنفيذه بعد، يتحمل المؤمن غرامة تعادل 10٪ من مبلغ الحكم تُدفع إلى صندوق الوقاية من حوادث المرور المنصوص عليه في المادة 177 من هذا القانون. مع مراعاة أحكام المادة 10، يجب على المؤمن، الملزم بتقديم عرض التسوية الودية، دفع مبلغ التعويض في غضون أقصى مدة.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

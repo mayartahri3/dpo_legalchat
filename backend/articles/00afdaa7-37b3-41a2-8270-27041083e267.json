@@ -1,0 +1,106 @@
+{
+  "id": "00afdaa7-37b3-41a2-8270-27041083e267",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "2000-83",
+  "year": 2000,
+  "status": "ACTIVE",
+  "title_french": "Loi relative aux échanges et au commerce électronique",
+  "title_arabic": "قانون يتعلق بالتبادل والتجارة الإلكترونية",
+  "chapter": "Chapitre VII - Des infractions et des sanctions",
+  "section": null,
+  "article_number": "52",
+  "content_french": "Sont punis conformément à l'article 254 du Code pénal le fournisseur de services de certification électronique et ses agents qui divulguent, incitent ou participent à divulguer les informations qui leur sont confiées dans le cadre de l'exercice de leurs activités, à l'exception de celles dont la publication ou la communication sont autorisées par le titulaire du certificat par écrit ou par voie électronique ou dans les cas prévus par la législation en vigueur. Cette disposition vise à garantir la confidentialité des informations traitées dans le cadre de la certification électronique et à protéger les droits des titulaires de certificats contre toute divulgation non autorisée.",
+  "content_arabic": "يعاقب طبق الفصل 254 من المجلة الجزائية مزود خدمات التصديق الإلكتروني ووكلاؤه الذين يفشون أو يحرضون أو يشاركون في إفشاء المعلومات الموضوعة تحت تصرفهم في إطار مزاولة نشاطهم، باستثناء تلك التي أذن صاحب الشهادة بنشرها أو تبليغها كتابة أو إلكترونياً أو في الحالات المنصوص عليها بالتشريع المعمول به. تهدف هذه الأحكام إلى ضمان سرية المعلومات المتداولة في إطار خدمات التصديق الإلكتروني وحماية حقوق أصحاب الشهادات من أي إفشاء غير مرخص به.",
+  "content_combined": "Sont punis conformément à l'article 254 du Code pénal le fournisseur de services de certification électronique et ses agents qui divulguent, incitent ou participent à divulguer les informations qui leur sont confiées dans le cadre de l'exercice de leurs activités, à l'exception de celles dont la publication ou la communication sont autorisées par le titulaire du certificat par écrit ou par voie électronique ou dans les cas prévus par la législation en vigueur. Cette disposition vise à garantir la confidentialité des informations traitées dans le cadre de la certification électronique et à protéger les droits des titulaires de certificats contre toute divulgation non autorisée. يعاقب طبق الفصل 254 من المجلة الجزائية مزود خدمات التصديق الإلكتروني ووكلاؤه الذين يفشون أو يحرضون أو يشاركون في إفشاء المعلومات الموضوعة تحت تصرفهم في إطار مزاولة نشاطهم، باستثناء تلك التي أذن صاحب الشهادة بنشرها أو تبليغها كتابة أو إلكترونياً أو في الحالات المنصوص عليها بالتشريع المعمول به. تهدف هذه الأحكام إلى ضمان سرية المعلومات المتداولة في إطار خدمات التصديق الإلكتروني وحماية حقوق أصحاب الشهادات من أي إفشاء غير مرخص به.",
+  "content_hash_sha256": "6f06c71a92c583be0d60320b435bbb92e23aa8aa944ee5b650f29ff1b45830d5",
+  "summary": "Cet article sanctionne le fournisseur de services de certification électronique et ses agents qui divulguent ou participent à la divulgation d'informations confidentielles obtenues dans le cadre de leur activité, sauf autorisation écrite ou électronique du titulaire du certificat ou dans les cas prévus par la loi. La sanction appliquée est celle prévue à l'article 254 du Code pénal.",
+  "summary_french": "Cet article prévoit que le fournisseur de services de certification électronique et ses agents sont sanctionnés, selon l'article 254 du Code pénal, en cas de divulgation non autorisée d'informations confidentielles obtenues dans le cadre de leur activité, sauf autorisation écrite ou électronique du titulaire du certificat ou dans les cas prévus par la loi.",
+  "summary_arabic": "ينص هذا الفصل على معاقبة مزود خدمات التصديق الإلكتروني ووكلائه طبقاً للفصل 254 من المجلة الجزائية إذا قاموا بإفشاء أو المشاركة في إفشاء معلومات سرية حصلوا عليها أثناء ممارسة نشاطهم، باستثناء الحالات التي يأذن فيها صاحب الشهادة كتابياً أو إلكترونياً أو الحالات المنصوص عليها بالتشريع الجاري به العمل، وذلك ضماناً لسرية المعلومات وحماية حقوق أصحاب الشهادات.",
+  "search_content": "Article 52 Loi 2000-83 échange commerce électronique divulgation secret professionnel fournisseur certification électronique agents article 254 code pénal sanction قانون التصديق الإلكتروني الفصل 254 المجلة الجزائية",
+  "keywords": [
+    "secret professionnel",
+    "divulgation d'informations",
+    "certification électronique",
+    "sanctions pénales",
+    "article 254 Code pénal",
+    "fournisseur de services de certification",
+    "confidentialité",
+    "autorisation écrite",
+    "titulaires de certificats"
+  ],
+  "legal_domains": [
+    "Droit pénal",
+    "Droit du numérique"
+  ],
+  "business_impact": "HIGH",
+  "target_audience": [
+    "Fournisseurs de services de certification électronique",
+    "Agents de certification",
+    "Professionnels du numérique"
+  ],
+  "related_laws": [
+    "Code pénal art. 254"
+  ],
+  "legal_concepts": [
+    "confidentialité",
+    "responsabilité pénale",
+    "services électroniques",
+    "protection des données",
+    "secret professionnel"
+  ],
+  "article_type": "PENAL",
+  "article_order": 52,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": true,
+  "has_deadlines": false,
+  "has_exceptions": true,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=2000-83&Annee=2000&TypeLoi=Loi",
+  "source_date": "2000-08-09T00:00:00Z",
+  "publication_date": "2000-08-09T00:00:00Z",
+  "effective_date": "2000-08-09T00:00:00Z",
+  "relation_target_ids": [
+    "Code pénal art. 254"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Code pénal"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "LEGAL_TEXT"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-code-penal"
+  ],
+  "community_id": "tn-numerique",
+  "community_label": "Droit numérique, data & télécoms",
+  "community_summary": "Réglementation des activités numériques, protection des données, cybersécurité et encadrement juridique des technologies de l'information.",
+  "parent_document_id": "tn-loi-2000-83",
+  "preceding_article_id": "tn-loi-2000-83-art-51",
+  "following_article_id": "tn-loi-2000-83-art-53",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-12T00:00:00Z",
+  "next_check": "2026-09-12T00:00:00Z",
+  "chapter_normalized": "chapitre_vii_des_infractions_et_des_sanctions",
+  "embedding_text": "Loi relative aux échanges et au commerce électronique\nCet article prévoit que le fournisseur de services de certification électronique et ses agents sont sanctionnés, selon l'article 254 du Code pénal, en cas de divulgation non autorisée d'informations confidentielles obtenues dans le cadre de leur activité, sauf autorisation écrite ou électronique du titulaire du certificat ou dans les cas prévus par la loi.\nينص هذا الفصل على معاقبة مزود خدمات التصديق الإلكتروني ووكلائه طبقاً للفصل 254 من المجلة الجزائية إذا قاموا بإفشاء أو المشاركة في إفشاء معلومات سرية حصلوا عليها أثناء ممارسة نشاطهم، باستثناء الحالات التي يأذن فيها صاحب الشهادة كتابياً أو إلكترونياً أو الحالات المنصوص عليها بالتشريع الجاري به العمل، وذلك ضماناً لسرية المعلومات وحماية حقوق أصحاب الشهادات.\nSont punis conformément à l'article 254 du Code pénal le fournisseur de services de certification électronique et ses agents qui divulguent, incitent ou participent à divulguer les informations qui leur sont confiées dans le cadre de l'exercice de leurs activités, à l'exception de celles dont la publication ou la communication sont autorisées par le titulaire du certificat par écrit ou par voie électronique ou dans les cas prévus par la législation en vigueur. Cette disposition vise à garantir la confidentialité des informations traitées dans le cadre de la certification électronique et à protéger les droits des titulaires de certificats contre toute divulgation non autorisée. يعاقب طبق الفصل 254 من المجلة الجزائية مزود خدمات التصديق الإلكتروني ووكلاؤه الذين يفشون أو يحرضون أو يشاركون في إفشاء المعلومات الموضوعة تحت تصرفهم في إطار مزاولة نشاطهم، باستثناء تلك التي أذن صاحب الشهادة بنشرها أو تبليغها كتابة أو إلكترونياً أو في الحالات المنصوص عليها بالتشريع المعمول به. تهدف هذه الأحكام إلى ضمان سرية المعلومات المتداولة في إطار خدمات التصديق الإلكتروني وحماية حقوق أصحاب الشهادات من أي إفشاء غير مرخص به.\nconfidentialité | responsabilité pénale | services électroniques | protection des données | secret professionnel"
+}

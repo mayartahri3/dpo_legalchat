@@ -1,0 +1,102 @@
+{
+  "id": "0a2fb00d-c110-4a2a-8811-1108e00b98dd",
+  "jurisdiction": "TUNISIA",
+  "institution": "Union Générale Tunisienne du Travail et Union Tunisienne de l'Industrie, du Commerce et de l'Artisanat",
+  "law_type": "Convention Collective Cadre",
+  "law_number": null,
+  "year": 1973,
+  "status": "ACTIVE",
+  "title_french": "Convention Collective-Cadre",
+  "title_arabic": "اتفاقية الإطار الجماعية",
+  "chapter": null,
+  "section": null,
+  "article_number": "ART. 5",
+  "content_french": "Les travailleurs bénéficient de la liberté d’adhérer à une organisation syndicale légalement constituée. L’employeur ne peut fonder aucune décision sur l’appartenance syndicale. L’exercice du droit syndical ne doit pas entraîner d’actes contraires à la loi. L’employeur reconnaît les syndicats légalement constitués et met à leur disposition des panneaux d’affichage. Les délégués syndicaux sont reçus mensuellement ou en cas d’urgence. Un travailleur élu délégué permanent peut être détaché, avec ou sans solde, tout en conservant ses droits à l’avancement et à l’ancienneté.",
+  "content_arabic": "يتمتع العمال بحرية الانتماء إلى منظمة نقابية مشكلة قانونيًا. لا يجوز للمشغل اتخاذ أي قرار بناءً على الانتماء أو عدم الانتماء النقابي. لا يجب أن يؤدي ممارسة الحق النقابي إلى أفعال مخالفة للقوانين. يعترف المشغل بالمنظمات النقابية القانونية ويضع لوحات إعلانات تحت تصرفها. يستقبل المشغل أو ممثله المندوبين النقابيين مرة شهريًا أو عند الضرورة. للعامل المنتخب كمندوب دائم الحق في الانتداب مع أو بدون أجر مع الحفاظ على حقوقه في الترقية والأقدمية.",
+  "content_combined": "Les travailleurs bénéficient de la liberté d’adhérer à une organisation syndicale légalement constituée. L’employeur ne peut fonder aucune décision sur l’appartenance syndicale. L’exercice du droit syndical ne doit pas entraîner d’actes contraires à la loi. L’employeur reconnaît les syndicats légalement constitués et met à leur disposition des panneaux d’affichage. Les délégués syndicaux sont reçus mensuellement ou en cas d’urgence. Un travailleur élu délégué permanent peut être détaché, avec ou sans solde, tout en conservant ses droits à l’avancement et à l’ancienneté. يتمتع العمال بحرية الانتماء إلى منظمة نقابية مشكلة قانونيًا. لا يجوز للمشغل اتخاذ أي قرار بناءً على الانتماء أو عدم الانتماء النقابي. لا يجب أن يؤدي ممارسة الحق النقابي إلى أفعال مخالفة للقوانين. يعترف المشغل بالمنظمات النقابية القانونية ويضع لوحات إعلانات تحت تصرفها. يستقبل المشغل أو ممثله المندوبين النقابيين مرة شهريًا أو عند الضرورة. للعامل المنتخب كمندوب دائم الحق في الانتداب مع أو بدون أجر مع الحفاظ على حقوقه في الترقية والأقدمية.",
+  "content_hash_sha256": "0c3867177cb5b787afff667427be3b39895cdccde89cb2f0fc6834a54fd05a0f",
+  "summary": "Liberté syndicale, non-discrimination, reconnaissance du syndicat, droit de réunion, détachement pour mandat syndical avec protection des droits et réintégration garantie.",
+  "summary_french": "Cet article garantit la liberté syndicale des travailleurs, interdit toute discrimination fondée sur l’appartenance syndicale et impose à l’employeur la reconnaissance des syndicats légalement constitués. Il organise le droit de réunion des délégués syndicaux, prévoit leur détachement pour mandat syndical et assure la préservation de leurs droits professionnels durant ce mandat.",
+  "summary_arabic": "يضمن هذا الفصل حرية الانتماء النقابي للعمال ويحظر التمييز بسبب الانتماء أو عدم الانتماء للنقابة. يفرض على المشغل الاعتراف بالمنظمات النقابية القانونية ويوفر لها وسائل التواصل مع العمال. ينظم حق المندوبين النقابيين في الاجتماع مع المشغل ويضمن حق الانتداب للمندوبين الدائمين مع الحفاظ على حقوقهم المهنية طوال مدة الانتداب.",
+  "search_content": "Convention Collective-Cadre ART. 5 liberté syndicale non-discrimination reconnaissance syndicat délégués syndicaux détachement droits avancement réintégration اتفاقية إطار جماعية المادة 5 حرية نقابية عدم تمييز اعتراف نقابة مندوبين نقابيين انتداب حقوق ترقية إعادة إلحاق",
+  "keywords": [
+    "liberté syndicale",
+    "non-discrimination syndicale",
+    "reconnaissance des syndicats",
+    "délégués syndicaux",
+    "détachement syndical",
+    "droits à l’avancement",
+    "procès-verbal d’entretien",
+    "réintégration professionnelle"
+  ],
+  "legal_domains": [
+    "Droit du travail"
+  ],
+  "business_impact": "HIGH",
+  "target_audience": [
+    "Employeurs",
+    "Travailleurs",
+    "Syndicats"
+  ],
+  "related_laws": [
+    "Code du travail art. 242"
+  ],
+  "legal_concepts": [
+    "contrat de travail",
+    "droits des salariés",
+    "relations professionnelles"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 5,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": true,
+  "has_exceptions": true,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Union Générale Tunisienne du Travail et Union Tunisienne de l'Industrie, du Commerce et de l'Artisanat",
+  "institution_secondary": null,
+  "institutions": [
+    "Union Générale Tunisienne du Travail et Union Tunisienne de l'Industrie, du Commerce et de l'Artisanat"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=N/A&Annee=1973&TypeLoi=Convention Collective Cadre",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Code du travail art. 242"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Union Générale Tunisienne du Travail",
+    "Union Tunisienne de l'Industrie, du Commerce et de l'Artisanat"
+  ],
+  "entity_types": [
+    "INSTITUTION",
+    "INSTITUTION"
+  ],
+  "entity_ids": [
+    "tn-org-union-generale-tunisienne-du-travail",
+    "tn-org-union-tunisienne-de-l-industrie-du-commerce-et-de-l-artisanat"
+  ],
+  "community_id": "tn-travail",
+  "community_label": "Droit du travail et sécurité sociale",
+  "community_summary": "Règles relatives aux relations de travail, droits syndicaux, obligations des employeurs et protection des travailleurs en Tunisie.",
+  "parent_document_id": "tn-conventioncollectivecadre-nodoc",
+  "preceding_article_id": "tn-conventioncollectivecadre-nodoc-art-4",
+  "following_article_id": "tn-conventioncollectivecadre-nodoc-art-6",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-02T00:00:00Z",
+  "next_check": "2026-10-02T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Convention Collective-Cadre\nCet article garantit la liberté syndicale des travailleurs, interdit toute discrimination fondée sur l’appartenance syndicale et impose à l’employeur la reconnaissance des syndicats légalement constitués. Il organise le droit de réunion des délégués syndicaux, prévoit leur détachement pour mandat syndical et assure la préservation de leurs droits professionnels durant ce mandat.\nيضمن هذا الفصل حرية الانتماء النقابي للعمال ويحظر التمييز بسبب الانتماء أو عدم الانتماء للنقابة. يفرض على المشغل الاعتراف بالمنظمات النقابية القانونية ويوفر لها وسائل التواصل مع العمال. ينظم حق المندوبين النقابيين في الاجتماع مع المشغل ويضمن حق الانتداب للمندوبين الدائمين مع الحفاظ على حقوقهم المهنية طوال مدة الانتداب.\nLes travailleurs bénéficient de la liberté d’adhérer à une organisation syndicale légalement constituée. L’employeur ne peut fonder aucune décision sur l’appartenance syndicale. L’exercice du droit syndical ne doit pas entraîner d’actes contraires à la loi. L’employeur reconnaît les syndicats légalement constitués et met à leur disposition des panneaux d’affichage. Les délégués syndicaux sont reçus mensuellement ou en cas d’urgence. Un travailleur élu délégué permanent peut être détaché, avec ou sans solde, tout en conservant ses droits à l’avancement et à l’ancienneté. يتمتع العمال بحرية الانتماء إلى منظمة نقابية مشكلة قانونيًا. لا يجوز للمشغل اتخاذ أي قرار بناءً على الانتماء أو عدم الانتماء النقابي. لا يجب أن يؤدي ممارسة الحق النقابي إلى أفعال مخالفة للقوانين. يعترف المشغل بالمنظمات النقابية القانونية ويضع لوحات إعلانات تحت تصرفها. يستقبل المشغل أو ممثله المندوبين النقابيين مرة شهريًا أو عند الضرورة. للعامل المنتخب كمندوب دائم الحق في الانتداب مع أو بدون أجر مع الحفاظ على حقوقه في الترقية والأقدمية.\ncontrat de travail | droits des salariés | relations professionnelles"
+}

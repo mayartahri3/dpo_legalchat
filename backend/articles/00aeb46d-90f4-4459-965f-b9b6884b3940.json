@@ -1,0 +1,110 @@
+{
+  "id": "00aeb46d-90f4-4459-965f-b9b6884b3940",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "LOI DE FINANCES",
+  "law_number": "48-2024",
+  "year": 2026,
+  "status": "ACTIVE",
+  "title_french": "Élargissement du champ d'intervention des contributions versées dans le cadre de la responsabilité sociétale",
+  "title_arabic": "توسيع مجال تدخل المساهمات المدفوعة في إطار المسؤولية المجتمعية",
+  "chapter": null,
+  "section": null,
+  "article_number": "39",
+  "content_french": "Le secteur social est ajouté aux domaines d'intervention des contributions versées dans le cadre de la responsabilité sociétale des entreprises, tels que définis à l'article 13 de la loi n° 48-2024. Cette disposition élargit ainsi le périmètre des actions éligibles au titre de la responsabilité sociétale des entreprises, en intégrant explicitement la dimension sociale. Les modalités d'application et de contrôle de ces contributions seront précisées par voie réglementaire.",
+  "content_arabic": "يتم إضافة \"القطاع الاجتماعي\" إلى مجالات تدخل المساهمات المدفوعة في إطار المسؤولية المجتمعية للمؤسسات، كما هي محددة في المادة 13 من القانون عدد 48-2024. توسع هذه المادة بذلك نطاق الأعمال المؤهلة في إطار المسؤولية المجتمعية للمؤسسات، بإدراج البعد الاجتماعي صراحة. وتحدد النصوص الترتيبية طرق تطبيق ومراقبة هذه المساهمات.",
+  "content_combined": "Le secteur social est ajouté aux domaines d'intervention des contributions versées dans le cadre de la responsabilité sociétale des entreprises, tels que définis à l'article 13 de la loi n° 48-2024. Cette disposition élargit ainsi le périmètre des actions éligibles au titre de la responsabilité sociétale des entreprises, en intégrant explicitement la dimension sociale. Les modalités d'application et de contrôle de ces contributions seront précisées par voie réglementaire. يتم إضافة \"القطاع الاجتماعي\" إلى مجالات تدخل المساهمات المدفوعة في إطار المسؤولية المجتمعية للمؤسسات، كما هي محددة في المادة 13 من القانون عدد 48-2024. توسع هذه المادة بذلك نطاق الأعمال المؤهلة في إطار المسؤولية المجتمعية للمؤسسات، بإدراج البعد الاجتماعي صراحة. وتحدد النصوص الترتيبية طرق تطبيق ومراقبة هذه المساهمات.",
+  "content_hash_sha256": "4aaba2f8dfeb807557e81aebd186d4844fc725f931fc32a5d59a77fda4c60a61",
+  "summary": "Cet article élargit le champ d'application de la responsabilité sociétale des entreprises (RSE) en y intégrant explicitement le secteur social. Les entreprises peuvent désormais comptabiliser leurs contributions sociales, financières ou en nature, dans leur démarche RSE, conformément à la modification de la loi n° 48-2024.",
+  "summary_french": "Cet article modifie la loi n° 48-2024 en élargissant le champ d'application de la responsabilité sociétale des entreprises au secteur social. Les entreprises peuvent désormais inclure leurs contributions sociales, financières ou en nature, dans leur démarche RSE. Les modalités d'application et de contrôle seront fixées par voie réglementaire.",
+  "summary_arabic": "ينص هذا الفصل على تعديل القانون عدد 48-2024 بإضافة القطاع الاجتماعي إلى مجالات تدخل المسؤولية المجتمعية للمؤسسات. يسمح هذا التوسيع للمؤسسات بإدراج مساهماتها المالية أو العينية في الأعمال الاجتماعية ضمن مقاربتها للمسؤولية المجتمعية. وتحدد النصوص الترتيبية طرق تطبيق ومراقبة هذه المساهمات.",
+  "search_content": "Article 39 responsabilité sociétale entreprises RSE secteur social contributions loi 48-2024 article 13 مسؤولية مجتمعية مؤسسات قطاع اجتماعي مساهمات",
+  "keywords": [
+    "responsabilité sociétale des entreprises",
+    "secteur social",
+    "contributions sociales",
+    "article 13 loi 48-2024",
+    "modification loi 48-2024",
+    "actions sociales",
+    "lutte contre l'exclusion",
+    "inclusion sociale",
+    "application réglementaire"
+  ],
+  "legal_domains": [
+    "Droit des sociétés",
+    "Droit social"
+  ],
+  "business_impact": "MEDIUM",
+  "target_audience": [
+    "Entreprises",
+    "Experts-comptables",
+    "Responsables RSE"
+  ],
+  "related_laws": [
+    "Loi 48-2024 art. 13"
+  ],
+  "legal_concepts": [
+    "responsabilité sociétale des entreprises",
+    "contributions sociales",
+    "modification législative",
+    "secteur social",
+    "comptabilisation des actions sociales"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 39,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": "Gouvernement Tunisien",
+  "institutions": [
+    "Assemblée des Représentants du Peuple",
+    "Gouvernement Tunisien"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=48-2024&Annee=2026&TypeLoi=LOI DE FINANCES",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Loi 48-2024 art. 13"
+  ],
+  "relation_types": [
+    "AMENDS"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Gouvernement Tunisien",
+    "قانون عدد 48"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "INSTITUTION",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-gouvernement-tunisien",
+    "tn-org-48"
+  ],
+  "community_id": "tn-societes",
+  "community_label": "Droit des sociétés",
+  "community_summary": "Réglementation des sociétés, gouvernance, responsabilité sociétale, obligations et interventions sociales des entreprises en Tunisie.",
+  "parent_document_id": "tn-loidefinances-48-2024",
+  "preceding_article_id": "tn-loidefinances-48-2024-art-38",
+  "following_article_id": "tn-loidefinances-48-2024-art-40",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-16T00:00:00Z",
+  "next_check": "2026-09-16T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Élargissement du champ d'intervention des contributions versées dans le cadre de la responsabilité sociétale\nCet article modifie la loi n° 48-2024 en élargissant le champ d'application de la responsabilité sociétale des entreprises au secteur social. Les entreprises peuvent désormais inclure leurs contributions sociales, financières ou en nature, dans leur démarche RSE. Les modalités d'application et de contrôle seront fixées par voie réglementaire.\nينص هذا الفصل على تعديل القانون عدد 48-2024 بإضافة القطاع الاجتماعي إلى مجالات تدخل المسؤولية المجتمعية للمؤسسات. يسمح هذا التوسيع للمؤسسات بإدراج مساهماتها المالية أو العينية في الأعمال الاجتماعية ضمن مقاربتها للمسؤولية المجتمعية. وتحدد النصوص الترتيبية طرق تطبيق ومراقبة هذه المساهمات.\nLe secteur social est ajouté aux domaines d'intervention des contributions versées dans le cadre de la responsabilité sociétale des entreprises, tels que définis à l'article 13 de la loi n° 48-2024. Cette disposition élargit ainsi le périmètre des actions éligibles au titre de la responsabilité sociétale des entreprises, en intégrant explicitement la dimension sociale. Les modalités d'application et de contrôle de ces contributions seront précisées par voie réglementaire. يتم إضافة \"القطاع الاجتماعي\" إلى مجالات تدخل المساهمات المدفوعة في إطار المسؤولية المجتمعية للمؤسسات، كما هي محددة في المادة 13 من القانون عدد 48-2024. توسع هذه المادة بذلك نطاق الأعمال المؤهلة في إطار المسؤولية المجتمعية للمؤسسات، بإدراج البعد الاجتماعي صراحة. وتحدد النصوص الترتيبية طرق تطبيق ومراقبة هذه المساهمات.\nresponsabilité sociétale des entreprises | contributions sociales | modification législative | secteur social | comptabilisation des actions sociales"
+}

@@ -1,0 +1,109 @@
+{
+  "id": "00f504d1-7f1f-47e7-a253-4dbbb3318d60",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": null,
+  "year": null,
+  "status": "ACTIVE",
+  "title_french": "Code de l'arbitrage",
+  "title_arabic": "قانون التحكيم",
+  "chapter": "Dispositions communes",
+  "section": null,
+  "article_number": "10",
+  "content_french": "Article 10.- L'arbitre doit être une personne physique, majeure, compétente et jouissant de tous ses droits civils. Il doit être indépendant et impartial vis-à-vis des parties. Si la convention d'arbitrage désigne une personne morale, la mission de cette dernière se limite à désigner le tribunal arbitral.",
+  "content_arabic": "المادة 10.- يجب أن يكون الحكم شخصًا طبيعيًا، بالغًا، كفؤًا ويتمتع بجميع حقوقه المدنية. يجب أن يكون مستقلاً وغير متحيز تجاه الأطراف. إذا عينت اتفاقية التحكيم شخصًا اعتباريًا، فإن مهمة هذا الأخير تقتصر على تعيين المحكمة التحكيمية.",
+  "content_combined": "Article 10.- L'arbitre doit être une personne physique, majeure, compétente et jouissant de tous ses droits civils. Il doit être indépendant et impartial vis-à-vis des parties. Si la convention d'arbitrage désigne une personne morale, la mission de cette dernière se limite à désigner le tribunal arbitral. المادة 10.- يجب أن يكون الحكم شخصًا طبيعيًا، بالغًا، كفؤًا ويتمتع بجميع حقوقه المدنية. يجب أن يكون مستقلاً وغير متحيز تجاه الأطراف. إذا عينت اتفاقية التحكيم شخصًا اعتباريًا، فإن مهمة هذا الأخير تقتصر على تعيين المحكمة التحكيمية.",
+  "content_hash_sha256": "ff51fb9b48a8f13d53752a9c8d10c7c88d70b864da62dc0e9fd318bde1072f98",
+  "summary": "N/A",
+  "summary_french": "L'article 10 du Code de l'arbitrage précise que l'arbitre doit être une personne physique, majeure, compétente et jouissant de tous ses droits civils. Il doit également être indépendant et impartial. Si une personne morale est désignée, son rôle se limite à nommer le tribunal arbitral.",
+  "summary_arabic": "تنص المادة 10 من قانون التحكيم على ضرورة أن يكون الحكم شخصًا طبيعيًا، بالغًا، كفؤًا ويتمتع بكافة حقوقه المدنية، وأن يتحلى بالاستقلالية والحياد تجاه الأطراف. إذا تم تعيين شخص اعتباري بموجب اتفاقية التحكيم، تقتصر مهمته على تعيين المحكمة التحكيمية فقط.",
+  "search_content": "arbitre, personne physique, compétence, indépendance, impartialité, droits civils, personne morale, tribunal arbitral, Code de l'arbitrage, article 10 قانون Law",
+  "keywords": [
+    "arbitre",
+    "personne physique",
+    "indépendance de l'arbitre",
+    "impartialité",
+    "droits civils",
+    "personne morale",
+    "tribunal arbitral",
+    "article 10 Code de l'arbitrage"
+  ],
+  "legal_domains": [
+    "droit civil",
+    "droit de l'arbitrage",
+    "droit des contrats"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "avocats",
+    "juges",
+    "parties en litige",
+    "institutions d'arbitrage",
+    "universitaires en droit"
+  ],
+  "related_laws": [
+    "Code civil tunisien"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 10,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=N/A&Annee=0&TypeLoi=Loi",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Code civil tunisien"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Tribunal arbitral",
+    "المحكمة التحكيمية"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "COURT",
+    "COURT"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-tribunal-arbitral",
+    "tn-org-default"
+  ],
+  "community_id": "tn-civil",
+  "community_label": "Droit civil et obligations (contrats, responsabilité)",
+  "community_summary": "Le droit civil régit les obligations contractuelles, la responsabilité et les relations juridiques entre personnes physiques ou morales.",
+  "parent_document_id": "tn-loi-nodoc",
+  "preceding_article_id": "tn-loi-nodoc-art-9",
+  "following_article_id": "tn-loi-nodoc-art-11",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-08T00:00:00Z",
+  "next_check": "2026-10-08T00:00:00Z",
+  "chapter_normalized": "dispositions_communes",
+  "embedding_text": "Code de l'arbitrage\nL'article 10 du Code de l'arbitrage précise que l'arbitre doit être une personne physique, majeure, compétente et jouissant de tous ses droits civils. Il doit également être indépendant et impartial. Si une personne morale est désignée, son rôle se limite à nommer le tribunal arbitral.\nتنص المادة 10 من قانون التحكيم على ضرورة أن يكون الحكم شخصًا طبيعيًا، بالغًا، كفؤًا ويتمتع بكافة حقوقه المدنية، وأن يتحلى بالاستقلالية والحياد تجاه الأطراف. إذا تم تعيين شخص اعتباري بموجب اتفاقية التحكيم، تقتصر مهمته على تعيين المحكمة التحكيمية فقط.\nArticle 10.- L'arbitre doit être une personne physique, majeure, compétente et jouissant de tous ses droits civils. Il doit être indépendant et impartial vis-à-vis des parties. Si la convention d'arbitrage désigne une personne morale, la mission de cette dernière se limite à désigner le tribunal arbitral. المادة 10.- يجب أن يكون الحكم شخصًا طبيعيًا، بالغًا، كفؤًا ويتمتع بجميع حقوقه المدنية. يجب أن يكون مستقلاً وغير متحيز تجاه الأطراف. إذا عينت اتفاقية التحكيم شخصًا اعتباريًا، فإن مهمة هذا الأخير تقتصر على تعيين المحكمة التحكيمية.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

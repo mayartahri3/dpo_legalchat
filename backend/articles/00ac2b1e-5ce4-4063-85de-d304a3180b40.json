@@ -1,0 +1,114 @@
+{
+  "id": "00ac2b1e-5ce4-4063-85de-d304a3180b40",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "62-13",
+  "year": 1962,
+  "status": "ACTIVE",
+  "title_french": "LIVRE IV - DE L'EXPLOITATION DES NAVIRES",
+  "title_arabic": "الكتاب الرابع - استغلال السفن",
+  "chapter": "TITRE III - DES TRANSPORTS MARITIMES - Chapitre IV - Des Délais De Chargement Et De Déchargement",
+  "section": null,
+  "article_number": "198",
+  "content_french": "Les staries ne courent pas les jours fériés et autres jours de repos prévus par l'usage des lieux. Dans le calcul des surestaries, il est tenu compte des jours fériés et autres jours de repos prévus par l'usage des lieux. Le cours des staries est suspendu en cas de force majeure. Le cours des surestaries n'est jamais suspendu, même en cas de force majeure, sauf la faculté pour le juge de réduire le montant des surestaries au cas de prolongation de l'empêchement. Cet article s'inscrit dans le cadre du Code de commerce maritime tunisien, loi n°62-13 du 3 avril 1962, qui régit les délais de chargement et de déchargement des navires, ainsi que les conséquences financières en cas de retard.",
+  "content_arabic": "لا تحتسب الغرامات اليومية في أيام العطل والراحة المقررة حسب عادات المكان. عند حساب الغرامات الزائدة، يؤخذ في الاعتبار أيام العطل والراحة المقررة حسب عادات المكان. يتم تعليق حساب الغرامات اليومية في حالة القوة القاهرة. لا يتم تعليق حساب الغرامات الزائدة حتى في حالة القوة القاهرة، مع إمكانية للقاضي تخفيض مقدار الغرامات الزائدة في حالة تمديد العرقلة. ينص هذا الفصل ضمن مجلة التجارة البحرية التونسية، القانون عدد 13 لسنة 1962 المؤرخ في 3 أفريل 1962، على تنظيم آجال الشحن والتفريغ والعواقب المالية عند التأخير.",
+  "content_combined": "Les staries ne courent pas les jours fériés et autres jours de repos prévus par l'usage des lieux. Dans le calcul des surestaries, il est tenu compte des jours fériés et autres jours de repos prévus par l'usage des lieux. Le cours des staries est suspendu en cas de force majeure. Le cours des surestaries n'est jamais suspendu, même en cas de force majeure, sauf la faculté pour le juge de réduire le montant des surestaries au cas de prolongation de l'empêchement. Cet article s'inscrit dans le cadre du Code de commerce maritime tunisien, loi n°62-13 du 3 avril 1962, qui régit les délais de chargement et de déchargement des navires, ainsi que les conséquences financières en cas de retard. لا تحتسب الغرامات اليومية في أيام العطل والراحة المقررة حسب عادات المكان. عند حساب الغرامات الزائدة، يؤخذ في الاعتبار أيام العطل والراحة المقررة حسب عادات المكان. يتم تعليق حساب الغرامات اليومية في حالة القوة القاهرة. لا يتم تعليق حساب الغرامات الزائدة حتى في حالة القوة القاهرة، مع إمكانية للقاضي تخفيض مقدار الغرامات الزائدة في حالة تمديد العرقلة. ينص هذا الفصل ضمن مجلة التجارة البحرية التونسية، القانون عدد 13 لسنة 1962 المؤرخ في 3 أفريل 1962، على تنظيم آجال الشحن والتفريغ والعواقب المالية عند التأخير.",
+  "content_hash_sha256": "e6e9ea546d149145e59c09bbc69a53c2385cd8d1775cfee86816e5f3418a91db",
+  "summary": "Cet article du Code de commerce maritime tunisien précise que les staries ne courent pas pendant les jours fériés ou de repos, tandis que les surestaries en tiennent compte. En cas de force majeure, le cours des staries est suspendu, mais pas celui des surestaries, sauf réduction possible par le juge en cas d'empêchement prolongé.",
+  "summary_french": "Cet article du Code de commerce maritime tunisien précise que les staries ne courent pas pendant les jours fériés ou de repos, tandis que les surestaries en tiennent compte. En cas de force majeure, le cours des staries est suspendu, mais pas celui des surestaries, sauf réduction possible par le juge en cas d'empêchement prolongé. Il régit les conséquences financières des retards de chargement et de déchargement.",
+  "summary_arabic": "ينص هذا الفصل من مجلة التجارة البحرية التونسية على أن الغرامات اليومية لا تحتسب خلال أيام العطل والراحة، بينما تؤخذ بعين الاعتبار عند حساب الغرامات الزائدة. يتم تعليق الغرامات اليومية في حالة القوة القاهرة، أما الغرامات الزائدة فلا تعلق حتى في هذه الحالة، مع إمكانية تخفيضها من قبل القاضي عند استمرار العرقلة. ينظم الفصل الآثار المالية لتأخير الشحن والتفريغ.",
+  "search_content": "staries, surestaries, jours fériés, force majeure, transport maritime, Code du commerce maritime, délais de chargement, délais de déchargement, loi 62-13, article 198, مجلة التجارة البحرية, القانون عدد 13 لسنة 1962",
+  "keywords": [
+    "staries",
+    "surestaries",
+    "jours fériés",
+    "force majeure",
+    "délais de chargement",
+    "délais de déchargement",
+    "réduction judiciaire des surestaries",
+    "article 198",
+    "loi 62-13"
+  ],
+  "legal_domains": [
+    "Droit maritime",
+    "Droit commercial"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "armateurs",
+    "transporteurs maritimes",
+    "juristes spécialisés en droit maritime",
+    "juges",
+    "avocats en droit maritime"
+  ],
+  "related_laws": [
+    "Code du commerce maritime",
+    "Loi 62-13"
+  ],
+  "legal_concepts": [
+    "délai de chargement",
+    "délai de déchargement",
+    "force majeure",
+    "responsabilité contractuelle",
+    "sanctions pécuniaires"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 198,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": true,
+  "has_exceptions": true,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=62-13&Annee=1962&TypeLoi=Loi",
+  "source_date": "1962-04-06T00:00:00Z",
+  "publication_date": "1962-04-06T00:00:00Z",
+  "effective_date": "1962-04-06T00:00:00Z",
+  "relation_target_ids": [
+    "Code du commerce maritime art. 198",
+    "Loi 62-13"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Tribunal de première instance",
+    "قانون عدد 13"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "COURT",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-tribunal-de-premiere-instance",
+    "tn-org-13"
+  ],
+  "community_id": "tn-transport",
+  "community_label": "Droit des transports",
+  "community_summary": "Réglementation du transport maritime, terrestre et aérien, responsabilités, contrats, délais et contentieux liés aux transports.",
+  "parent_document_id": "tn-loi-62-13",
+  "preceding_article_id": "tn-loi-62-13-art-197",
+  "following_article_id": "tn-loi-62-13-art-199",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-11T00:00:00Z",
+  "next_check": "2026-09-11T00:00:00Z",
+  "chapter_normalized": "titre_iii_des_transports_maritimes_chapitre_iv_des_delais_de_chargement_et_de_dechargement",
+  "embedding_text": "LIVRE IV - DE L'EXPLOITATION DES NAVIRES\nCet article du Code de commerce maritime tunisien précise que les staries ne courent pas pendant les jours fériés ou de repos, tandis que les surestaries en tiennent compte. En cas de force majeure, le cours des staries est suspendu, mais pas celui des surestaries, sauf réduction possible par le juge en cas d'empêchement prolongé. Il régit les conséquences financières des retards de chargement et de déchargement.\nينص هذا الفصل من مجلة التجارة البحرية التونسية على أن الغرامات اليومية لا تحتسب خلال أيام العطل والراحة، بينما تؤخذ بعين الاعتبار عند حساب الغرامات الزائدة. يتم تعليق الغرامات اليومية في حالة القوة القاهرة، أما الغرامات الزائدة فلا تعلق حتى في هذه الحالة، مع إمكانية تخفيضها من قبل القاضي عند استمرار العرقلة. ينظم الفصل الآثار المالية لتأخير الشحن والتفريغ.\nLes staries ne courent pas les jours fériés et autres jours de repos prévus par l'usage des lieux. Dans le calcul des surestaries, il est tenu compte des jours fériés et autres jours de repos prévus par l'usage des lieux. Le cours des staries est suspendu en cas de force majeure. Le cours des surestaries n'est jamais suspendu, même en cas de force majeure, sauf la faculté pour le juge de réduire le montant des surestaries au cas de prolongation de l'empêchement. Cet article s'inscrit dans le cadre du Code de commerce maritime tunisien, loi n°62-13 du 3 avril 1962, qui régit les délais de chargement et de déchargement des navires, ainsi que les conséquences financières en cas de retard. لا تحتسب الغرامات اليومية في أيام العطل والراحة المقررة حسب عادات المكان. عند حساب الغرامات الزائدة، يؤخذ في الاعتبار أيام العطل والراحة المقررة حسب عادات المكان. يتم تعليق حساب الغرامات اليومية في حالة القوة القاهرة. لا يتم تعليق حساب الغرامات الزائدة حتى في حالة القوة القاهرة، مع إمكانية للقاضي تخفيض مقدار الغرامات الزائدة في حالة تمديد العرقلة. ينص هذا الفصل ضمن مجلة التجارة البحرية التونسية، القانون عدد 13 لسنة 1962 المؤرخ في 3 أفريل 1962، على تنظيم آجال الشحن والتفريغ والعواقب المالية عند التأخير.\ndélai de chargement | délai de déchargement | force majeure | responsabilité contractuelle | sanctions pécuniaires"
+}

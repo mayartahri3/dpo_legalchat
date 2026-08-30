@@ -1,0 +1,22 @@
+# Retrieval (déjà présent dans minirag.py)
+numpy
+sentence-transformers
+faiss-cpu
+
+# Génération (déjà présent dans minirag.py)
+transformers
+torch
+
+# Entraînement DPO (nouveau)
+trl>=0.12
+datasets
+accelerate
+peft            # LoRA — recommandé pour rester léger sur des modèles 1-8B
+
+# API HTTP (nouveau — interface web au lieu du CLI)
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-dotenv
+requests
+python-multipart

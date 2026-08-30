@@ -1,0 +1,96 @@
+{
+  "id": "0c3b5bfa-a3a2-48e0-a83d-16b394d04a06",
+  "jurisdiction": "TUNISIA",
+  "institution": "Présidence de la République",
+  "law_type": "Décret",
+  "law_number": null,
+  "year": 1913,
+  "status": "ACTIVE",
+  "title_french": "Décret du 9 juillet 1913 (5 chaâbane 1331)",
+  "title_arabic": "المرسوم المؤرخ في 9 يوليو 1913 (5 شعبان 1331)",
+  "chapter": null,
+  "section": null,
+  "article_number": "4",
+  "content_french": "Article 4. - Notre Premier ministre est chargé de l'exécution du présent décret. Ce décret, pris sous l'autorité du gouvernement tunisien, précise que l'application de ses dispositions relève de la responsabilité du Premier ministre, qui doit veiller à leur mise en œuvre effective conformément à la législation en vigueur.",
+  "content_arabic": "المادة 4. - يُكلف رئيس وزرائنا بتنفيذ هذا المرسوم. ينص هذا المرسوم الصادر عن الحكومة التونسية على أن تنفيذ أحكامه من مسؤولية رئيس الوزراء الذي يتعين عليه ضمان تطبيقها الفعلي وفقًا للتشريعات النافذة.",
+  "content_combined": "Article 4. - Notre Premier ministre est chargé de l'exécution du présent décret. Ce décret, pris sous l'autorité du gouvernement tunisien, précise que l'application de ses dispositions relève de la responsabilité du Premier ministre, qui doit veiller à leur mise en œuvre effective conformément à la législation en vigueur. المادة 4. - يُكلف رئيس وزرائنا بتنفيذ هذا المرسوم. ينص هذا المرسوم الصادر عن الحكومة التونسية على أن تنفيذ أحكامه من مسؤولية رئيس الوزراء الذي يتعين عليه ضمان تطبيقها الفعلي وفقًا للتشريعات النافذة.",
+  "content_hash_sha256": "91fc9e14fa85305bf52c39679de3ec993fbb3cb6708704bfc41ac447dea9bff2",
+  "summary": "Ce décret du 9 juillet 1913 confie au Premier ministre la charge de l'exécution de ses dispositions. Il s'agit d'une clause classique d'exécution, plaçant la responsabilité de la mise en œuvre du texte sur le chef du gouvernement tunisien.",
+  "summary_french": "Ce décret du 9 juillet 1913 confie expressément au Premier ministre la responsabilité de l’exécution de ses dispositions. Il précise que la mise en œuvre effective du texte relève du chef du gouvernement tunisien, qui doit veiller à l’application conforme à la législation en vigueur. Il s’agit d’une clause classique d’exécution.",
+  "summary_arabic": "ينص هذا المرسوم المؤرخ في 9 يوليو 1913 على تكليف رئيس الوزراء بتنفيذ أحكامه، ويحدد أن مسؤولية تطبيق المرسوم تقع على عاتق رئيس الوزراء الذي يجب عليه ضمان التنفيذ الفعلي وفقًا للتشريعات السارية. يمثل ذلك بندًا تقليديًا في المراسيم الإدارية التونسية.",
+  "search_content": "Décret du 9 juillet 1913 (5 chaâbane 1331). Article 4.- Notre Premier ministre est chargé de l'exécution du présent décret. Le Premier ministre est responsable de la mise en œuvre des dispositions du décret. المادة 4. - يُكلف رئيس وزرائنا بتنفيذ هذا المرسوم.",
+  "keywords": [
+    "exécution du décret",
+    "responsabilité du Premier ministre",
+    "application des dispositions",
+    "gouvernement tunisien",
+    "article 4"
+  ],
+  "legal_domains": [
+    "Droit administratif",
+    "Droit constitutionnel"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Fonctionnaires publics",
+    "Juristes",
+    "Institutions gouvernementales"
+  ],
+  "related_laws": [
+    "Constitution tunisienne"
+  ],
+  "legal_concepts": [
+    "exécution des lois",
+    "responsabilité administrative",
+    "organisation gouvernementale"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 4,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Présidence de la République",
+  "institution_secondary": null,
+  "institutions": [
+    "Présidence de la République"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/%7Bln%7D",
+  "source_date": "1913-07-09T00:00:00Z",
+  "publication_date": "1913-07-09T00:00:00Z",
+  "effective_date": "1913-07-09T00:00:00Z",
+  "relation_target_ids": [],
+  "relation_types": [],
+  "entity_names": [
+    "Présidence de la République",
+    "Premier ministre"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "MINISTRY"
+  ],
+  "entity_ids": [
+    "tn-org-presidence-de-la-republique",
+    "tn-org-premier-ministre"
+  ],
+  "community_id": "tn-administratif",
+  "community_label": "Droit administratif et public",
+  "community_summary": "Normes et règles relatives à l’organisation, au fonctionnement et à l’exécution des actes des autorités publiques tunisiennes.",
+  "parent_document_id": "tn-dcret-nodoc",
+  "preceding_article_id": "tn-dcret-nodoc-art-3",
+  "following_article_id": "tn-dcret-nodoc-art-5",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-13T00:00:00Z",
+  "next_check": "2026-09-13T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Décret du 9 juillet 1913 (5 chaâbane 1331)\nCe décret du 9 juillet 1913 confie expressément au Premier ministre la responsabilité de l’exécution de ses dispositions. Il précise que la mise en œuvre effective du texte relève du chef du gouvernement tunisien, qui doit veiller à l’application conforme à la législation en vigueur. Il s’agit d’une clause classique d’exécution.\nينص هذا المرسوم المؤرخ في 9 يوليو 1913 على تكليف رئيس الوزراء بتنفيذ أحكامه، ويحدد أن مسؤولية تطبيق المرسوم تقع على عاتق رئيس الوزراء الذي يجب عليه ضمان التنفيذ الفعلي وفقًا للتشريعات السارية. يمثل ذلك بندًا تقليديًا في المراسيم الإدارية التونسية.\nArticle 4. - Notre Premier ministre est chargé de l'exécution du présent décret. Ce décret, pris sous l'autorité du gouvernement tunisien, précise que l'application de ses dispositions relève de la responsabilité du Premier ministre, qui doit veiller à leur mise en œuvre effective conformément à la législation en vigueur. المادة 4. - يُكلف رئيس وزرائنا بتنفيذ هذا المرسوم. ينص هذا المرسوم الصادر عن الحكومة التونسية على أن تنفيذ أحكامه من مسؤولية رئيس الوزراء الذي يتعين عليه ضمان تطبيقها الفعلي وفقًا للتشريعات النافذة.\nexécution des lois | responsabilité administrative | organisation gouvernementale"
+}

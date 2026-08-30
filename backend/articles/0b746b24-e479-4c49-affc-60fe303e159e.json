@@ -1,0 +1,110 @@
+{
+  "id": "0b746b24-e479-4c49-affc-60fe303e159e",
+  "jurisdiction": "TUNISIA",
+  "institution": "Présidence de la République",
+  "law_type": "Décret-loi",
+  "law_number": "2022-54",
+  "year": 2022,
+  "status": "ACTIVE",
+  "title_french": "Décret-loi n° 2022-54 du 13 septembre 2022, relatif à la lutte contre les infractions se rapportant aux systèmes d’information et de communication",
+  "title_arabic": "المرسوم القانون رقم 2022-54 بتاريخ 13 سبتمبر 2022 المتعلق بمكافحة الجرائم المتعلقة بأنظمة المعلومات والاتصالات",
+  "chapter": "Chapitre III – Des infractions se rapportant aux systèmes d’information et de communication et des peines encourues",
+  "section": null,
+  "article_number": "26",
+  "content_french": "Art. 26 – Sous réserve des législations spécifiques, est puni d'une peine d'emprisonnement de six ans et une amende de cinquante mille dinars, quiconque produit, affiche, fournit, publie, envoie, obtient ou détient intentionnellement des données informatiques à contenu pornographique montrant un enfant ou une personne ayant l'apparence d'un enfant s’adonnant à des pratiques sexuelles explicites ou suggestives ou en être victime. Est passible des mêmes peines prévues par le premier alinéa du présent article, quiconque aura utilisé intentionnellement des systèmes d'information pour publier ou diffuser des images ou des séquences vidéo d'agressions physiques ou sexuelles sur autrui.",
+  "content_arabic": "المادة 26 - مع مراعاة التشريعات الخاصة، يعاقب بالسجن لمدة ست سنوات وغرامة قدرها خمسون ألف دينار، كل من ينتج، يعرض، يوفر، ينشر، يرسل، يحصل أو يحتفظ عمداً ببيانات حاسوبية ذات محتوى إباحي يظهر طفلاً أو شخصاً يبدو كطفل يمارس الجنس بشكل صريح أو ضمني أو يكون ضحية لذلك. يخضع لنفس العقوبات المنصوص عليها في الفقرة الأولى من هذه المادة، كل من يستخدم عمداً أنظمة المعلومات لنشر أو توزيع صور أو مقاطع فيديو لاعتداءات جسدية أو جنسية على الآخرين.",
+  "content_combined": "Art. 26 – Sous réserve des législations spécifiques, est puni d'une peine d'emprisonnement de six ans et une amende de cinquante mille dinars, quiconque produit, affiche, fournit, publie, envoie, obtient ou détient intentionnellement des données informatiques à contenu pornographique montrant un enfant ou une personne ayant l'apparence d'un enfant s’adonnant à des pratiques sexuelles explicites ou suggestives ou en être victime. Est passible des mêmes peines prévues par le premier alinéa du présent article, quiconque aura utilisé intentionnellement des systèmes d'information pour publier ou diffuser des images ou des séquences vidéo d'agressions physiques ou sexuelles sur autrui. المادة 26 - مع مراعاة التشريعات الخاصة، يعاقب بالسجن لمدة ست سنوات وغرامة قدرها خمسون ألف دينار، كل من ينتج، يعرض، يوفر، ينشر، يرسل، يحصل أو يحتفظ عمداً ببيانات حاسوبية ذات محتوى إباحي يظهر طفلاً أو شخصاً يبدو كطفل يمارس الجنس بشكل صريح أو ضمني أو يكون ضحية لذلك. يخضع لنفس العقوبات المنصوص عليها في الفقرة الأولى من هذه المادة، كل من يستخدم عمداً أنظمة المعلومات لنشر أو توزيع صور أو مقاطع فيديو لاعتداءات جسدية أو جنسية على الآخرين.",
+  "content_hash_sha256": "23edf305d38c78775eaf6e396d4b30a1b3aceaec674f9630e609e8895d60787a",
+  "summary": "N/A",
+  "summary_french": "L'article 26 du décret-loi n° 2022-54 prévoit une peine de six ans d'emprisonnement et une amende de cinquante mille dinars pour toute personne produisant, diffusant ou détenant des données informatiques à caractère pornographique impliquant des enfants, ou utilisant des systèmes d'information pour publier des images ou vidéos d'agressions physiques ou sexuelles sur autrui.",
+  "summary_arabic": "تنص المادة 26 من المرسوم القانوني عدد 2022-54 على عقوبة بالسجن لمدة ست سنوات وغرامة خمسين ألف دينار لكل من ينتج أو ينشر أو يحتفظ ببيانات حاسوبية ذات محتوى إباحي يظهر طفلاً أو من يبدو كطفل في ممارسات جنسية أو يكون ضحية لها، أو يستخدم أنظمة المعلومات لنشر صور أو فيديوهات لاعتداءات جسدية أو جنسية.",
+  "search_content": "N/A مرسوم بقانون Decree-Law",
+  "keywords": [
+    "données informatiques",
+    "pornographie infantile",
+    "systèmes d'information",
+    "publication d'images illicites",
+    "agressions sexuelles",
+    "amende de cinquante mille dinars",
+    "emprisonnement de six ans",
+    "article 26",
+    "Décret-loi 2022-54"
+  ],
+  "legal_domains": [
+    "droit pénal",
+    "droit des technologies de l'information",
+    "droit de la protection de l'enfance"
+  ],
+  "business_impact": "HIGH",
+  "target_audience": [
+    "juristes",
+    "professionnels de l'informatique",
+    "organisations de protection de l'enfance",
+    "forces de l'ordre",
+    "magistrats"
+  ],
+  "related_laws": [
+    "Code pénal tunisien",
+    "Loi sur la protection de l'enfance"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "PENAL",
+  "article_order": 26,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": true,
+  "has_deadlines": false,
+  "has_exceptions": true,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Présidence de la République",
+  "institution_secondary": null,
+  "institutions": [
+    "Présidence de la République"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=2022-54&Annee=2022&TypeLoi=Décret-loi",
+  "source_date": "2022-09-13T00:00:00Z",
+  "publication_date": "2022-09-13T00:00:00Z",
+  "effective_date": null,
+  "relation_target_ids": [
+    "Code pénal tunisien",
+    "Loi sur la protection de l'enfance"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Présidence de la République",
+    "Assemblée des Représentants du Peuple"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "STATE_ORGAN"
+  ],
+  "entity_ids": [
+    "tn-org-presidence-de-la-republique",
+    "tn-org-assemblee-des-representants-du-peuple"
+  ],
+  "community_id": "tn-penal",
+  "community_label": "Droit pénal",
+  "community_summary": "Textes relatifs aux infractions, sanctions et procédures pénales en droit tunisien, incluant la cybercriminalité et la protection de l'enfance.",
+  "parent_document_id": "tn-dcretloi-2022-54",
+  "preceding_article_id": "tn-dcretloi-2022-54-art-25",
+  "following_article_id": "tn-dcretloi-2022-54-art-27",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-03T00:00:00Z",
+  "next_check": "2026-10-03T00:00:00Z",
+  "chapter_normalized": "chapitre_iii_des_infractions_se_rapportant_aux_systemes_d_information_et_de_communication_et_des_peines_encourues",
+  "embedding_text": "Décret-loi n° 2022-54 du 13 septembre 2022, relatif à la lutte contre les infractions se rapportant aux systèmes d’information et de communication\nL'article 26 du décret-loi n° 2022-54 prévoit une peine de six ans d'emprisonnement et une amende de cinquante mille dinars pour toute personne produisant, diffusant ou détenant des données informatiques à caractère pornographique impliquant des enfants, ou utilisant des systèmes d'information pour publier des images ou vidéos d'agressions physiques ou sexuelles sur autrui.\nتنص المادة 26 من المرسوم القانوني عدد 2022-54 على عقوبة بالسجن لمدة ست سنوات وغرامة خمسين ألف دينار لكل من ينتج أو ينشر أو يحتفظ ببيانات حاسوبية ذات محتوى إباحي يظهر طفلاً أو من يبدو كطفل في ممارسات جنسية أو يكون ضحية لها، أو يستخدم أنظمة المعلومات لنشر صور أو فيديوهات لاعتداءات جسدية أو جنسية.\nArt. 26 – Sous réserve des législations spécifiques, est puni d'une peine d'emprisonnement de six ans et une amende de cinquante mille dinars, quiconque produit, affiche, fournit, publie, envoie, obtient ou détient intentionnellement des données informatiques à contenu pornographique montrant un enfant ou une personne ayant l'apparence d'un enfant s’adonnant à des pratiques sexuelles explicites ou suggestives ou en être victime. Est passible des mêmes peines prévues par le premier alinéa du présent article, quiconque aura utilisé intentionnellement des systèmes d'information pour publier ou diffuser des images ou des séquences vidéo d'agressions physiques ou sexuelles sur autrui. المادة 26 - مع مراعاة التشريعات الخاصة، يعاقب بالسجن لمدة ست سنوات وغرامة قدرها خمسون ألف دينار، كل من ينتج، يعرض، يوفر، ينشر، يرسل، يحصل أو يحتفظ عمداً ببيانات حاسوبية ذات محتوى إباحي يظهر طفلاً أو شخصاً يبدو كطفل يمارس الجنس بشكل صريح أو ضمني أو يكون ضحية لذلك. يخضع لنفس العقوبات المنصوص عليها في الفقرة الأولى من هذه المادة، كل من يستخدم عمداً أنظمة المعلومات لنشر أو توزيع صور أو مقاطع فيديو لاعتداءات جسدية أو جنسية على الآخرين.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

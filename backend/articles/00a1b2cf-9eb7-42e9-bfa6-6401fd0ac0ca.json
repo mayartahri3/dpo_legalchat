@@ -1,0 +1,114 @@
+{
+  "id": "00a1b2cf-9eb7-42e9-bfa6-6401fd0ac0ca",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Code",
+  "law_number": "59-130",
+  "year": 1959,
+  "status": "ACTIVE",
+  "title_french": "Code de procédure civile et commerciale",
+  "title_arabic": "قانون الإجراءات المدنية والتجارية",
+  "chapter": "Chapitre VI De la saisie des meubles et de leur vente",
+  "section": null,
+  "article_number": "392",
+  "content_french": "Le procès-verbal de saisie-exécution ou de conversion doit énoncer, à peine de nullité : 1) le titre exécutoire en vertu duquel la saisie ou la conversion est opérée et la signification de ce titre au saisi ; 2) le montant de la créance dont le paiement est réclamé ; 3) la présence ou l'absence du saisi et du gardien constitué, s'il y a lieu, aux opérations de saisie ou de conversion ; 4) les jour, heure et lieu auxquels il sera procédé à la vente des objets saisis. Il doit, en outre, être revêtu de la signature ou de l'empreinte digitale du gardien constitué, qu'il s'agisse du saisi lui-même ou d'un tiers.",
+  "content_arabic": "يجب أن يتضمن محضر الحجز التنفيذي أو التحويل، تحت طائلة البطلان: 1) العنوان التنفيذي الذي بموجبه يتم الحجز أو الاتفاق وإبلاغ هذا العنوان للمحجوز عليه؛ 2) مبلغ الدين الذي يُطالب بدفعه؛ 3) حضور أو غياب المحجوز عليه والحارس المعين، إن وجد، في عمليات الحجز أو التحويل؛ 4) اليوم والساعة والمكان الذي سيتم فيه بيع الأشياء المحجوزة. وعلاوة على ذلك، يجب أن يكون موقعًا من قبل الحارس المعين، سواء كان المحجوز عليه نفسه أو شخصًا آخر.",
+  "content_combined": "Le procès-verbal de saisie-exécution ou de conversion doit énoncer, à peine de nullité : 1) le titre exécutoire en vertu duquel la saisie ou la conversion est opérée et la signification de ce titre au saisi ; 2) le montant de la créance dont le paiement est réclamé ; 3) la présence ou l'absence du saisi et du gardien constitué, s'il y a lieu, aux opérations de saisie ou de conversion ; 4) les jour, heure et lieu auxquels il sera procédé à la vente des objets saisis. Il doit, en outre, être revêtu de la signature ou de l'empreinte digitale du gardien constitué, qu'il s'agisse du saisi lui-même ou d'un tiers. يجب أن يتضمن محضر الحجز التنفيذي أو التحويل، تحت طائلة البطلان: 1) العنوان التنفيذي الذي بموجبه يتم الحجز أو الاتفاق وإبلاغ هذا العنوان للمحجوز عليه؛ 2) مبلغ الدين الذي يُطالب بدفعه؛ 3) حضور أو غياب المحجوز عليه والحارس المعين، إن وجد، في عمليات الحجز أو التحويل؛ 4) اليوم والساعة والمكان الذي سيتم فيه بيع الأشياء المحجوزة. وعلاوة على ذلك، يجب أن يكون موقعًا من قبل الحارس المعين، سواء كان المحجوز عليه نفسه أو شخصًا آخر.",
+  "content_hash_sha256": "9042c8bf1fbd196d639f179e3a437bb9f52c740ba41a8c33cb65c568ca337367",
+  "summary": "Cet article du Code de procédure civile et commerciale précise les mentions obligatoires du procès-verbal de saisie-exécution ou de conversion. Il impose, sous peine de nullité, l’indication du titre exécutoire, du montant de la créance, de la présence des parties, des modalités de vente et la signature du gardien constitué.",
+  "summary_french": "L’article 392 du Code de procédure civile et commerciale énumère les mentions obligatoires du procès-verbal de saisie-exécution ou de conversion. Il impose, sous peine de nullité, l’indication du titre exécutoire, du montant de la créance, de la présence ou absence des parties, des modalités de vente et la signature du gardien constitué.",
+  "summary_arabic": "ينص الفصل 392 من قانون الإجراءات المدنية والتجارية على ضرورة تضمين محضر الحجز التنفيذي أو التحويل بيانات إلزامية تحت طائلة البطلان، منها العنوان التنفيذي، مبلغ الدين، حضور أو غياب الأطراف والحارس، وتحديد موعد ومكان البيع، بالإضافة إلى توقيع الحارس سواء كان المحجوز عليه أو غيره.",
+  "search_content": "Article 392 du Code de procédure civile et commerciale concernant la saisie des meubles et leur vente. يجب أن يتضمن محضر الحجز التنفيذي أو التحويل بيانات إلزامية تحت طائلة البطلان. مجلة Code",
+  "keywords": [
+    "saisie-exécution",
+    "procès-verbal de saisie",
+    "titre exécutoire",
+    "créance",
+    "vente des objets saisis",
+    "nullité",
+    "gardien constitué",
+    "signature du gardien",
+    "article 392",
+    "Code de procédure civile et commerciale"
+  ],
+  "legal_domains": [
+    "droit civil",
+    "droit commercial",
+    "procédure civile"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "avocats",
+    "juges",
+    "huissiers de justice",
+    "créanciers",
+    "débiteurs",
+    "notaires"
+  ],
+  "related_laws": [
+    "Code de commerce",
+    "Code civil"
+  ],
+  "legal_concepts": [
+    "saisie-exécution",
+    "acte authentique",
+    "créance",
+    "vente judiciaire",
+    "nullité de procédure"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 392,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": true,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": null,
+  "institutions": [
+    "Assemblée des Représentants du Peuple"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "https://www.pist.tn/jort/1959/1959F/Jo05959.pdf",
+  "source_date": "1959-10-05T00:00:00Z",
+  "publication_date": "1959-10-05T00:00:00Z",
+  "effective_date": "1959-10-05T00:00:00Z",
+  "relation_target_ids": [
+    "Code de commerce",
+    "Code civil"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Assemblée des Représentants du Peuple",
+    "Tribunal de première instance"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "COURT"
+  ],
+  "entity_ids": [
+    "tn-org-assemblee-des-representants-du-peuple",
+    "tn-org-tribunal-de-premiere-instance"
+  ],
+  "community_id": "tn-procedure",
+  "community_label": "Procédures judiciaires et contentieux",
+  "community_summary": "Textes relatifs aux procédures judiciaires, à l’exécution des décisions et au contentieux civil et commercial en Tunisie.",
+  "parent_document_id": "tn-code-59-130",
+  "preceding_article_id": "tn-code-59-130-art-391",
+  "following_article_id": "tn-code-59-130-art-393",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-09T00:00:00Z",
+  "next_check": "2026-09-09T00:00:00Z",
+  "chapter_normalized": "chapitre_vi_de_la_saisie_des_meubles_et_de_leur_vente",
+  "embedding_text": "Code de procédure civile et commerciale\nL’article 392 du Code de procédure civile et commerciale énumère les mentions obligatoires du procès-verbal de saisie-exécution ou de conversion. Il impose, sous peine de nullité, l’indication du titre exécutoire, du montant de la créance, de la présence ou absence des parties, des modalités de vente et la signature du gardien constitué.\nينص الفصل 392 من قانون الإجراءات المدنية والتجارية على ضرورة تضمين محضر الحجز التنفيذي أو التحويل بيانات إلزامية تحت طائلة البطلان، منها العنوان التنفيذي، مبلغ الدين، حضور أو غياب الأطراف والحارس، وتحديد موعد ومكان البيع، بالإضافة إلى توقيع الحارس سواء كان المحجوز عليه أو غيره.\nLe procès-verbal de saisie-exécution ou de conversion doit énoncer, à peine de nullité : 1) le titre exécutoire en vertu duquel la saisie ou la conversion est opérée et la signification de ce titre au saisi ; 2) le montant de la créance dont le paiement est réclamé ; 3) la présence ou l'absence du saisi et du gardien constitué, s'il y a lieu, aux opérations de saisie ou de conversion ; 4) les jour, heure et lieu auxquels il sera procédé à la vente des objets saisis. Il doit, en outre, être revêtu de la signature ou de l'empreinte digitale du gardien constitué, qu'il s'agisse du saisi lui-même ou d'un tiers. يجب أن يتضمن محضر الحجز التنفيذي أو التحويل، تحت طائلة البطلان: 1) العنوان التنفيذي الذي بموجبه يتم الحجز أو الاتفاق وإبلاغ هذا العنوان للمحجوز عليه؛ 2) مبلغ الدين الذي يُطالب بدفعه؛ 3) حضور أو غياب المحجوز عليه والحارس المعين، إن وجد، في عمليات الحجز أو التحويل؛ 4) اليوم والساعة والمكان الذي سيتم فيه بيع الأشياء المحجوزة. وعلاوة على ذلك، يجب أن يكون موقعًا من قبل الحارس المعين، سواء كان المحجوز عليه نفسه أو شخصًا آخر.\nsaisie-exécution | acte authentique | créance | vente judiciaire | nullité de procédure"
+}

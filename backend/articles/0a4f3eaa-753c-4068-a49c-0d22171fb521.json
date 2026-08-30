@@ -1,0 +1,106 @@
+{
+  "id": "0a4f3eaa-753c-4068-a49c-0d22171fb521",
+  "jurisdiction": "TUNISIA",
+  "institution": "Ministère de l'Agriculture, des Ressources Hydrauliques et de la Pêche",
+  "law_type": "Loi",
+  "law_number": null,
+  "year": 2010,
+  "status": "ACTIVE",
+  "title_french": "Article 30",
+  "title_arabic": "المادة 30",
+  "chapter": null,
+  "section": null,
+  "article_number": "30",
+  "content_french": "Les agents mentionnés à l'article précédent sont chargés d'établir des procès-verbaux relatifs aux infractions constatées dans le cadre de l'application de la présente loi. Ces procès-verbaux sont transmis, par l'intermédiaire de l'autorité de tutelle compétente, au Procureur de la République pour les suites légales nécessaires.",
+  "content_arabic": "يقوم الأعوان المشار إليهم في المادة السابقة بتحرير محاضر بالمخالفات التي يلاحظونها أثناء تنفيذ أحكام هذا القانون. وتتم إحالة هذه المحاضر عن طريق السلطة الوصية المختصة إلى وكيل الجمهورية لاتخاذ الإجراءات القانونية اللازمة.",
+  "content_combined": "Les agents mentionnés à l'article précédent sont chargés d'établir des procès-verbaux relatifs aux infractions constatées dans le cadre de l'application de la présente loi. Ces procès-verbaux sont transmis, par l'intermédiaire de l'autorité de tutelle compétente, au Procureur de la République pour les suites légales nécessaires. يقوم الأعوان المشار إليهم في المادة السابقة بتحرير محاضر بالمخالفات التي يلاحظونها أثناء تنفيذ أحكام هذا القانون. وتتم إحالة هذه المحاضر عن طريق السلطة الوصية المختصة إلى وكيل الجمهورية لاتخاذ الإجراءات القانونية اللازمة.",
+  "content_hash_sha256": "b5aef27deadbfc4f0b61fcdac68337009f164ec36dd2596f97eadd801033b450",
+  "summary": "L'article 30 précise que les agents compétents doivent rédiger des procès-verbaux pour les infractions constatées. Ces documents sont ensuite transmis au Procureur de la République via l'autorité de tutelle.",
+  "summary_french": "L'article 30 impose aux agents désignés de rédiger des procès-verbaux pour chaque infraction constatée lors de l'application de la loi. Ces procès-verbaux doivent être transmis à l'autorité de tutelle, qui les adresse ensuite au Procureur de la République pour engager les procédures légales appropriées.",
+  "summary_arabic": "تنص المادة 30 على إلزام الأعوان المختصين بتحرير محاضر بكل مخالفة يتم ضبطها أثناء تنفيذ القانون. وتتم إحالة هذه المحاضر عبر السلطة الوصية إلى وكيل الجمهورية، الذي يتولى اتخاذ الإجراءات القانونية اللازمة بشأنها وفقاً للتشريع الجاري به العمل.",
+  "search_content": "Article 30 - Les agents mentionnés à l'article précédent établissent des procès-verbaux des infractions constatées. Ces procès-verbaux sont transmis par l'autorité de tutelle au Procureur de la République. المادة 30 - يقوم الأعوان المشار إليهم في المادة السابقة بتحرير محاضر بالمخالفات التي يلاحظونها. تُحال هذه المحاضر عن طريق السلطة الوصية إلى وكيل الجمهورية. قانون Law",
+  "keywords": [
+    "procès-verbaux",
+    "infractions constatées",
+    "autorité de tutelle",
+    "Procureur de la République",
+    "agents assermentés",
+    "article 29",
+    "transmission des procès-verbaux"
+  ],
+  "legal_domains": [
+    "Droit administratif",
+    "Droit pénal"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Agents publics",
+    "Juristes",
+    "Procureurs",
+    "Autorités administratives"
+  ],
+  "related_laws": [
+    "Article 29 du Code des eaux",
+    "Code pénal tunisien"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 30,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Ministère de l'Agriculture, des Ressources Hydrauliques et de la Pêche",
+  "institution_secondary": null,
+  "institutions": [
+    "Ministère de l'Agriculture, des Ressources Hydrauliques et de la Pêche"
+  ],
+  "source_name": "JORT",
+  "source_number": "102",
+  "source_url": "https://jibaya.tn/wp-content/uploads/2024/01/Loi-de-Finances-2011.pdf",
+  "source_date": "2010-12-21T00:00:00Z",
+  "publication_date": "2010-12-21T00:00:00Z",
+  "effective_date": "2010-12-21T00:00:00Z",
+  "relation_target_ids": [
+    "Article 29 du Code des eaux",
+    "Code pénal tunisien"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Ministère de l'Agriculture, des Ressources Hydrauliques et de la Pêche",
+    "Procureur de la République"
+  ],
+  "entity_types": [
+    "MINISTRY",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-ministere-de-l-agriculture-des-ressources-hydrauliques-et-de-la-peche",
+    "tn-org-procureur-de-la-republique"
+  ],
+  "community_id": "tn-administratif",
+  "community_label": "Droit administratif et public",
+  "community_summary": "Règles encadrant l'action administrative, les agents publics et la transmission des infractions aux autorités compétentes.",
+  "parent_document_id": "tn-loi-nodoc",
+  "preceding_article_id": "tn-loi-nodoc-art-29",
+  "following_article_id": "tn-loi-nodoc-art-31",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-27T00:00:00Z",
+  "next_check": "2026-09-27T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Article 30\nL'article 30 impose aux agents désignés de rédiger des procès-verbaux pour chaque infraction constatée lors de l'application de la loi. Ces procès-verbaux doivent être transmis à l'autorité de tutelle, qui les adresse ensuite au Procureur de la République pour engager les procédures légales appropriées.\nتنص المادة 30 على إلزام الأعوان المختصين بتحرير محاضر بكل مخالفة يتم ضبطها أثناء تنفيذ القانون. وتتم إحالة هذه المحاضر عبر السلطة الوصية إلى وكيل الجمهورية، الذي يتولى اتخاذ الإجراءات القانونية اللازمة بشأنها وفقاً للتشريع الجاري به العمل.\nLes agents mentionnés à l'article précédent sont chargés d'établir des procès-verbaux relatifs aux infractions constatées dans le cadre de l'application de la présente loi. Ces procès-verbaux sont transmis, par l'intermédiaire de l'autorité de tutelle compétente, au Procureur de la République pour les suites légales nécessaires. يقوم الأعوان المشار إليهم في المادة السابقة بتحرير محاضر بالمخالفات التي يلاحظونها أثناء تنفيذ أحكام هذا القانون. وتتم إحالة هذه المحاضر عن طريق السلطة الوصية المختصة إلى وكيل الجمهورية لاتخاذ الإجراءات القانونية اللازمة.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

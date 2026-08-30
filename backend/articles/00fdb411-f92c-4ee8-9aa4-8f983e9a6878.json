@@ -1,0 +1,103 @@
+{
+  "id": "00fdb411-f92c-4ee8-9aa4-8f983e9a6878",
+  "jurisdiction": "TUNISIA",
+  "institution": "Banque Centrale de Tunisie",
+  "law_type": "Circulaire",
+  "law_number": "2021-02",
+  "year": 2021,
+  "status": "ACTIVE",
+  "title_french": "Titre III - Opérations de Swap",
+  "title_arabic": "العنوان الثالث - عمليات المبادلة",
+  "chapter": null,
+  "section": null,
+  "article_number": "23",
+  "content_french": "Article 23 : L'échéancier du contrat de swap de taux d'intérêt doit coïncider avec les dates de règlement contractuelles de l'opération sous-jacente. Cette disposition vise à assurer l'alignement temporel entre les obligations de paiement des parties et les échéances prévues dans le cadre de l'opération financière sous-jacente, conformément à la réglementation bancaire tunisienne.",
+  "content_arabic": "المادة 23: يجب أن يتطابق الجدول الزمني لعقد مبادلة أسعار الفائدة مع تواريخ التسوية التعاقدية للعملية الأساسية. تهدف هذه القاعدة إلى ضمان التوافق الزمني بين التزامات الأطراف وجدولة المدفوعات المنصوص عليها في إطار العملية المالية الأساسية، وذلك وفقًا للتشريعات البنكية التونسية.",
+  "content_combined": "Article 23 : L'échéancier du contrat de swap de taux d'intérêt doit coïncider avec les dates de règlement contractuelles de l'opération sous-jacente. Cette disposition vise à assurer l'alignement temporel entre les obligations de paiement des parties et les échéances prévues dans le cadre de l'opération financière sous-jacente, conformément à la réglementation bancaire tunisienne. المادة 23: يجب أن يتطابق الجدول الزمني لعقد مبادلة أسعار الفائدة مع تواريخ التسوية التعاقدية للعملية الأساسية. تهدف هذه القاعدة إلى ضمان التوافق الزمني بين التزامات الأطراف وجدولة المدفوعات المنصوص عليها في إطار العملية المالية الأساسية، وذلك وفقًا للتشريعات البنكية التونسية.",
+  "content_hash_sha256": "fb4c950ff505037f180aff7e8a6f01ec2191f595329a9edce9e3ad38416b2541",
+  "summary": "La circulaire n° 2021-02 émise par la Banque Centrale de Tunisie précise que l'échéancier des contrats de swap de taux d'intérêt doit correspondre aux dates de règlement des opérations sous-jacentes. Cette disposition vise à garantir une meilleure coordination entre les parties contractantes.",
+  "summary_french": "L’article 23 de la Circulaire n° 2021-02 de la Banque Centrale de Tunisie impose que l’échéancier du contrat de swap de taux d’intérêt corresponde strictement aux dates de règlement contractuelles de l’opération sous-jacente, assurant ainsi la cohérence des flux financiers et la conformité aux exigences réglementaires du secteur bancaire tunisien.",
+  "summary_arabic": "تنص المادة 23 من المنشور عدد 2021-02 الصادر عن البنك المركزي التونسي على ضرورة تطابق الجدول الزمني لعقد مبادلة أسعار الفائدة مع تواريخ التسوية التعاقدية للعملية الأساسية، وذلك لضمان انسجام التدفقات المالية والامتثال للضوابط التنظيمية المعتمدة في القطاع البنكي التونسي.",
+  "search_content": "Titre III - Opérations de Swap, Article 23 : L'échéancier du contrat de swap de taux d'intérêt doit coïncider avec les dates de règlement contractuelles de l'opération sous-jacente. Banque Centrale de Tunisie, swap de taux d'intérêt, échéancier, règlement contractuel, opération sous-jacente. منشور Circular",
+  "keywords": [
+    "swap de taux d'intérêt",
+    "échéancier du contrat",
+    "opération sous-jacente",
+    "règlement contractuel",
+    "Banque Centrale de Tunisie",
+    "circulaire 2021-02",
+    "marchés financiers",
+    "contrat de swap",
+    "réglementation bancaire"
+  ],
+  "legal_domains": [
+    "Droit bancaire",
+    "Réglementation financière"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Banques",
+    "Intermédiaires financiers",
+    "Juristes spécialisés en finance",
+    "Institutions financières",
+    "Régulateurs bancaires"
+  ],
+  "related_laws": [
+    "Code des obligations et des contrats",
+    "Réglementation des marchés financiers"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 23,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": true,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Banque Centrale de Tunisie",
+  "institution_secondary": null,
+  "institutions": [
+    "Banque Centrale de Tunisie"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=2021-02&Annee=2021&TypeLoi=Circulaire",
+  "source_date": null,
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [],
+  "relation_types": [],
+  "entity_names": [
+    "Banque Centrale de Tunisie",
+    "Marchés financiers"
+  ],
+  "entity_types": [
+    "INSTITUTION",
+    "ORGANIZATION"
+  ],
+  "entity_ids": [
+    "tn-org-banque-centrale-de-tunisie",
+    "tn-org-marches-financiers"
+  ],
+  "community_id": "tn-bancaire",
+  "community_label": "Droit bancaire et financier",
+  "community_summary": "Règles applicables aux opérations bancaires, institutions financières et marchés financiers en Tunisie.",
+  "parent_document_id": "tn-circulaire-2021-02",
+  "preceding_article_id": "tn-circulaire-2021-02-art-22",
+  "following_article_id": "tn-circulaire-2021-02-art-24",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-07T00:00:00Z",
+  "next_check": "2026-10-07T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Titre III - Opérations de Swap\nL’article 23 de la Circulaire n° 2021-02 de la Banque Centrale de Tunisie impose que l’échéancier du contrat de swap de taux d’intérêt corresponde strictement aux dates de règlement contractuelles de l’opération sous-jacente, assurant ainsi la cohérence des flux financiers et la conformité aux exigences réglementaires du secteur bancaire tunisien.\nتنص المادة 23 من المنشور عدد 2021-02 الصادر عن البنك المركزي التونسي على ضرورة تطابق الجدول الزمني لعقد مبادلة أسعار الفائدة مع تواريخ التسوية التعاقدية للعملية الأساسية، وذلك لضمان انسجام التدفقات المالية والامتثال للضوابط التنظيمية المعتمدة في القطاع البنكي التونسي.\nArticle 23 : L'échéancier du contrat de swap de taux d'intérêt doit coïncider avec les dates de règlement contractuelles de l'opération sous-jacente. Cette disposition vise à assurer l'alignement temporel entre les obligations de paiement des parties et les échéances prévues dans le cadre de l'opération financière sous-jacente, conformément à la réglementation bancaire tunisienne. المادة 23: يجب أن يتطابق الجدول الزمني لعقد مبادلة أسعار الفائدة مع تواريخ التسوية التعاقدية للعملية الأساسية. تهدف هذه القاعدة إلى ضمان التوافق الزمني بين التزامات الأطراف وجدولة المدفوعات المنصوص عليها في إطار العملية المالية الأساسية، وذلك وفقًا للتشريعات البنكية التونسية.\ndisposition légale | obligation réglementaire | cadre juridique"
+}

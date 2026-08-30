@@ -1,0 +1,101 @@
+{
+  "id": "0c3e8b25-7f69-422b-b5a3-0a94d15fec97",
+  "jurisdiction": "TUNISIA",
+  "institution": "Assemblée des Représentants du Peuple",
+  "law_type": "Loi",
+  "law_number": "60-30",
+  "year": 1960,
+  "status": "ACTIVE",
+  "title_french": "Loi n°60-30 du 14 décembre 1960 relative à l'organisation des régimes de sécurité sociale",
+  "title_arabic": "قانون عدد 60-30 لسنة 1960 مؤرخ في 14 ديسمبر 1960 يتعلق بتنظيم أنظمة الضمان الاجتماعي",
+  "chapter": "TITRE PREMIER, CHAPITRE I",
+  "section": null,
+  "article_number": "premier",
+  "content_french": "Il est institué une organisation de la sécurité sociale, destinée à protéger les travailleurs et leur famille contre les risques inhérents à la nature humaine, susceptibles d'affecter les conditions matérielles et morales de leur existence. Cette organisation vise à garantir une couverture sociale contre les accidents, la maladie, la maternité, l'invalidité, la vieillesse et le décès, conformément aux principes de solidarité et de justice sociale.",
+  "content_arabic": "يحدث تنظيم للضمان الاجتماعي، يهدف إلى حماية الأجراء وعائلاتهم من الأخطار الملازمة للطبيعة البشرية، والتي من شأنها التأثير في ظروف عيشهم المادية والمعنوية. يهدف هذا التنظيم إلى توفير تغطية اجتماعية ضد الحوادث والمرض والأمومة والعجز والشيخوخة والوفاة، وفقًا لمبادئ التضامن والعدالة الاجتماعية.",
+  "content_combined": "Il est institué une organisation de la sécurité sociale, destinée à protéger les travailleurs et leur famille contre les risques inhérents à la nature humaine, susceptibles d'affecter les conditions matérielles et morales de leur existence. Cette organisation vise à garantir une couverture sociale contre les accidents, la maladie, la maternité, l'invalidité, la vieillesse et le décès, conformément aux principes de solidarité et de justice sociale. يحدث تنظيم للضمان الاجتماعي، يهدف إلى حماية الأجراء وعائلاتهم من الأخطار الملازمة للطبيعة البشرية، والتي من شأنها التأثير في ظروف عيشهم المادية والمعنوية. يهدف هذا التنظيم إلى توفير تغطية اجتماعية ضد الحوادث والمرض والأمومة والعجز والشيخوخة والوفاة، وفقًا لمبادئ التضامن والعدالة الاجتماعية.",
+  "content_hash_sha256": "49099199180d04bdfc0bb5526c8b2b4f10c729e121b57d239d768cc491fdf4d7",
+  "summary": "إنشاء تنظيم للضمان الاجتماعي لحماية الأجراء وعائلاتهم من المخاطر البشرية.",
+  "summary_french": "La présente loi institue une organisation de la sécurité sociale en Tunisie, destinée à protéger les travailleurs et leurs familles contre les risques liés à la nature humaine, pouvant affecter leurs conditions matérielles et morales. Elle pose les bases d’un système de couverture sociale fondé sur la solidarité et la justice sociale.",
+  "summary_arabic": "يهدف هذا القانون إلى إرساء تنظيم للضمان الاجتماعي في تونس، يضمن حماية الأجراء وعائلاتهم من المخاطر المرتبطة بالطبيعة البشرية والتي قد تؤثر على ظروفهم المادية والمعنوية. ويؤسس لنظام تغطية اجتماعية يقوم على مبادئ التضامن والعدالة الاجتماعية.",
+  "search_content": "Article premier organisation sécurité sociale protection travailleurs famille risques humains couverture sociale solidarité justice sociale قانون Law",
+  "keywords": [
+    "organisation de la sécurité sociale",
+    "protection des travailleurs",
+    "protection des familles",
+    "risques sociaux",
+    "solidarité",
+    "justice sociale",
+    "couverture sociale",
+    "article premier",
+    "loi 60-30"
+  ],
+  "legal_domains": [
+    "Droit de la sécurité sociale",
+    "Droit social"
+  ],
+  "business_impact": "HIGH",
+  "target_audience": [
+    "Travailleurs",
+    "Employeurs",
+    "Caisse Nationale de Sécurité Sociale (CNSS)"
+  ],
+  "related_laws": [
+    "N/A"
+  ],
+  "legal_concepts": [
+    "contrat de travail",
+    "droits des salariés",
+    "relations professionnelles"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 1,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Assemblée des Représentants du Peuple",
+  "institution_secondary": "Caisse Nationale de Sécurité Sociale (CNSS)",
+  "institutions": [
+    "Assemblée des Représentants du Peuple",
+    "Caisse Nationale de Sécurité Sociale (CNSS)"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "https://www.jurisitetunisie.com/tunisie/codes/social/L1960-0030_1100.htm",
+  "source_date": "1960-12-14T00:00:00Z",
+  "publication_date": "1960-12-14T00:00:00Z",
+  "effective_date": "1960-12-14T00:00:00Z",
+  "relation_target_ids": [],
+  "relation_types": [],
+  "entity_names": [
+    "Caisse Nationale de Sécurité Sociale (CNSS)",
+    "Assemblée des Représentants du Peuple"
+  ],
+  "entity_types": [
+    "INSTITUTION",
+    "STATE_ORGAN"
+  ],
+  "entity_ids": [
+    "tn-org-caisse-nationale-de-securite-sociale-cnss",
+    "tn-org-assemblee-des-representants-du-peuple"
+  ],
+  "community_id": "tn-travail",
+  "community_label": "Droit du travail et sécurité sociale",
+  "community_summary": "Réglementation relative à la sécurité sociale, la protection des travailleurs et les droits sociaux en Tunisie.",
+  "parent_document_id": "tn-loi-60-30",
+  "preceding_article_id": null,
+  "following_article_id": null,
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-01T00:00:00Z",
+  "next_check": "2026-10-01T00:00:00Z",
+  "chapter_normalized": "titre_premier_chapitre_i",
+  "embedding_text": "Loi n°60-30 du 14 décembre 1960 relative à l'organisation des régimes de sécurité sociale\nLa présente loi institue une organisation de la sécurité sociale en Tunisie, destinée à protéger les travailleurs et leurs familles contre les risques liés à la nature humaine, pouvant affecter leurs conditions matérielles et morales. Elle pose les bases d’un système de couverture sociale fondé sur la solidarité et la justice sociale.\nيهدف هذا القانون إلى إرساء تنظيم للضمان الاجتماعي في تونس، يضمن حماية الأجراء وعائلاتهم من المخاطر المرتبطة بالطبيعة البشرية والتي قد تؤثر على ظروفهم المادية والمعنوية. ويؤسس لنظام تغطية اجتماعية يقوم على مبادئ التضامن والعدالة الاجتماعية.\nIl est institué une organisation de la sécurité sociale, destinée à protéger les travailleurs et leur famille contre les risques inhérents à la nature humaine, susceptibles d'affecter les conditions matérielles et morales de leur existence. Cette organisation vise à garantir une couverture sociale contre les accidents, la maladie, la maternité, l'invalidité, la vieillesse et le décès, conformément aux principes de solidarité et de justice sociale. يحدث تنظيم للضمان الاجتماعي، يهدف إلى حماية الأجراء وعائلاتهم من الأخطار الملازمة للطبيعة البشرية، والتي من شأنها التأثير في ظروف عيشهم المادية والمعنوية. يهدف هذا التنظيم إلى توفير تغطية اجتماعية ضد الحوادث والمرض والأمومة والعجز والشيخوخة والوفاة، وفقًا لمبادئ التضامن والعدالة الاجتماعية.\ncontrat de travail | droits des salariés | relations professionnelles"
+}

@@ -1,0 +1,107 @@
+{
+  "id": "0b5474c9-04f9-4606-b679-cec2570d7f2a",
+  "jurisdiction": "TUNISIA",
+  "institution": "Présidence du Gouvernement",
+  "law_type": "Décret",
+  "law_number": "2000-254",
+  "year": 2000,
+  "status": "ACTIVE",
+  "title_french": "Décret n° 2000-254 du 31 janvier 2000, portant code de déontologie du médecin vétérinaire",
+  "title_arabic": "المرسوم عدد 254 لسنة 2000 المؤرخ في 31 جانفي 2000 المتعلق بمدونة أخلاقيات الطبيب البيطري",
+  "chapter": "TITRE VII - DES MEDECINS VETERINAIRES DE LA FONCTION PUBLIQUE",
+  "section": null,
+  "article_number": "67",
+  "content_french": "Article 67. - Un médecin vétérinaire ne doit jamais consentir un rabais du traitement ou des honoraires attachés à une fonction pour essayer de l'occuper ou de se substituer au confrère qui la détient. Cette disposition vise à garantir l'intégrité professionnelle et à prévenir toute concurrence déloyale entre vétérinaires exerçant dans la fonction publique. Toute infraction à cette règle expose le contrevenant à des sanctions disciplinaires prévues par le code de déontologie.",
+  "content_arabic": "المادة 67. - يجب على الطبيب البيطري ألا يوافق أبداً على خصم في العلاج أو الأتعاب المرتبطة بوظيفة في محاولة لشغلها أو ليحل محل الزميل الذي يحتفظ بها. تهدف هذه القاعدة إلى ضمان النزاهة المهنية ومنع أي منافسة غير مشروعة بين الأطباء البيطريين العاملين في الوظيفة العمومية. كل مخالفة لهذا الحكم تعرض مرتكبها للعقوبات التأديبية المنصوص عليها في مدونة أخلاقيات المهنة.",
+  "content_combined": "Article 67. - Un médecin vétérinaire ne doit jamais consentir un rabais du traitement ou des honoraires attachés à une fonction pour essayer de l'occuper ou de se substituer au confrère qui la détient. Cette disposition vise à garantir l'intégrité professionnelle et à prévenir toute concurrence déloyale entre vétérinaires exerçant dans la fonction publique. Toute infraction à cette règle expose le contrevenant à des sanctions disciplinaires prévues par le code de déontologie. المادة 67. - يجب على الطبيب البيطري ألا يوافق أبداً على خصم في العلاج أو الأتعاب المرتبطة بوظيفة في محاولة لشغلها أو ليحل محل الزميل الذي يحتفظ بها. تهدف هذه القاعدة إلى ضمان النزاهة المهنية ومنع أي منافسة غير مشروعة بين الأطباء البيطريين العاملين في الوظيفة العمومية. كل مخالفة لهذا الحكم تعرض مرتكبها للعقوبات التأديبية المنصوص عليها في مدونة أخلاقيات المهنة.",
+  "content_hash_sha256": "51fbd375c5a74fb109e9e91e1b1f21d06f0d326eb75819907afe18512187e5c3",
+  "summary": "Cet article interdit formellement aux médecins vétérinaires de la fonction publique de consentir à des rabais sur les traitements ou honoraires pour obtenir une fonction ou remplacer un confrère. Il vise à préserver l'intégrité professionnelle et à prévenir toute concurrence déloyale, sous peine de sanctions disciplinaires.",
+  "summary_french": "L’article 67 du décret n° 2000-254 interdit à tout médecin vétérinaire de la fonction publique de consentir un rabais sur les traitements ou honoraires pour obtenir une fonction ou remplacer un confrère. Cette règle vise à préserver l’intégrité professionnelle et à prévenir toute concurrence déloyale, sous peine de sanctions disciplinaires prévues par le code de déontologie.",
+  "summary_arabic": "تنص المادة 67 من المرسوم عدد 254 لسنة 2000 على منع الطبيب البيطري العامل في الوظيفة العمومية من تقديم أي خصم في العلاج أو الأتعاب بهدف الحصول على وظيفة أو تعويض زميل آخر. تهدف هذه القاعدة إلى حماية النزاهة المهنية ومنع المنافسة غير المشروعة، ويعرض المخالف نفسه للعقوبات التأديبية المنصوص عليها في مدونة أخلاقيات المهنة.",
+  "search_content": "Décret 2000-254, article 67, médecin vétérinaire, déontologie, rabais, fonction publique, éthique, sanctions disciplinaires, المرسوم عدد 254 لسنة 2000, المادة 67, الطبيب البيطري, مدونة أخلاقيات المهنة",
+  "keywords": [
+    "déontologie vétérinaire",
+    "rabais sur honoraires",
+    "fonction publique",
+    "sanctions disciplinaires",
+    "intégrité professionnelle",
+    "concurrence déloyale",
+    "article 67",
+    "Décret 2000-254"
+  ],
+  "legal_domains": [
+    "droit de la santé",
+    "droit public",
+    "éthique professionnelle"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "médecins vétérinaires",
+    "fonctionnaires",
+    "établissements publics de santé animale",
+    "conseils de l'ordre des vétérinaires",
+    "administrations publiques"
+  ],
+  "related_laws": [
+    "Code de la santé publique"
+  ],
+  "legal_concepts": [
+    "déontologie professionnelle",
+    "concurrence déloyale",
+    "sanctions disciplinaires",
+    "intégrité professionnelle"
+  ],
+  "article_type": "PENAL",
+  "article_order": 67,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": true,
+  "has_deadlines": false,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Présidence du Gouvernement",
+  "institution_secondary": null,
+  "institutions": [
+    "Présidence du Gouvernement"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=254&Annee=2000&TypeLoi=Décret",
+  "source_date": "2000-02-08T00:00:00Z",
+  "publication_date": "2000-02-08T00:00:00Z",
+  "effective_date": "2000-02-08T00:00:00Z",
+  "relation_target_ids": [
+    "Code de la santé publique"
+  ],
+  "relation_types": [
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Présidence du Gouvernement",
+    "Conseil de l'Ordre des vétérinaires"
+  ],
+  "entity_types": [
+    "STATE_ORGAN",
+    "INSTITUTION"
+  ],
+  "entity_ids": [
+    "tn-org-presidence-du-gouvernement",
+    "tn-org-conseil-de-l-ordre-des-veterinaires"
+  ],
+  "community_id": "tn-sante",
+  "community_label": "Droit de la santé",
+  "community_summary": "Normes et règles applicables aux professions médicales, établissements de santé et déontologie dans le secteur de la santé.",
+  "parent_document_id": "tn-dcret-2000-254",
+  "preceding_article_id": "tn-dcret-2000-254-art-66",
+  "following_article_id": "tn-dcret-2000-254-art-68",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-03-14T00:00:00Z",
+  "next_check": "2026-09-14T00:00:00Z",
+  "chapter_normalized": "titre_vii_des_medecins_veterinaires_de_la_fonction_publique",
+  "embedding_text": "Décret n° 2000-254 du 31 janvier 2000, portant code de déontologie du médecin vétérinaire\nL’article 67 du décret n° 2000-254 interdit à tout médecin vétérinaire de la fonction publique de consentir un rabais sur les traitements ou honoraires pour obtenir une fonction ou remplacer un confrère. Cette règle vise à préserver l’intégrité professionnelle et à prévenir toute concurrence déloyale, sous peine de sanctions disciplinaires prévues par le code de déontologie.\nتنص المادة 67 من المرسوم عدد 254 لسنة 2000 على منع الطبيب البيطري العامل في الوظيفة العمومية من تقديم أي خصم في العلاج أو الأتعاب بهدف الحصول على وظيفة أو تعويض زميل آخر. تهدف هذه القاعدة إلى حماية النزاهة المهنية ومنع المنافسة غير المشروعة، ويعرض المخالف نفسه للعقوبات التأديبية المنصوص عليها في مدونة أخلاقيات المهنة.\nArticle 67. - Un médecin vétérinaire ne doit jamais consentir un rabais du traitement ou des honoraires attachés à une fonction pour essayer de l'occuper ou de se substituer au confrère qui la détient. Cette disposition vise à garantir l'intégrité professionnelle et à prévenir toute concurrence déloyale entre vétérinaires exerçant dans la fonction publique. Toute infraction à cette règle expose le contrevenant à des sanctions disciplinaires prévues par le code de déontologie. المادة 67. - يجب على الطبيب البيطري ألا يوافق أبداً على خصم في العلاج أو الأتعاب المرتبطة بوظيفة في محاولة لشغلها أو ليحل محل الزميل الذي يحتفظ بها. تهدف هذه القاعدة إلى ضمان النزاهة المهنية ومنع أي منافسة غير مشروعة بين الأطباء البيطريين العاملين في الوظيفة العمومية. كل مخالفة لهذا الحكم تعرض مرتكبها للعقوبات التأديبية المنصوص عليها في مدونة أخلاقيات المهنة.\ndéontologie professionnelle | concurrence déloyale | sanctions disciplinaires | intégrité professionnelle"
+}

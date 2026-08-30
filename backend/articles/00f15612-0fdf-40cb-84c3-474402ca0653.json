@@ -1,0 +1,111 @@
+{
+  "id": "00f15612-0fdf-40cb-84c3-474402ca0653",
+  "jurisdiction": "TUNISIA",
+  "institution": "Ministère des Affaires Culturelles",
+  "law_type": "Arrêté ministériel",
+  "law_number": null,
+  "year": 2025,
+  "status": "ACTIVE",
+  "title_french": "Arrêté de la ministre des affaires culturelles du 9 décembre 2025, portant ouverture d'un concours interne sur épreuves pratiques pour la promotion au grade de professeur principal d'enseignement de musique au titre de l'année 2025.",
+  "title_arabic": "قرار وزيرة الشؤون الثقافية المؤرخ في 9 ديسمبر 2025، المتعلق بفتح مسابقة داخلية على أساس الاختبارات العملية للترقية إلى رتبة أستاذ رئيسي لتعليم الموسيقى لسنة 2025.",
+  "chapter": null,
+  "section": null,
+  "article_number": "Art. 3",
+  "content_french": "La date de clôture de la liste des candidatures pour le concours interne sur épreuves pratiques, organisé en vue de la promotion au grade de professeur principal d'enseignement de musique pour l'année 2025, est fixée au 29 décembre 2025. Les dossiers de candidature doivent être déposés dans les délais impartis conformément aux dispositions réglementaires en vigueur.",
+  "content_arabic": "تحدد تاريخ غلق لائحة الترشحات للمسابقة الداخلية على أساس الاختبارات العملية للترقية إلى رتبة أستاذ رئيسي لتعليم الموسيقى لسنة 2025 في 29 ديسمبر 2025. يجب على المترشحين تقديم ملفاتهم في الآجال المحددة ووفقًا للإجراءات التنظيمية المعمول بها.",
+  "content_combined": "La date de clôture de la liste des candidatures pour le concours interne sur épreuves pratiques, organisé en vue de la promotion au grade de professeur principal d'enseignement de musique pour l'année 2025, est fixée au 29 décembre 2025. Les dossiers de candidature doivent être déposés dans les délais impartis conformément aux dispositions réglementaires en vigueur. تحدد تاريخ غلق لائحة الترشحات للمسابقة الداخلية على أساس الاختبارات العملية للترقية إلى رتبة أستاذ رئيسي لتعليم الموسيقى لسنة 2025 في 29 ديسمبر 2025. يجب على المترشحين تقديم ملفاتهم في الآجال المحددة ووفقًا للإجراءات التنظيمية المعمول بها.",
+  "content_hash_sha256": "07b45e1f5108765579c6513705fe314a3b0d58238c68082698e2a9bb2732d84c",
+  "summary": "تحديد آخر موعد لقبول الترشحات في 29 ديسمبر 2025.",
+  "summary_french": "L'article 3 de l'arrêté ministériel du 9 décembre 2025 fixe la date limite de dépôt des candidatures pour le concours interne de promotion au grade de professeur principal d'enseignement de musique à l'année 2025 au 29 décembre 2025. Les candidats doivent respecter ce délai pour la validité de leur participation.",
+  "summary_arabic": "ينص الفصل الثالث من قرار وزيرة الشؤون الثقافية المؤرخ في 9 ديسمبر 2025 على تحديد آخر أجل لإيداع ملفات الترشح للمسابقة الداخلية للترقية إلى رتبة أستاذ رئيسي لتعليم الموسيقى لسنة 2025 في 29 ديسمبر 2025. يجب على المترشحين احترام هذا الموعد النهائي.",
+  "search_content": "Art. 3 date clôture liste candidatures fixée 29 décembre 2025 المادة 3 تاريخ غلق لائحة ترشحات محدد 29 ديسمبر 2025 قرار وزاري Ministerial Order",
+  "keywords": [
+    "date de clôture",
+    "candidatures",
+    "concours interne",
+    "professeur principal d'enseignement de musique",
+    "promotion",
+    "Arrêté ministériel",
+    "Ministère des Affaires Culturelles",
+    "article 3",
+    "année 2025"
+  ],
+  "legal_domains": [
+    "Droit administratif",
+    "Fonction publique",
+    "Enseignement artistique"
+  ],
+  "business_impact": "LOW",
+  "target_audience": [
+    "Enseignants de musique",
+    "Fonctionnaires",
+    "Administration publique"
+  ],
+  "related_laws": [
+    "Loi n° 83-112 du 12 décembre 1983",
+    "Décret n° 2000-2487 du 31 octobre 2000",
+    "Arrêté du ministre de la culture, de la jeunesse et des loisirs du 12 juin 2004"
+  ],
+  "legal_concepts": [
+    "disposition légale",
+    "obligation réglementaire",
+    "cadre juridique"
+  ],
+  "article_type": "REGULATORY",
+  "article_order": 3,
+  "ambiguity_level": "LOW",
+  "has_obligations": true,
+  "has_penalties": false,
+  "has_deadlines": true,
+  "has_exceptions": false,
+  "is_abrogation": false,
+  "is_transitional": false,
+  "institution_primary": "Ministère des Affaires Culturelles",
+  "institution_secondary": null,
+  "institutions": [
+    "Ministère des Affaires Culturelles"
+  ],
+  "source_name": "JORT",
+  "source_number": null,
+  "source_url": "http://www.iort.gov.tn/WD120AWP/WD120Awp.exe/CONNECT/SITEIORT?NumLoi=N/A&Annee=2025&TypeLoi=Arrêté Ministériel",
+  "source_date": "2025-12-09T00:00:00Z",
+  "publication_date": null,
+  "effective_date": null,
+  "relation_target_ids": [
+    "Loi n° 83-112 du 12 décembre 1983",
+    "Décret n° 2000-2487 du 31 octobre 2000",
+    "Arrêté du ministre de la culture, de la jeunesse et des loisirs du 12 juin 2004"
+  ],
+  "relation_types": [
+    "REFERENCES",
+    "REFERENCES",
+    "REFERENCES"
+  ],
+  "entity_names": [
+    "Ministère des Affaires Culturelles",
+    "Assemblée des Représentants du Peuple"
+  ],
+  "entity_types": [
+    "MINISTRY",
+    "STATE_ORGAN"
+  ],
+  "entity_ids": [
+    "tn-org-ministere-des-affaires-culturelles",
+    "tn-org-assemblee-des-representants-du-peuple"
+  ],
+  "community_id": "tn-administratif",
+  "community_label": "Droit administratif et public",
+  "community_summary": "Règles relatives à l'organisation, au fonctionnement et à la gestion des administrations et concours publics en Tunisie.",
+  "parent_document_id": "tn-arrtministriel-nodoc",
+  "preceding_article_id": "tn-arrtministriel-nodoc-art-2",
+  "following_article_id": "tn-arrtministriel-nodoc-art-4",
+  "graph_level": 1,
+  "version": 1,
+  "repeal_date": null,
+  "superseded_by_id": null,
+  "supersedes_id": null,
+  "last_checked": "2026-04-01T00:00:00Z",
+  "next_check": "2026-10-01T00:00:00Z",
+  "chapter_normalized": null,
+  "embedding_text": "Arrêté de la ministre des affaires culturelles du 9 décembre 2025, portant ouverture d'un concours interne sur épreuves pratiques pour la promotion au grade de professeur principal d'enseignement de musique au titre de l'année 2025.\nL'article 3 de l'arrêté ministériel du 9 décembre 2025 fixe la date limite de dépôt des candidatures pour le concours interne de promotion au grade de professeur principal d'enseignement de musique à l'année 2025 au 29 décembre 2025. Les candidats doivent respecter ce délai pour la validité de leur participation.\nينص الفصل الثالث من قرار وزيرة الشؤون الثقافية المؤرخ في 9 ديسمبر 2025 على تحديد آخر أجل لإيداع ملفات الترشح للمسابقة الداخلية للترقية إلى رتبة أستاذ رئيسي لتعليم الموسيقى لسنة 2025 في 29 ديسمبر 2025. يجب على المترشحين احترام هذا الموعد النهائي.\nLa date de clôture de la liste des candidatures pour le concours interne sur épreuves pratiques, organisé en vue de la promotion au grade de professeur principal d'enseignement de musique pour l'année 2025, est fixée au 29 décembre 2025. Les dossiers de candidature doivent être déposés dans les délais impartis conformément aux dispositions réglementaires en vigueur. تحدد تاريخ غلق لائحة الترشحات للمسابقة الداخلية على أساس الاختبارات العملية للترقية إلى رتبة أستاذ رئيسي لتعليم الموسيقى لسنة 2025 في 29 ديسمبر 2025. يجب على المترشحين تقديم ملفاتهم في الآجال المحددة ووفقًا للإجراءات التنظيمية المعمول بها.\ndisposition légale | obligation réglementaire | cadre juridique"
+}
