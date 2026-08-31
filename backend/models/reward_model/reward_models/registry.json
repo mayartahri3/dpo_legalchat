@@ -1,0 +1,10 @@
+[
+  {
+    "version": 1,
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "created_at": "2026-08-30T21:52:09.176797+00:00",
+    "n_training_pairs": 24,
+    "path": "reward_models/v1",
+    "status": "ready"
+  }
+]

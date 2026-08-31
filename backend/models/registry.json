@@ -6,7 +6,29 @@
     "dataset_version": 1,
     "n_training_pairs": 20,
     "path": "models\\v1",
+    "status": "retired",
+    "eval_summary": {}
+  },
+  {
+    "version": 2,
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "created_at": "2026-08-12T20:32:57.114885+00:00",
+    "dataset_version": 1,
+    "n_training_pairs": 20,
+    "path": "models\\v2",
+    "status": "staged",
+    "method": "dpo",
+    "eval_summary": {}
+  },
+  {
+    "version": 3,
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "created_at": "2026-08-12T20:32:57.114885+00:00",
+    "dataset_version": 1,
+    "n_training_pairs": 20,
+    "path": "models\\v3",
     "status": "active",
+    "method": "dpo",
     "eval_summary": {}
   }
 ]
