@@ -345,7 +345,7 @@ export default function Training() {
                       onChange={() => toggleCompareSelection(v.version)}
                     />
                     <span className={`version-badge version-${v.status}`}>{STATUS_LABEL[v.status] || v.status}</span>
-                    <span className="method-badge">{METHOD_LABEL[v.method] || v.method || "dpo"}</span>
+                    <span className="method-badge">{METHOD_LABEL[v.method] || v.method }</span>
                     <span>v{v.version}</span>
                     <span>{v.n_training_pairs} paires</span>
                     <span>{v.created_at ? new Date(v.created_at).toLocaleString("fr-FR") : ""}</span>

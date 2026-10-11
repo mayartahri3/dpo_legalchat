@@ -810,6 +810,7 @@ async def import_model(
     base_model: str = Form(default=""),
     n_training_pairs: int = Form(default=0),
     dataset_version: int = Form(default=0),
+    method: str = Form(default="dpo"),
     x_import_token: str | None = Header(default=None),
 ):
     _check_external_token(x_import_token)
@@ -838,6 +839,7 @@ async def import_model(
         n_training_pairs=n_training_pairs,
         path=out_dir,
         status="staged",
+        method=method,
     )
     registry.register(mv)
     return {"version": version, "path": out_dir, "status": "staged"}

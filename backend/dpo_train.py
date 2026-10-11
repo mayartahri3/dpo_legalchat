@@ -1,22 +1,21 @@
 """
 dpo_train.py — Reward signal + cycle d'entraînement DPO + versioning (§5.4, §7).
 
+VERSION OPTIMISÉE RAM/VRAM COLAB (voir CHANGES en bas de fichier pour le
+détail de ce qui a changé par rapport à la version d'origine).
+
 Périmètre (§3.1 / §3.2 / §6-Portabilité) :
   - Cible UNIQUEMENT un modèle open source contrôlé par E-Tafakna
     (ex. Qwen/Mistral/Llama — ici on réutilise le modèle de minirag.py),
     jamais un modèle propriétaire via API.
   - Le "Reward Model" du §5.4 est ici IMPLICITE : DPO n'entraîne pas de
     tête de récompense séparée, la log-vraisemblance relative
-    policy/référence sur (chosen, rejected) joue ce rôle. C'est la
-    différence fondamentale entre DPO et RLHF classique (PPO + Reward
-    Model explicite) — voir le glossaire du cahier des charges, qui
-    présente DPO comme "plus simple à mettre en œuvre que le RL classique".
-    Un ReferenceRewardScorer optionnel est fourni plus bas pour l'étape
-    d'évaluation comparative (§8 — dégradation entre versions).
+    policy/référence sur (chosen, rejected) joue ce rôle.
 """
 
 from __future__ import annotations
 
+import gc
 import json
 import shutil
 from dataclasses import dataclass, field
@@ -28,8 +27,7 @@ from feedback_store import FeedbackStore
 
 
 # --------------------------------------------------------------------------- #
-# Model registry — versioning + historique (§5.4 "Versionner chaque nouvelle
-# version du modèle et conserver un historique des cycles d'entraînement")
+# Model registry — versioning + historique (§5.4)
 # --------------------------------------------------------------------------- #
 
 @dataclass
@@ -41,7 +39,7 @@ class ModelVersion:
     n_training_pairs: int
     path: str
     status: str = "staged"     # staged | active | retired
-    method: str = "dpo"        # dpo | ppo | grpo — pour comparer les 3 approches (voir model_eval.py)
+    method: str = "dpo"        # dpo | ppo | grpo
     eval_summary: dict = field(default_factory=dict)
 
 
@@ -75,7 +73,6 @@ class ModelRegistry:
         return entries[-1] if entries else None
 
     def promote(self, version: int) -> None:
-        """Remplace la version en production après évaluation comparative (§7 étape 8, §8)."""
         entries = self._load()
         for e in entries:
             if e["status"] == "active":
@@ -88,8 +85,6 @@ class ModelRegistry:
         return self._load()
 
     def set_eval_summary(self, version: int, summary: dict) -> None:
-        """Enregistre le résultat d'une comparaison (model_eval.py) sur une version
-        donnée — permet au dashboard d'afficher les métriques sans tout recalculer."""
         entries = self._load()
         for e in entries:
             if e["version"] == version:
@@ -98,18 +93,53 @@ class ModelRegistry:
 
 
 # --------------------------------------------------------------------------- #
+# Memory helpers — utilisés par dpo_train.py ET grpo_train.py
+# --------------------------------------------------------------------------- #
+
+def resolve_training_dtype():
+    """Choisit le dtype le plus économe en mémoire disponible sur ce matériel.
+
+    fp32 pour les poids d'un modèle 1.5B ~= 6 Go rien que pour les poids.
+    bf16/fp16 divise ça par 2 — la différence entre "ça tient sur un T4 16 Go"
+    et "ça OOM avant même la première step". Sur CPU (pas de GPU Colab
+    attribué) on reste en fp32, torch ne supporte pas bien le matmul bf16/fp16
+    sur CPU pour l'entraînement.
+    """
+    import torch
+    if not torch.cuda.is_available():
+        return torch.float32, False, False
+    has_bf16 = torch.cuda.is_bf16_supported()
+    dtype = torch.bfloat16 if has_bf16 else torch.float16
+    return dtype, True, has_bf16
+
+
+def print_gpu_mem(tag: str) -> None:
+    import torch
+    if not torch.cuda.is_available():
+        return
+    allocated = torch.cuda.memory_allocated() / 1e9
+    reserved = torch.cuda.memory_reserved() / 1e9
+    print(f"[mem] {tag}: allocated={allocated:.2f} GB, reserved={reserved:.2f} GB")
+
+
+def free_memory(*objs) -> None:
+    """Supprime les références passées puis force le garbage collector +
+    la libération du cache CUDA. À appeler après chaque run_cycle avant de
+    lancer un autre cycle dans le MÊME process Colab (sinon les allocateurs
+    CUDA gardent la mémoire réservée même après suppression des objets)."""
+    import torch
+    for o in objs:
+        del o
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
+
+# --------------------------------------------------------------------------- #
 # DPO training pipeline
 # --------------------------------------------------------------------------- #
 
 class DPOTrainingPipeline:
-    """
-    Fine-tune le modèle open source contrôlé (LocalLLM de minirag.py) sur le
-    dataset de préférences, via trl.DPOTrainer.
-
-    Nécessite : pip install trl transformers datasets peft (optionnel: LoRA
-    pour rester léger — recommandé, minirag.py cible des modèles 1-8B).
-    """
-
     def __init__(self, base_model: str = "Qwen/Qwen2.5-1.5B-Instruct",
                  registry: ModelRegistry | None = None, use_lora: bool = True):
         self.base_model_name = base_model
@@ -117,28 +147,29 @@ class DPOTrainingPipeline:
         self.use_lora = use_lora
 
     def _resolve_base_checkpoint(self) -> str:
-        """Repart de la dernière version active si elle existe, sinon du modèle de base."""
         active = self.registry.active_version()
         return active["path"] if active else self.base_model_name
 
     def run_cycle(self, store: FeedbackStore, index: "EmbeddingIndex", dataset_dir: str | Path = "datasets",
                   min_examples: int = 20, epochs: int = 1, learning_rate: float = 5e-6,
-                  top_k: int = 3, fast_test: bool = False) -> ModelVersion:
+                  top_k: int = 3, fast_test: bool = False,
+                  per_device_train_batch_size: int = 1,
+                  gradient_accumulation_steps: int = 8) -> ModelVersion:
         """
-        Un cycle complet §7 (étapes 5-7) :
-          corrections validées -> dataset -> entraînement DPO -> nouvelle version.
+        Un cycle complet §7 (étapes 5-7).
 
-        `index` est nécessaire pour reconstruire le contexte RAG des prompts
-        d'entraînement (voir dataset_builder.build_preference_dataset) —
-        sans lui, le modèle serait entraîné sur des prompts sans contexte,
-        ce qui ne correspond pas à ce qu'il voit réellement en inférence.
-
-        Lève ValueError si le volume de corrections validées est insuffisant
-        (§8 — éviter le sur-apprentissage sur peu d'exemples).
+        CHANGÉ vs original : batch_size=1 / grad_accum=8 par défaut (au lieu
+        de batch_size=2 / accum=4) — même throughput effectif (8 séquences
+        par update), mais le pic mémoire d'activation ne dépend que du
+        batch PHYSIQUE (1), pas du batch effectif. C'est le levier le plus
+        direct contre un OOM Colab sans changer la qualité d'entraînement.
         """
-        from datasets import Dataset          # import tardif : dépendance lourde optionnelle
+        from datasets import Dataset
         from transformers import AutoModelForCausalLM, AutoTokenizer
         from trl import DPOConfig, DPOTrainer
+        import dataclasses
+        import os
+        import torch
 
         base_ckpt = self._resolve_base_checkpoint()
         tokenizer = AutoTokenizer.from_pretrained(base_ckpt)
@@ -149,11 +180,20 @@ class DPOTrainingPipeline:
         dataset_version = self.registry.next_version()
         dataset_path = save_dataset(examples, dataset_dir, dataset_version)
 
-        model = AutoModelForCausalLM.from_pretrained(base_ckpt)
-        # Le modèle de référence de DPO reste figé sur les poids de départ du
-        # cycle — trl le clone en interne si `ref_model=None` et que le modèle
-        # n'a pas d'adaptateurs PEFT actifs.
-        ref_model = None
+        has_cuda = torch.cuda.is_available()
+        model_dtype, _, has_bf16 = resolve_training_dtype()
+        if not has_cuda:
+            torch.set_num_threads(max(1, os.cpu_count() or 1))
+
+        print_gpu_mem("before model load")
+        model = AutoModelForCausalLM.from_pretrained(base_ckpt, torch_dtype=model_dtype)
+        # Requis dès qu'on active gradient checkpointing plus bas — sinon le
+        # modèle garde le cache d'attention en mémoire pour rien pendant le
+        # forward d'entraînement (use_cache ne sert qu'à la génération).
+        model.config.use_cache = False
+        print_gpu_mem("after model load")
+
+        ref_model = None  # trl clone en interne (adaptateurs désactivés) — pas de 2e copie du modèle
 
         peft_config = None
         if self.use_lora:
@@ -168,48 +208,45 @@ class DPOTrainingPipeline:
         new_version = self.registry.next_version()
         output_dir = str(Path("models") / f"v{new_version}")
 
-        # TrainingArguments essaie de deviner bf16/GPU automatiquement, ce qui
-        # plante sur une machine CPU-only ("doesn't support bf16/gpu"). On
-        # détecte explicitement le matériel disponible plutôt que de laisser
-        # trl/transformers deviner.
-        import os
-        import torch
-        has_cuda = torch.cuda.is_available()
-        has_bf16 = has_cuda and torch.cuda.is_bf16_supported()
-        if not has_cuda:
-            # Utilise tous les coeurs dispo pour les forward/backward CPU —
-            # sinon PyTorch peut se limiter à 1 thread selon l'environnement.
-            torch.set_num_threads(max(1, os.cpu_count() or 1))
-
-        # Le coût d'un pas DPO scale avec le carré de la longueur de séquence.
-        # Le contexte juridique (articles de loi complets) dans `chosen`/
-        # `rejected` peut faire plusieurs centaines/milliers de tokens — on
-        # tronque pour garder des pas rapides, surtout utile sur CPU.
         max_length = 256 if fast_test else 768
         max_prompt_length = 128 if fast_test else 384
 
-        config = DPOConfig(
+        # CHANGÉ — robustesse aux versions de trl : `pip install -U trl` peut
+        # attraper une release plus récente que celle testée ici, et trl a
+        # déjà supprimé/renommé des champs de *Config d'une version à l'autre
+        # (ex: max_prompt_length déprécié puis retiré de DPOConfig). Plutôt
+        # que de planter sur un TypeError, on ne passe QUE les kwargs que la
+        # version installée accepte réellement, et on log ce qui est ignoré.
+        requested_config_kwargs = dict(
             output_dir=output_dir,
             num_train_epochs=epochs,
             learning_rate=learning_rate,
-            # fast_test réduit le batch à 1/pas d'accumulation pour avoir un
-            # retour quasi immédiat sur la mécanique du pipeline (job créé,
-            # version enregistrée, promotion possible) sans attendre un vrai
-            # cycle d'entraînement complet.
-            per_device_train_batch_size=1 if fast_test else 2,
-            gradient_accumulation_steps=1 if fast_test else 4,
+            per_device_train_batch_size=1 if fast_test else per_device_train_batch_size,
+            gradient_accumulation_steps=1 if fast_test else gradient_accumulation_steps,
             max_steps=3 if fast_test else -1,
             max_length=max_length,
             max_prompt_length=max_prompt_length,
-            beta=0.1,                       # force du terme de préférence DPO
-            logging_steps=1,                # log chaque pas — avec peu d'exemples, logging_steps=10
-                                             # ne loguait jamais rien avant la fin du run
+            beta=0.1,
+            logging_steps=1,
             save_strategy="epoch",
             report_to=[],
             use_cpu=not has_cuda,
             bf16=has_bf16,
-            fp16=False,                     # fp16 instable pour DPO sur petits modèles CPU/mixte
+            fp16=False,
+            gradient_checkpointing=True,
+            gradient_checkpointing_kwargs={"use_reentrant": False},
+            optim="adamw_torch",
         )
+        accepted_fields = {f.name for f in dataclasses.fields(DPOConfig)}
+        dropped = sorted(k for k in requested_config_kwargs if k not in accepted_fields)
+        if dropped:
+            print(f"[dpo_train] ⚠ Cette version de trl n'accepte pas ces options DPOConfig, "
+                  f"elles sont ignorées : {dropped}")
+            if "max_prompt_length" in dropped:
+                print("  (max_prompt_length déprécié dans les trl récents — seul max_length "
+                      "s'applique désormais, avec troncature 'keep_start' par défaut.)")
+        config_kwargs = {k: v for k, v in requested_config_kwargs.items() if k in accepted_fields}
+        config = DPOConfig(**config_kwargs)
 
         trainer = DPOTrainer(
             model=model,
@@ -219,7 +256,9 @@ class DPOTrainingPipeline:
             processing_class=tokenizer,
             peft_config=peft_config,
         )
+        print_gpu_mem("before train")
         trainer.train()
+        print_gpu_mem("after train")
         trainer.save_model(output_dir)
         tokenizer.save_pretrained(output_dir)
 
@@ -230,22 +269,22 @@ class DPOTrainingPipeline:
             dataset_version=dataset_version,
             n_training_pairs=len(examples),
             path=output_dir,
-            status="staged",   # reste "staged" tant que l'évaluation comparative (§8) n'a pas eu lieu
+            status="staged",
             method="dpo",
         )
         self.registry.register(mv)
+
+        # CHANGÉ : libère explicitement le modèle/trainer avant de rendre la
+        # main — sans ça, si colab_train.py enchaîne un 2e cycle dans le
+        # même process, la mémoire du premier cycle reste réservée par
+        # l'allocateur CUDA et peut faire échouer le 2e cycle même s'il est
+        # individuellement plus petit.
+        free_memory(trainer, model, ref_model)
+        print_gpu_mem("after cleanup")
+
         return mv
 
     def should_trigger(self, store: FeedbackStore, min_examples: int = 20) -> bool:
-        """
-        Déclencheur simple pour un cycle "hebdomadaire/mensuel" (§7) : on
-        planifie l'appel de cette méthode via un scheduler externe (cron,
-        Airflow...) — ce module ne fait qu'exposer la condition métier.
-
-        Ne reconstruit PAS les prompts (pas besoin d'index/tokenizer ici) —
-        compte juste les paires (chosen, rejected) utilisables, comme le
-        ferait build_preference_dataset avant l'étape de reconstruction RAG.
-        """
         rows = store.validated_corrections()
         usable = sum(
             1 for row in rows
@@ -257,22 +296,10 @@ class DPOTrainingPipeline:
 
 
 # --------------------------------------------------------------------------- #
-# Évaluation comparative avant remplacement — §7 étape 8, §8 (dégradation)
+# Évaluation comparative avant remplacement — §7 étape 8, §8
 # --------------------------------------------------------------------------- #
 
 class ReferenceRewardScorer:
-    """
-    Scoreur heuristique utilisé UNIQUEMENT pour comparer deux versions du
-    modèle sur un jeu de questions de benchmark avant promotion (§8), pas
-    pour l'entraînement lui-même (DPO n'a pas besoin de ce scoreur, cf.
-    note en tête de fichier).
-
-    Score = similarité d'embedding entre la réponse générée et la réponse
-    "chosen" de référence pour la même question, quand elle existe dans le
-    dataset de préférences validé. Une vraie évaluation juridique reste
-    humaine (§3.2 — exclue du périmètre technique).
-    """
-
     def __init__(self, embed_model):
         self.embed_model = embed_model
 
@@ -283,11 +310,6 @@ class ReferenceRewardScorer:
 
     def compare_versions(self, questions_and_refs: list[tuple[str, str]],
                           generate_fn_a, generate_fn_b) -> dict:
-        """
-        generate_fn_a / generate_fn_b : callables(question) -> str, typiquement
-        `LocalLLM.generate` chargé sur chacune des deux versions du modèle.
-        Renvoie un résumé exploitable pour la décision de promotion (§7-8).
-        """
         scores_a, scores_b = [], []
         for question, reference in questions_and_refs:
             scores_a.append(self.score(generate_fn_a(question), reference))
@@ -302,3 +324,26 @@ class ReferenceRewardScorer:
             "b_wins": mean_b > mean_a,
             "delta": round(mean_b - mean_a, 4),
         }
+
+
+# --------------------------------------------------------------------------- #
+# CHANGES vs. version d'origine
+# --------------------------------------------------------------------------- #
+# 1. Modèle chargé en bf16 (ou fp16 si bf16 indisponible) au lieu de fp32
+#    systématique -> ~2x moins de mémoire pour les poids du modèle de base.
+# 2. gradient_checkpointing=True + use_cache=False -> réduit fortement la
+#    mémoire d'activations au prix d'un peu de temps de calcul en plus
+#    (recompute des activations au backward).
+# 3. per_device_train_batch_size=1 par défaut avec gradient_accumulation
+#    plus élevé -> même throughput effectif, pic mémoire plus bas.
+# 4. free_memory() explicite en fin de run_cycle -> permet d'enchaîner
+#    plusieurs cycles dans le même process Colab sans fuite d'allocation
+#    CUDA (utile si vous scriptez DPO puis GRPO dans le même notebook —
+#    même si le guide recommande un restart runtime entre les deux par
+#    prudence supplémentaire).
+# 5. print_gpu_mem() à des points clés -> permet de voir exactement où la
+#    mémoire grimpe si un OOM survient malgré tout, au lieu de deviner.
+# 6. DPOConfig(**kwargs) filtré dynamiquement sur dataclasses.fields() ->
+#    évite un crash sec (TypeError) si `pip install -U trl` attrape une
+#    version qui a retiré/renommé un champ (ex: max_prompt_length) entre le
+#    moment où ce script a été écrit et le moment où vous le lancez.

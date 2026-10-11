@@ -55,16 +55,17 @@ export const api = {
   triggerN8n: ({ min_examples, epochs }) =>
     client.post("/api/train/trigger-n8n", { min_examples, epochs }).then((r) => r.data),
 
-  importModel: (file, { base_model, n_training_pairs, dataset_version } = {}) => {
-    const form = new FormData();
-    form.append("file", file);
-    if (base_model) form.append("base_model", base_model);
-    if (n_training_pairs != null) form.append("n_training_pairs", n_training_pairs);
-    if (dataset_version != null) form.append("dataset_version", dataset_version);
-    return client
-      .post("/api/models/import", form, { headers: { "Content-Type": "multipart/form-data" } })
-      .then((r) => r.data);
-  },
+  importModel: (file, { base_model, n_training_pairs, dataset_version, method } = {}) => {
+  const form = new FormData();
+  form.append("file", file);
+  if (base_model) form.append("base_model", base_model);
+  if (n_training_pairs != null) form.append("n_training_pairs", n_training_pairs);
+  if (dataset_version != null) form.append("dataset_version", dataset_version);
+  if (method) form.append("method", method);   // NEW
+  return client
+    .post("/api/models/import", form, { headers: { "Content-Type": "multipart/form-data" } })
+    .then((r) => r.data);
+},
 
   modelsHistory: () => client.get("/api/models/history").then((r) => r.data),
 

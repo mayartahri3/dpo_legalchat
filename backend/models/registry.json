@@ -28,7 +28,7 @@
     "n_training_pairs": 20,
     "path": "models\\v3",
     "status": "active",
-    "method": "dpo",
+    "method": "grpo",
     "eval_summary": {}
   }
 ]
