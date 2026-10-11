@@ -1,26 +1,11 @@
 """
-export_for_colab.py — à exécuter EN LOCAL pour préparer feedback_export.zip,
-le fichier à uploader dans Google Colab pour lancer colab_train.py (§7 —
-même cycle question -> feedback -> correction -> validation -> dataset ->
-entraînement, mais l'étape entraînement tourne sur GPU Colab au lieu du
-poste local).
+export_for_colab.py — prépare feedback_export.zip à uploader dans Colab.
 
-Usage :
-    python export_for_colab.py
-    python export_for_colab.py --include-reward-model
-        # requis pour lancer un cycle PPO dans Colab SI le reward model
-        # n'est pas ré-entraîné dans ce même notebook (voir colab_train.py
-        # --method reward_model, qui évite d'avoir besoin de cette option).
+    python export_for_colab.py [--include-reward-model]
 
-Ce que fait ce script :
-  1. Copie feedback.db (l'historique réel feedback/corrections/validations)
-     et articles/ (le corpus juridique — nécessaire pour reconstruire
-     exactement le même contexte RAG dans les prompts d'entraînement,
-     voir dataset_builder.py) dans une archive zip.
-  2. Optionnellement, inclut reward_models/ (déjà entraîné en local ou lors
-     d'un précédent cycle Colab) — seul PPO en a besoin.
-  3. N'inclut PAS models/ : on ne renvoie jamais un modèle déjà entraîné
-     vers Colab, seulement les données sources.
+Contient : feedback.db, articles/, eval_split.json (s'il existe — INDISPENSABLE pour
+que Colab n'entraîne pas sur les questions de test), et reward_models/ si demandé
+(seul PPO en a besoin). Jamais models/.
 """
 
 from __future__ import annotations
@@ -32,47 +17,36 @@ from pathlib import Path
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--db", default="feedback.db")
-    parser.add_argument("--data", default="articles")
-    parser.add_argument("--reward-models-root", default="reward_models")
-    parser.add_argument(
-        "--include-reward-model",
-        action="store_true",
-        help="Inclut reward_models/ dans l'export — requis pour un cycle PPO dans Colab "
-             "si le reward model n'est PAS entraîné dans ce même notebook Colab.",
-    )
-    parser.add_argument("--out", default="feedback_export.zip")
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--db", default="feedback.db")
+    ap.add_argument("--data", default="articles")
+    ap.add_argument("--reward-models-root", default="reward_models")
+    ap.add_argument("--include-reward-model", action="store_true")
+    ap.add_argument("--out", default="feedback_export.zip")
+    args = ap.parse_args()
 
-    db_path = Path(args.db)
-    data_dir = Path(args.data)
-    if not db_path.exists():
-        raise FileNotFoundError(f"'{db_path}' introuvable — lancez ce script depuis le dossier backend/.")
-    if not data_dir.exists():
-        raise FileNotFoundError(f"'{data_dir}' introuvable — lancez ce script depuis le dossier backend/.")
+    required = {"--db": Path(args.db), "--data": Path(args.data)}
+    if args.include_reward_model:
+        required["--reward-models-root"] = Path(args.reward_models_root)
+    for flag, p in required.items():
+        if not p.exists():
+            raise FileNotFoundError(f"'{p}' introuvable ({flag}) — lancez depuis le dossier backend/.")
 
-    with tempfile.TemporaryDirectory() as tmp_str:
-        tmp = Path(tmp_str)
-        shutil.copy2(db_path, tmp / "feedback.db")
-        shutil.copytree(data_dir, tmp / "articles")
-
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        shutil.copy2(args.db, tmp / "feedback.db")
+        shutil.copytree(args.data, tmp / "articles")
+        if Path("eval_split.json").exists():
+            shutil.copy2("eval_split.json", tmp / "eval_split.json")
+        else:
+            print("⚠ eval_split.json absent : Colab entraînera sur TOUTES les corrections "
+                  "(pas de holdout). Créez-le avec `python eval_metrics.py --make-split`.")
         if args.include_reward_model:
-            reward_root = Path(args.reward_models_root)
-            if not reward_root.exists():
-                raise FileNotFoundError(
-                    f"'{reward_root}' introuvable (--include-reward-model demandé) — "
-                    "entraînez d'abord un reward model en local, ou omettez cette option "
-                    "et utilisez `colab_train.py --method reward_model` directement dans Colab."
-                )
-            shutil.copytree(reward_root, tmp / "reward_models")
+            shutil.copytree(args.reward_models_root, tmp / "reward_models")
+        archive = shutil.make_archive(str(Path(args.out).with_suffix("")), "zip", root_dir=str(tmp))
 
-        out_base = Path(args.out).with_suffix("")
-        archive_path = shutil.make_archive(str(out_base), "zip", root_dir=str(tmp))
-
-    print(f"Export prêt : {archive_path}")
-    print("Uploadez ce fichier dans Colab, puis lancez :")
-    print("    python colab_train.py --export-zip feedback_export.zip --method dpo   # ou ppo / grpo / reward_model")
+    print(f"Export prêt : {archive}")
+    print("Dans Colab : python colab_train.py --export-zip feedback_export.zip --method dpo   # ou ppo / grpo / reward_model")
 
 
 if __name__ == "__main__":

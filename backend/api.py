@@ -1,269 +1,178 @@
 """
-api.py — Interface HTTP (FastAPI) au-dessus du pipeline existant.
+api.py — API FastAPI (mêmes routes et formats de réponse qu'avant).
 
-IMPORTANT : ce fichier ne modifie AUCUN module existant. Il réutilise tel
-quel minirag.py (EmbeddingIndex, LocalLLM, RAGChatbot, load_articles),
-feedback_store.py (FeedbackStore, Feedback, Correction, StylePreference,
-can_propose_correction), validation.py (ValidationModule), dashboard.py
-(compute_metrics) et dataset_builder/dpo_train pour /train. C'est la même
-logique que legal_rag_app.py (chat / review / train / dashboard), simplement
-appelée depuis des routes HTTP au lieu de boucles input().
+    ARTICLES_DIR, DB_PATH, EMBED_MODEL, LLM_MODEL, TOP_K, MAX_NEW_TOKENS, EMBED_CACHE_DIR,
+    FORCE_BASE_MODEL, N8N_WEBHOOK_URL, N8N_WEBHOOK_TOKEN, AUTO_TRAIN_VIA_N8N,
+    PUBLIC_API_URL, EXTERNAL_API_TOKEN, AUTO_TRAIN_MIN_EXAMPLES, AUTO_TRAIN_EPOCHS
 
-Config via variables d'environnement (mêmes défauts que legal_rag_app.py) :
-    ARTICLES_DIR   dossier des articles JSON (§ legaldata)   default: "articles"
-    DB_PATH        fichier sqlite                            default: "feedback.db"
-    EMBED_MODEL    modèle sentence-transformers               default: all-MiniLM-L6-v2
-    LLM_MODEL      modèle HF causal-LM local                  default: Qwen/Qwen2.5-1.5B-Instruct
-    TOP_K          nb d'articles récupérés par question       default: 3
-
-Lancement :
-    uvicorn api:app --reload --port 8000
+Lancement :  uvicorn api:app --reload --port 8000
 """
 
 from __future__ import annotations
 
+import io
+import json
 import os
+import re
 import threading
 import uuid
-from concurrent.futures import ThreadPoolExecutor
+import zipfile
+from contextlib import asynccontextmanager
+from datetime import datetime, timezone
 from typing import Literal, Optional
 
 from dotenv import load_dotenv
-load_dotenv()  # lit un fichier .env dans le dossier courant s'il existe
+load_dotenv()
 
-from fastapi import FastAPI, HTTPException, UploadFile, File, Form, Header
+from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from feedback_store import (
-    Correction, CorrectionStatus, Feedback, FeedbackStore, Rating, Reason,
-    ResponseStyle, StylePreference, UserProfile, can_propose_correction,
-)
-from validation import ValidationModule
 from dashboard import compute_metrics
-from dpo_train import DPOTrainingPipeline, ModelRegistry
-from reward_model import RewardModelPipeline, RewardModelRegistry
-from ppo_train import PPOTrainingPipeline
+from dataset_builder import build_preference_dataset, training_columns
+from dpo_train import DPOTrainingPipeline
+from feedback_store import (
+    Correction, CorrectionStatus, Feedback, FeedbackStore, Rating, Reason, ResponseStyle,
+    StylePreference, UserProfile, can_propose_correction,
+)
 from grpo_train import GRPOTrainingPipeline
+from minirag import EmbeddingIndex, LocalLLM, load_articles
 from model_eval import compare_model_versions
-
-from minirag import LocalLLM, RAGChatbot, EmbeddingIndex, load_articles
-
-# Réutilise les mêmes system-prompts de style que legal_rag_app.py (§5.5)
-from legal_rag_app import STYLE_SYSTEM_PROMPTS
-
-import re
+from ppo_train import PPOTrainingPipeline
+from reward_model import RewardModelPipeline, RewardModelRegistry
+from train_common import ModelRegistry, ModelVersion, count_usable_pairs
+from validation import ValidationModule
 
 # --------------------------------------------------------------------------- #
-# Détection de messages de "small talk" (salutations, remerciements, etc.) —
-# évite de lancer la recherche RAG + les deux générations A/B (§5.5) pour des
-# messages qui ne posent pas de question juridique. Répond directement, sans
-# appeler le LLM, donc quasi instantané, et sans demander de préférence de
-# style puisqu'il n'y a pas deux réponses à comparer.
-#
-# NOUVEAU : une seule réponse générique pour TOUT type de small talk donnait
-# des réponses absurdes ("Bonjour !" en réponse à "merci beaucoup") — chaque
-# catégorie (salutation / remerciement / au revoir / ça va / identité / test)
-# a maintenant sa propre réponse adaptée.
-# --------------------------------------------------------------------------- #
-
-SMALL_TALK_CATEGORIES = [
-    ("greeting", [
-        r"^salut+\s*[!.?]*$", r"^bonjour\s*[!.?]*$", r"^bonsoir\s*[!.?]*$",
-        r"^coucou\s*[!.?]*$", r"^(hello|hi|hey|yo)\s*[!.?]*$", r"^slt\s*[!.?]*$",
-    ]),
-    ("how_are_you", [
-        r"^(ça|ca)\s*va\s*[?!.]*$", r"^comment\s*(ça|ca)\s*va\s*[?!.]*$",
-    ]),
-    ("thanks", [
-        r"^merci+\s*[!.]*$", r"^merci\s*beaucoup\s*[!.]*$",
-    ]),
-    ("ack", [
-        r"^ok(ay)?\s*[!.]*$",
-    ]),
-    ("goodbye", [
-        r"^(au revoir|bye|à bientôt|a bientot)\s*[!.]*$",
-    ]),
-    ("identity", [
-        r"^(qui es[- ]tu|c'?est quoi ce chatbot|tu fais quoi)\s*[?]*$",
-    ]),
-    ("test", [
-        r"^test\s*[!.?]*$",
-    ]),
-]
-
-_SMALL_TALK_RE = [
-    (category, re.compile(p, re.IGNORECASE))
-    for category, patterns in SMALL_TALK_CATEGORIES
-    for p in patterns
-]
-
-SMALL_TALK_REPLIES = {
-    "greeting": (
-        "Bonjour ! Je suis votre copilote juridique — posez-moi une question sur un texte de "
-        "loi tunisien (droit du travail, propriété, entreprise, etc.) et je vous répondrai en "
-        "m'appuyant sur les articles pertinents."
-    ),
-    "how_are_you": (
-        "Je vais bien, merci ! Et vous ? N'hésitez pas à me poser une question juridique dès "
-        "que vous êtes prêt(e)."
-    ),
-    "thanks": (
-        "Avec plaisir ! N'hésitez pas si vous avez d'autres questions juridiques."
-    ),
-    "ack": "D'accord ! Posez-moi votre question quand vous voulez.",
-    "goodbye": "Au revoir ! N'hésitez pas à revenir si vous avez d'autres questions juridiques.",
-    "identity": (
-        "Je suis votre copilote juridique — je réponds à vos questions sur les textes de loi "
-        "tunisiens en m'appuyant sur les articles pertinents, avec citation systématique."
-    ),
-    "test": "Je fonctionne correctement ! Posez-moi une question juridique quand vous voulez.",
-}
-# Repli si jamais une catégorie n'a pas de réponse dédiée (ne devrait pas arriver).
-DEFAULT_SMALL_TALK_REPLY = SMALL_TALK_REPLIES["greeting"]
-
-
-def small_talk_category(question: str) -> str | None:
-    """Renvoie la catégorie de small talk détectée (ou None si la question doit
-    passer par le pipeline RAG normal)."""
-    q = question.strip()
-    if not q:
-        return "greeting"  # message vide -> traité comme une salutation d'accueil
-    if len(q) <= 25:
-        for category, pattern in _SMALL_TALK_RE:
-            if pattern.match(q):
-                return category
-    return None
-
-
-def is_small_talk(question: str) -> bool:
-    """Conservé pour compatibilité — préférer small_talk_category()."""
-    return small_talk_category(question) is not None
-
-
-# --------------------------------------------------------------------------- #
-# Config (identique aux défauts argparse de legal_rag_app.py)
+# Config — tous les chemins relatifs (models/, reward_models/, datasets/…) sont
+# résolus par rapport à ce dossier, quel que soit le répertoire de lancement.
 # --------------------------------------------------------------------------- #
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
 
 
-def _resolve(path: str) -> str:
-    """Résout un chemin relatif par rapport au dossier de api.py (BASE_DIR),
-    pas par rapport au cwd du process qui lance uvicorn."""
-    return path if os.path.isabs(path) else os.path.join(BASE_DIR, path)
+def _path(p: str) -> str:
+    return p if os.path.isabs(p) else os.path.join(BASE_DIR, p)
 
 
-ARTICLES_DIR = _resolve(os.environ.get("ARTICLES_DIR", "articles"))
-DB_PATH = _resolve(os.environ.get("DB_PATH", "feedback.db"))
+def _flag(name: str) -> bool:
+    return os.environ.get(name, "false").lower() == "true"
+
+
+ARTICLES_DIR = _path(os.environ.get("ARTICLES_DIR", "articles"))
+DB_PATH = _path(os.environ.get("DB_PATH", "feedback.db"))
+EMBED_CACHE_DIR = _path(os.environ.get("EMBED_CACHE_DIR", "embedding_cache"))
 EMBED_MODEL = os.environ.get("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 LLM_MODEL = os.environ.get("LLM_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")
 TOP_K = int(os.environ.get("TOP_K", "3"))
 MAX_NEW_TOKENS = int(os.environ.get("MAX_NEW_TOKENS", "500"))
-EMBED_CACHE_DIR = _resolve(os.environ.get("EMBED_CACHE_DIR", "embedding_cache"))
-
-# Si True, on ignore la version 'active' de ModelRegistry et on force
-# toujours le modèle de base LLM_MODEL — utile pour comparer base vs.
-# fine-tuné, ou pour revenir en arrière rapidement sans dé-promouvoir.
-FORCE_BASE_MODEL = os.environ.get("FORCE_BASE_MODEL", "false").lower() == "true"
-
-# --------------------------------------------------------------------------- #
-# n8n
-# --------------------------------------------------------------------------- #
+FORCE_BASE_MODEL = _flag("FORCE_BASE_MODEL")
 
 N8N_WEBHOOK_URL = os.environ.get("N8N_WEBHOOK_URL", "")
 N8N_WEBHOOK_TOKEN = os.environ.get("N8N_WEBHOOK_TOKEN", "")
-AUTO_TRAIN_VIA_N8N = os.environ.get("AUTO_TRAIN_VIA_N8N", "false").lower() == "true"
+AUTO_TRAIN_VIA_N8N = _flag("AUTO_TRAIN_VIA_N8N")
 PUBLIC_API_URL = os.environ.get("PUBLIC_API_URL", "http://localhost:8000")
 EXTERNAL_API_TOKEN = os.environ.get("EXTERNAL_API_TOKEN", "")
+AUTO_TRAIN_MIN_EXAMPLES = int(os.environ.get("AUTO_TRAIN_MIN_EXAMPLES", "20"))
+AUTO_TRAIN_EPOCHS = int(os.environ.get("AUTO_TRAIN_EPOCHS", "1"))
 
-
-def _check_external_token(x_import_token: str | None) -> None:
-    if EXTERNAL_API_TOKEN and x_import_token != EXTERNAL_API_TOKEN:
-        raise HTTPException(401, "Token invalide ou manquant (en-tête X-Import-Token).")
-
-app = FastAPI(title="E-Tafakna — API RAG juridique")
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # dev local uniquement ; restreindre en production
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-_gen_executor = ThreadPoolExecutor(max_workers=2)
+STYLE_PROMPTS = {
+    ResponseStyle.PEDAGOGICAL: (
+        "Tu es un assistant juridique. Réponds UNIQUEMENT à partir des articles de loi fournis "
+        "en contexte. Utilise un langage simple et pédagogique, avec un exemple concret si utile, "
+        "comme si tu expliquais à quelqu'un sans formation juridique. Cite quand même le numéro "
+        "d'article utilisé."
+    ),
+    ResponseStyle.TECHNICAL: (
+        "Tu es un assistant juridique. Réponds UNIQUEMENT à partir des articles de loi fournis "
+        "en contexte. Utilise un langage technique et précis, structuré, avec référence "
+        "systématique et rigoureuse au numéro d'article et à la loi concernée, comme pour un "
+        "professionnel du droit."
+    ),
+}
 
 # --------------------------------------------------------------------------- #
-# État global — construit une seule fois au démarrage (comme cmd_chat)
+# Small talk — réponse directe, sans RAG ni LLM
 # --------------------------------------------------------------------------- #
 
-_state: dict = {}
+_TALK_ADVICE = "posez-moi une question sur un texte de loi tunisien et je m'appuierai sur les articles pertinents."
+SMALL_TALK = {  # catégorie -> (regex, réponse)
+    "greeting": (r"salut+|bonjour|bonsoir|coucou|hello|hi|hey|yo|slt",
+                 f"Bonjour ! Je suis votre copilote juridique — {_TALK_ADVICE}"),
+    "how_are_you": (r"(?:comment\s*)?(?:ça|ca)\s*va",
+                    "Je vais bien, merci ! Et vous ? N'hésitez pas à me poser une question juridique."),
+    "thanks": (r"merci+(?:\s*beaucoup)?",
+               "Avec plaisir ! N'hésitez pas si vous avez d'autres questions juridiques."),
+    "ack": (r"ok(?:ay)?", "D'accord ! Posez-moi votre question quand vous voulez."),
+    "goodbye": (r"au revoir|bye|à bientôt|a bientot",
+                "Au revoir ! N'hésitez pas à revenir si vous avez d'autres questions juridiques."),
+    "identity": (r"qui es[- ]tu|c'?est quoi ce chatbot|tu fais quoi",
+                 "Je suis votre copilote juridique — je réponds à vos questions sur les textes de "
+                 "loi tunisiens, avec citation systématique des articles."),
+    "test": (r"test", "Je fonctionne correctement ! Posez-moi une question juridique quand vous voulez."),
+}
+_SMALL_TALK_RE = {k: re.compile(rf"^(?:{p})\s*[!.?]*$", re.IGNORECASE) for k, (p, _) in SMALL_TALK.items()}
+
+
+def small_talk_reply(question: str) -> str | None:
+    q = question.strip()
+    if not q:
+        return SMALL_TALK["greeting"][1]
+    if len(q) <= 25:
+        for category, rx in _SMALL_TALK_RE.items():
+            if rx.match(q):
+                return SMALL_TALK[category][1]
+    return None
+
+
+# --------------------------------------------------------------------------- #
+# État global + démarrage
+# --------------------------------------------------------------------------- #
+
+S: dict = {"auto_last_count": 0, "jobs": {}}
+_jobs_lock = threading.Lock()
 
 
 def _resolve_active_model() -> str:
-    """
-    NOUVEAU : au lieu de toujours charger LLM_MODEL (modèle de base), on
-    vérifie d'abord si une version a été promue ('active') dans
-    ModelRegistry. Si oui, c'est ELLE qu'on charge — sinon on retombe sur
-    LLM_MODEL. C'est ce qui manquait pour que "Promouvoir en production"
-    (Training.jsx / legal_rag_app.py promote) ait un effet réel sur /api/chat.
-    """
     if FORCE_BASE_MODEL:
-        print("[api] FORCE_BASE_MODEL=true -> modèle de base forcé, version promue ignorée.")
+        print("[api] FORCE_BASE_MODEL=true -> modèle de base.")
         return LLM_MODEL
-
     active = ModelRegistry().active_version()
     if active is None:
-        print("[api] Aucune version promue trouvée dans ModelRegistry -> modèle de base utilisé.")
+        print("[api] Aucune version promue -> modèle de base.")
         return LLM_MODEL
-
-    active_path = active["path"]
-    if not os.path.isdir(active_path):
-        print(f"[api] ATTENTION : version active v{active['version']} pointe vers "
-              f"'{active_path}' introuvable sur ce disque -> modèle de base utilisé à la place.")
+    if not os.path.isdir(active["path"]):
+        print(f"[api] ⚠ v{active['version']} introuvable ({active['path']}) -> modèle de base.")
         return LLM_MODEL
+    print(f"[api] Version active : v{active['version']} -> {active['path']}")
+    return active["path"]
 
-    print(f"[api] Version active trouvée : v{active['version']} -> {active_path}")
-    return active_path
 
-
-@app.on_event("startup")
-def startup() -> None:
-    print(f"[api] DB_PATH          = {DB_PATH}")
-    print(f"[api] ARTICLES_DIR     = {ARTICLES_DIR}")
-    print(f"[api] EMBED_CACHE_DIR  = {EMBED_CACHE_DIR}")
-
-    print(f"[api] Chargement des articles depuis '{ARTICLES_DIR}' ...")
-    articles = load_articles(ARTICLES_DIR)
-    print(f"[api] {len(articles)} article(s) chargé(s).")
-
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
     index = EmbeddingIndex(EMBED_MODEL)
-    index.build(articles, cache_dir=EMBED_CACHE_DIR)
+    index.build(load_articles(ARTICLES_DIR), cache_dir=EMBED_CACHE_DIR)
+    print(f"[api] {len(index.articles)} article(s) indexé(s).")
 
     model_path = _resolve_active_model()
-    # base_model_for_adapter : si model_path est un adaptateur LoRA, LocalLLM
-    # lit déjà le modèle de base dans adapter_config.json — on le passe quand
-    # même en secours explicite au cas où ce champ serait absent.
-    llm = LocalLLM(model_path, max_new_tokens=MAX_NEW_TOKENS, base_model_for_adapter=LLM_MODEL)
-    bot = RAGChatbot(index, llm, top_k=TOP_K)
-
-    _state["index"] = index
-    _state["llm"] = llm
-    _state["bot"] = bot
-    _state["loaded_model_path"] = model_path
-
-    store = get_store()
-    n_feedback = store.conn.execute("SELECT COUNT(*) AS n FROM feedback").fetchone()["n"]
-    n_corrections = store.conn.execute("SELECT COUNT(*) AS n FROM corrections").fetchone()["n"]
-    n_validated = len(store.validated_corrections())
-    store.close()
-    print(f"[api] Base existante   : {n_feedback} feedback(s), {n_corrections} correction(s), "
-          f"{n_validated} validée(s).")
+    S.update(index=index, loaded_model_path=model_path,
+             llm=LocalLLM(model_path, max_new_tokens=MAX_NEW_TOKENS, base_model_for_adapter=LLM_MODEL))
     print("[api] Prêt.")
+    yield
 
 
-def get_store() -> FeedbackStore:
-    return FeedbackStore(DB_PATH)
+app = FastAPI(title="E-Tafakna — API RAG juridique", lifespan=lifespan)
+app.add_middleware(CORSMiddleware, allow_origins=["*"],   # dev uniquement : restreindre en production
+                   allow_methods=["*"], allow_headers=["*"])
+
+
+def get_store():
+    store = FeedbackStore(DB_PATH)
+    try:
+        yield store
+    finally:
+        store.close()
 
 
 def _profile(value: str) -> UserProfile:
@@ -271,6 +180,11 @@ def _profile(value: str) -> UserProfile:
         return UserProfile(value)
     except ValueError:
         raise HTTPException(400, f"Profil inconnu : {value}")
+
+
+def _check_external_token(token: str | None) -> None:
+    if EXTERNAL_API_TOKEN and token != EXTERNAL_API_TOKEN:
+        raise HTTPException(401, "Token invalide ou manquant (en-tête X-Import-Token).")
 
 
 # --------------------------------------------------------------------------- #
@@ -320,362 +234,257 @@ class ReviewDecisionRequest(BaseModel):
 class TrainRequest(BaseModel):
     min_examples: int = 20
     epochs: int = 1
-    method: str = "dpo"  # "dpo" | "ppo" | "grpo" | "reward_model"
-    fast_test: bool = False  # cap à quelques steps/séquences courtes — pour valider la mécanique du pipeline rapidement
+    method: str = "dpo"          # dpo | ppo | grpo | reward_model
+    fast_test: bool = False
 
 
-class SeedDemoDataRequest(BaseModel):
-    n: int = 6
+class CompareRequest(BaseModel):
+    versions: list[int]
+    n_questions: int = 15
+
+
+class N8nTriggerRequest(BaseModel):
+    min_examples: int = 20
+    epochs: int = 1
 
 
 # --------------------------------------------------------------------------- #
-# §5.1/§5.2/§5.5 — /chat
+# Chat / historique / feedback
 # --------------------------------------------------------------------------- #
 
 @app.post("/api/chat")
-def chat(req: ChatRequest):
+def chat(req: ChatRequest, store: FeedbackStore = Depends(get_store)):
     profile = _profile(req.profile)
-    bot: RAGChatbot = _state["bot"]
-    index: EmbeddingIndex = _state["index"]
-    llm: LocalLLM = _state["llm"]
-    store = get_store()
+    index, llm = S["index"], S["llm"]
+    base = {"question": req.question}
 
-    if can_propose_correction(profile):
-        result = bot.ask(req.question)
-        turn_id = store.add_conversation_turn(
-            user_id=req.user_id, profile=profile, question=req.question, mode="single",
-            answer=result["answer"], sources=result["sources"],
-        )
-        store.close()
-        return {
-            "mode": "single",
-            "question": req.question,
-            "answer": result["answer"],
-            "sources": result["sources"],
-            "turn_id": turn_id,
-        }
+    def save(mode: str, **kw) -> str:
+        return store.add_conversation_turn(user_id=req.user_id, profile=profile,
+                                           question=req.question, mode=mode, **kw)
 
-    category = small_talk_category(req.question)
-    if category is not None:
-        reply = SMALL_TALK_REPLIES.get(category, DEFAULT_SMALL_TALK_REPLY)
-        turn_id = store.add_conversation_turn(
-            user_id=req.user_id, profile=profile, question=req.question, mode="smalltalk",
-            answer=reply, sources=[],
-        )
-        store.close()
-        return {
-            "mode": "smalltalk",
-            "question": req.question,
-            "answer": reply,
-            "sources": [],
-            "turn_id": turn_id,
-        }
+    reply = small_talk_reply(req.question)
+    if reply is not None:
+        return {**base, "mode": "smalltalk", "answer": reply, "sources": [],
+                "turn_id": save("smalltalk", answer=reply, sources=[])}
 
     hits = index.search(req.question, top_k=TOP_K)
-    hit_articles = [a for a, _score in hits]
-    future_a = _gen_executor.submit(
-        llm.generate, req.question, hit_articles, system_prompt=STYLE_SYSTEM_PROMPTS[ResponseStyle.PEDAGOGICAL]
-    )
-    future_b = _gen_executor.submit(
-        llm.generate, req.question, hit_articles, system_prompt=STYLE_SYSTEM_PROMPTS[ResponseStyle.TECHNICAL]
-    )
-    answer_a = future_a.result()
-    answer_b = future_b.result()
-    sources = [{"citation": a.citation(), "score": round(score, 3)} for a, score in hits]
+    articles = [a for a, _ in hits]
+    sources = [{"citation": a.citation(), "score": round(s, 3)} for a, s in hits]
 
-    turn_id = store.add_conversation_turn(
-        user_id=req.user_id, profile=profile, question=req.question, mode="choice",
-        answer_a=answer_a, answer_b=answer_b, sources=sources,
-    )
-    store.close()
-    return {
-        "mode": "choice",
-        "question": req.question,
-        "answer_a": answer_a,
-        "answer_b": answer_b,
-        "sources": sources,
-        "turn_id": turn_id,
-    }
+    if can_propose_correction(profile):
+        answer = llm.generate(req.question, articles)
+        return {**base, "mode": "single", "answer": answer, "sources": sources,
+                "turn_id": save("single", answer=answer, sources=sources)}
+
+    # Citoyen / anonyme : deux styles, générés dans UN seul appel batché (§5.5).
+    prompts = [llm.build_prompt(req.question, articles, STYLE_PROMPTS[s])
+               for s in (ResponseStyle.PEDAGOGICAL, ResponseStyle.TECHNICAL)]
+    answer_a, answer_b = llm.generate_prompts(prompts)
+    return {**base, "mode": "choice", "answer_a": answer_a, "answer_b": answer_b, "sources": sources,
+            "turn_id": save("choice", answer_a=answer_a, answer_b=answer_b, sources=sources)}
 
 
 @app.get("/api/history")
-def history(user_id: str):
-    store = get_store()
-    rows = store.conversation_history(user_id)
-    store.close()
-    import json
-    out = []
-    for r in rows:
-        out.append({
-            "turn_id": r["id"],
-            "profile": r["profile"],
-            "question": r["question"],
-            "mode": r["mode"],
-            "answer": r["answer"],
-            "answer_a": r["answer_a"],
-            "answer_b": r["answer_b"],
-            "chosen": r["chosen"],
-            "sources": json.loads(r["sources"] or "[]"),
-            "timestamp": r["timestamp"],
-        })
-    return {"turns": out}
+def history(user_id: str, store: FeedbackStore = Depends(get_store)):
+    return {"turns": [{
+        "turn_id": r["id"], "profile": r["profile"], "question": r["question"], "mode": r["mode"],
+        "answer": r["answer"], "answer_a": r["answer_a"], "answer_b": r["answer_b"],
+        "chosen": r["chosen"], "sources": json.loads(r["sources"] or "[]"), "timestamp": r["timestamp"],
+    } for r in store.conversation_history(user_id)]}
 
 
 @app.post("/api/feedback")
-def submit_feedback(req: FeedbackRequest):
+def submit_feedback(req: FeedbackRequest, store: FeedbackStore = Depends(get_store)):
     profile = _profile(req.profile)
-    store = get_store()
     try:
         fb = store.add_feedback(Feedback(
-            question=req.question,
-            answer=req.answer,
-            rating=Rating.UP if req.rating == "up" else Rating.DOWN,
-            user_profile=profile,
+            question=req.question, answer=req.answer,
+            rating=Rating(req.rating), user_profile=profile,
             reason=Reason(req.reason) if req.reason else None,
-            reason_text=req.reason_text,
-            sources=req.sources,
+            reason_text=req.reason_text, sources=req.sources,
         ))
     except ValueError as e:
         raise HTTPException(400, str(e))
-    finally:
-        store.close()
-
-    return {
-        "feedback_id": fb.id,
-        "can_propose_correction": can_propose_correction(profile) and req.rating == "down",
-    }
+    return {"feedback_id": fb.id,
+            "can_propose_correction": can_propose_correction(profile) and req.rating == "down"}
 
 
 @app.post("/api/correction")
-def submit_correction(req: CorrectionRequest):
-    profile = _profile(req.profile)
-    store = get_store()
+def submit_correction(req: CorrectionRequest, store: FeedbackStore = Depends(get_store)):
     try:
-        correction = store.add_correction(Correction(
-            feedback_id=req.feedback_id,
-            question=req.question,
-            rejected_answer=req.rejected_answer,
-            proposed_answer=req.proposed_answer,
-            author_profile=profile,
+        c = store.add_correction(Correction(
+            feedback_id=req.feedback_id, question=req.question, rejected_answer=req.rejected_answer,
+            proposed_answer=req.proposed_answer, author_profile=_profile(req.profile),
         ))
     except PermissionError as e:
         raise HTTPException(403, str(e))
-    finally:
-        store.close()
-    return {"correction_id": correction.id, "status": correction.status.value}
+    return {"correction_id": c.id, "status": c.status.value}
 
 
 @app.post("/api/style-preference")
-def submit_style_preference(req: StylePreferenceRequest):
-    profile = _profile(req.profile)
-    store = get_store()
-    try:
-        pref = store.add_style_preference(StylePreference(
-            question=req.question,
-            answer_a=req.answer_a, style_a=ResponseStyle.PEDAGOGICAL,
-            answer_b=req.answer_b, style_b=ResponseStyle.TECHNICAL,
-            chosen=req.chosen, user_profile=profile,
-        ))
-        if req.turn_id:
-            store.set_turn_choice(req.turn_id, req.chosen)
-    finally:
-        store.close()
+def submit_style_preference(req: StylePreferenceRequest, store: FeedbackStore = Depends(get_store)):
+    pref = store.add_style_preference(StylePreference(
+        question=req.question, answer_a=req.answer_a, style_a=ResponseStyle.PEDAGOGICAL,
+        answer_b=req.answer_b, style_b=ResponseStyle.TECHNICAL,
+        chosen=req.chosen, user_profile=_profile(req.profile),
+    ))
+    if req.turn_id:
+        store.set_turn_choice(req.turn_id, req.chosen)
     return {"preference_id": pref.id}
 
 
-@app.get("/api/review/pending")
-def review_pending():
-    store = get_store()
-    validator = ValidationModule(_state["index"], store)
-    rows = store.pending_corrections()
+# --------------------------------------------------------------------------- #
+# Validation experte
+# --------------------------------------------------------------------------- #
 
+@app.get("/api/review/pending")
+def review_pending(store: FeedbackStore = Depends(get_store)):
+    validator = ValidationModule(S["index"], store)
     out = []
-    for row in rows:
-        correction = Correction(
-            id=row["id"], feedback_id=row["feedback_id"], question=row["question"],
-            rejected_answer=row["rejected_answer"], proposed_answer=row["proposed_answer"],
-            author_profile=UserProfile(row["author_profile"]),
-            status=CorrectionStatus(row["status"]), timestamp=row["timestamp"],
-        )
-        if correction.status == CorrectionStatus.PENDING:
-            correction = validator.validate(correction)
-        if correction.status == CorrectionStatus.NEEDS_EXPERT:
+    for row in store.pending_corrections():
+        c = Correction.from_row(row)
+        if c.status == CorrectionStatus.PENDING:
+            c = validator.validate(c)
+        if c.status == CorrectionStatus.NEEDS_EXPERT:
             out.append({
-                "id": correction.id,
-                "question": correction.question,
-                "rejected_answer": correction.rejected_answer,
-                "proposed_answer": correction.proposed_answer,
-                "author_profile": correction.author_profile.value,
-                "confidence_score": correction.confidence_score,
-                "consensus_count": correction.consensus_count,
-                "rag_check": correction.rag_check,
+                "id": c.id, "question": c.question, "rejected_answer": c.rejected_answer,
+                "proposed_answer": c.proposed_answer, "author_profile": c.author_profile.value,
+                "confidence_score": c.confidence_score, "consensus_count": c.consensus_count,
+                "rag_check": c.rag_check,
             })
-    auto_job_id = _maybe_autotrigger_training(store)
-    store.close()
-    return {"pending": out, "auto_train_job_id": auto_job_id}
+    return {"pending": out, "auto_train_job_id": _maybe_autotrigger_training(store)}
 
 
 @app.post("/api/review/decide")
-def review_decide(req: ReviewDecisionRequest):
-    store = get_store()
-    validator = ValidationModule(_state["index"], store)
-    cur = store.conn.execute("SELECT * FROM corrections WHERE id = ?", (req.correction_id,)).fetchone()
-    if cur is None:
-        store.close()
+def review_decide(req: ReviewDecisionRequest, store: FeedbackStore = Depends(get_store)):
+    correction = store.get_correction(req.correction_id)
+    if correction is None:
         raise HTTPException(404, "Correction introuvable.")
-
-    correction = Correction(
-        id=cur["id"], feedback_id=cur["feedback_id"], question=cur["question"],
-        rejected_answer=cur["rejected_answer"], proposed_answer=cur["proposed_answer"],
-        author_profile=UserProfile(cur["author_profile"]),
-        status=CorrectionStatus(cur["status"]), timestamp=cur["timestamp"],
-        confidence_score=cur["confidence_score"], rag_check=cur["rag_check"],
-        consensus_count=cur["consensus_count"],
-    )
     try:
-        correction = validator.expert_decide(
-            correction, req.decision, req.validator_role, req.reformulated_answer,
-        )
+        correction = ValidationModule(S["index"], store).expert_decide(
+            correction, req.decision, req.validator_role, req.reformulated_answer)
     except ValueError as e:
-        store.close()
         raise HTTPException(400, str(e))
-    auto_job_id = _maybe_autotrigger_training(store)
-    store.close()
-    return {"id": correction.id, "status": correction.status.value, "auto_train_job_id": auto_job_id}
+    return {"id": correction.id, "status": correction.status.value,
+            "auto_train_job_id": _maybe_autotrigger_training(store)}
 
+
+# --------------------------------------------------------------------------- #
+# Dashboard / articles / santé
+# --------------------------------------------------------------------------- #
 
 @app.get("/api/dashboard")
-def dashboard():
-    store = get_store()
+def dashboard(store: FeedbackStore = Depends(get_store)):
     m = compute_metrics(store)
-    store.close()
     return {
-        "total_feedback": m.total_feedback,
-        "satisfaction_rate": m.satisfaction_rate,
-        "pending_corrections": m.pending_corrections,
-        "validation_rate": m.validation_rate,
+        "total_feedback": m.total_feedback, "satisfaction_rate": m.satisfaction_rate,
+        "pending_corrections": m.pending_corrections, "validation_rate": m.validation_rate,
         "reason_breakdown": m.reason_breakdown,
-        "style_preference_breakdown": m.style_preference_breakdown,
-        "alerts": m.alerts,
+        "style_preference_breakdown": m.style_preference_breakdown, "alerts": m.alerts,
     }
 
 
+def _article_dict(a, score: float | None = None) -> dict:
+    d = {"id": a.id, "title": f"Art. {a.article_number} — {a.title_french}",
+         "related_law": f"loi n°{a.law_number}", "chapter": a.chapter,
+         "legal_domains": a.legal_domains, "keywords": a.keywords}
+    if score is not None:
+        d["score"] = round(score, 3)
+    return d
+
+
+@app.get("/api/articles")
+def list_articles():
+    articles = S["index"].articles
+    return {"total": len(articles), "articles": [_article_dict(a) for a in articles]}
+
+
+@app.get("/api/articles/search")
+def search_articles(q: str, top_k: int = 30):
+    return {"articles": [_article_dict(a, s) for a, s in S["index"].search(q, top_k=top_k)]}
+
+
+@app.get("/api/health")
+def health():
+    return {"status": "ok", "articles_dir": ARTICLES_DIR, "top_k": TOP_K,
+            "loaded_model_path": S.get("loaded_model_path", "?")}
+
+
 @app.delete("/api/seed-demo-data")
-def delete_seed_demo_data():
-    store = get_store()
-    deleted = store.delete_seeded_demo_data()
-    store.close()
-    return {"deleted": deleted}
+def delete_seed_demo_data(store: FeedbackStore = Depends(get_store)):
+    return {"deleted": store.delete_seeded_demo_data()}
 
 
-AUTO_TRAIN_MIN_EXAMPLES = int(os.environ.get("AUTO_TRAIN_MIN_EXAMPLES", "20"))
-AUTO_TRAIN_EPOCHS = int(os.environ.get("AUTO_TRAIN_EPOCHS", "1"))
+# --------------------------------------------------------------------------- #
+# Entraînement (jobs en arrière-plan)
+# --------------------------------------------------------------------------- #
 
-_train_jobs: dict[str, dict] = {}
-_auto_train_last_count = 0
+PIPELINES = {"dpo": DPOTrainingPipeline, "ppo": PPOTrainingPipeline, "grpo": GRPOTrainingPipeline}
 
 
-def _run_training_job(job_id: str, min_examples: int, epochs: int, method: str = "dpo",
-                       fast_test: bool = False) -> None:
-    """
-    method: "dpo" | "ppo" | "grpo" | "reward_model" — les quatre partagent le
-    même mécanisme de job en arrière-plan (thread + polling par le frontend),
-    seule la pipeline appelée change. C'est ce qui permet de lancer/suivre
-    les trois méthodes de comparaison depuis la même page Entraînement.
-
-    fast_test=True : cap à quelques steps / séquences courtes sur chaque
-    pipeline — sert à vérifier que le job démarre, tourne et se termine
-    correctement (mécanique du pipeline) sans attendre un vrai cycle complet,
-    surtout utile pour PPO/GRPO qui sont nettement plus lents que DPO.
-    """
-    _train_jobs[job_id]["status"] = "running"
-    store = get_store()
-    index: EmbeddingIndex = _state["index"]
+def _run_training_job(job_id: str, min_examples: int, epochs: int, method: str, fast_test: bool) -> None:
+    job = S["jobs"][job_id]
+    job["status"] = "running"
+    store = FeedbackStore(DB_PATH)
     try:
-        if method == "reward_model":
-            pipeline = RewardModelPipeline(base_model=LLM_MODEL)
-            rv = pipeline.run_cycle(store, index, min_examples=min_examples, epochs=epochs, fast_test=fast_test)
-            _train_jobs[job_id].update(status="completed", version=rv.version, path=rv.path,
-                                        n_training_pairs=rv.n_training_pairs, method="reward_model")
+        n_usable = count_usable_pairs(store)
+        if n_usable < min_examples:
+            job.update(status="skipped",
+                       message=f"Pas assez de corrections validées ({n_usable} < {min_examples}).")
             return
-
-        if method == "dpo":
-            pipeline = DPOTrainingPipeline(base_model=LLM_MODEL)
-            if not pipeline.should_trigger(store, min_examples=min_examples):
-                _train_jobs[job_id].update(status="skipped", message=f"Pas assez de corrections validées (< {min_examples}).")
-                return
-            mv = pipeline.run_cycle(store, index, min_examples=min_examples, epochs=epochs, fast_test=fast_test)
-        elif method == "ppo":
-            pipeline = PPOTrainingPipeline(base_model=LLM_MODEL)
-            mv = pipeline.run_cycle(store, index, min_examples=min_examples, epochs=epochs, fast_test=fast_test)
-        elif method == "grpo":
-            pipeline = GRPOTrainingPipeline(base_model=LLM_MODEL)
-            mv = pipeline.run_cycle(store, index, min_examples=min_examples, epochs=epochs, fast_test=fast_test)
-        else:
+        kwargs = dict(min_examples=min_examples, epochs=epochs, fast_test=fast_test)
+        if method == "reward_model":
+            rv = RewardModelPipeline(base_model=LLM_MODEL).run_cycle(store, S["index"], **kwargs)
+            job.update(status="completed", version=rv.version, path=rv.path,
+                       n_training_pairs=rv.n_training_pairs, method=method)
+            return
+        if method not in PIPELINES:
             raise ValueError(f"Méthode d'entraînement inconnue : {method}")
-
-        _train_jobs[job_id].update(
-            status="completed", version=mv.version, path=mv.path,
-            n_training_pairs=mv.n_training_pairs, model_status=mv.status, method=mv.method,
-        )
-    except Exception as e:  # noqa: BLE001 — on veut capturer et exposer toute erreur d'entraînement
-        _train_jobs[job_id].update(status="failed", error=str(e))
+        mv = PIPELINES[method](base_model=LLM_MODEL).run_cycle(store, S["index"], **kwargs)
+        job.update(status="completed", version=mv.version, path=mv.path,
+                   n_training_pairs=mv.n_training_pairs, model_status=mv.status, method=mv.method)
+    except Exception as e:  # noqa: BLE001 — toute erreur d'entraînement est exposée au frontend
+        job.update(status="failed", error=str(e))
     finally:
         store.close()
 
 
 def _launch_training_job(min_examples: int, epochs: int, trigger: str, method: str = "dpo",
-                          fast_test: bool = False) -> str:
-    job_id = uuid.uuid4().hex[:12]
-    _train_jobs[job_id] = {
-        "status": "queued", "min_examples": min_examples, "epochs": epochs,
-        "trigger": trigger, "method": method, "fast_test": fast_test,
-    }
-    thread = threading.Thread(
-        target=_run_training_job, args=(job_id, min_examples, epochs, method, fast_test), daemon=True,
-    )
-    thread.start()
+                         fast_test: bool = False) -> str | None:
+    with _jobs_lock:   # un seul entraînement à la fois
+        if any(j["status"] in ("queued", "running") for j in S["jobs"].values()):
+            return None
+        job_id = uuid.uuid4().hex[:12]
+        S["jobs"][job_id] = {"status": "queued", "min_examples": min_examples, "epochs": epochs,
+                             "trigger": trigger, "method": method, "fast_test": fast_test}
+    threading.Thread(target=_run_training_job, args=(job_id, min_examples, epochs, method, fast_test),
+                     daemon=True).start()
     return job_id
 
 
 def _notify_n8n(reason: str, min_examples: int, epochs: int) -> dict:
     if not N8N_WEBHOOK_URL:
-        raise RuntimeError(
-            "N8N_WEBHOOK_URL n'est pas configuré (.env) — ajoute l'URL du nœud Webhook "
-            "de ton workflow n8n pour activer ce déclenchement."
-        )
+        raise RuntimeError("N8N_WEBHOOK_URL n'est pas configuré (.env).")
     import requests
-
     payload = {
-        "event": "dpo_train_trigger",
-        "reason": reason,
-        "min_examples": min_examples,
-        "epochs": epochs,
+        "event": "dpo_train_trigger", "reason": reason, "min_examples": min_examples, "epochs": epochs,
         "base_model": LLM_MODEL,
         "dataset_export_url": f"{PUBLIC_API_URL}/api/dataset/export?min_examples={min_examples}",
-        "model_import_url": f"{PUBLIC_API_URL}/api/models/import",
-        "import_token": EXTERNAL_API_TOKEN,
+        "model_import_url": f"{PUBLIC_API_URL}/api/models/import", "import_token": EXTERNAL_API_TOKEN,
     }
     headers = {"Content-Type": "application/json"}
     if N8N_WEBHOOK_TOKEN:
         headers["X-Webhook-Token"] = N8N_WEBHOOK_TOKEN
-
     resp = requests.post(N8N_WEBHOOK_URL, json=payload, headers=headers, timeout=10)
     resp.raise_for_status()
     return {"sent": True, "payload": payload, "n8n_status_code": resp.status_code}
 
 
 def _maybe_autotrigger_training(store: FeedbackStore) -> Optional[str]:
-    global _auto_train_last_count
-    n_validated = len(store.validated_corrections())
-    if n_validated < AUTO_TRAIN_MIN_EXAMPLES:
+    n = count_usable_pairs(store)
+    if n < AUTO_TRAIN_MIN_EXAMPLES or n == S["auto_last_count"]:
         return None
-    if n_validated == _auto_train_last_count:
-        return None
-    if any(j["status"] in ("queued", "running") for j in _train_jobs.values()):
-        return None
-    _auto_train_last_count = n_validated
-
+    S["auto_last_count"] = n
     if AUTO_TRAIN_VIA_N8N:
         try:
             _notify_n8n("auto_threshold_reached", AUTO_TRAIN_MIN_EXAMPLES, AUTO_TRAIN_EPOCHS)
@@ -687,73 +496,25 @@ def _maybe_autotrigger_training(store: FeedbackStore) -> Optional[str]:
 
 @app.post("/api/train")
 def train(req: TrainRequest):
-    """method: "dpo" (défaut, comportement inchangé) | "ppo" | "grpo" | "reward_model" —
-    voir TrainRequest.method. Un cycle PPO nécessite qu'un reward model existe déjà
-    (POST /api/train avec method="reward_model" d'abord)."""
-    job_id = _launch_training_job(
-        req.min_examples, req.epochs, trigger="manual", method=req.method, fast_test=req.fast_test
-    )
+    job_id = _launch_training_job(req.min_examples, req.epochs, "manual", req.method, req.fast_test)
+    if job_id is None:
+        raise HTTPException(409, "Un entraînement est déjà en cours.")
     return {"job_id": job_id, "status": "queued", "method": req.method}
-
-
-class CompareRequest(BaseModel):
-    versions: list[int]           # numéros de version à comparer (voir /api/models/history)
-    n_questions: int = 15
-
-
-@app.post("/api/models/compare")
-def compare_models(req: CompareRequest):
-    """Compare plusieurs versions (DPO / PPO / GRPO / base) sur les mêmes questions
-    validées — similarité d'embedding à la réponse validée + win-rate par paires.
-    Coûteux : charge chaque modèle successivement, prévoir plusieurs minutes."""
-    registry = ModelRegistry()
-    all_versions = {v["version"]: v for v in registry.history()}
-    selected = [all_versions[v] for v in req.versions if v in all_versions]
-    if len(selected) < 2:
-        raise HTTPException(400, "Sélectionnez au moins deux versions valides à comparer.")
-
-    store = get_store()
-    try:
-        result = compare_model_versions(
-            store, _state["index"], selected, base_model=LLM_MODEL, n_questions=req.n_questions,
-        )
-    except Exception as e:  # noqa: BLE001
-        raise HTTPException(500, f"Échec de la comparaison : {e}")
-    finally:
-        store.close()
-
-    for r in result["results"]:
-        registry.set_eval_summary(r["version"], {
-            "mean_similarity": r["mean_similarity"], "win_rate": r["win_rate"],
-            "n_questions": r["n_questions"], "compared_against": req.versions,
-        })
-    return result
-
-
-@app.get("/api/reward-model/history")
-def reward_model_history():
-    return {"history": RewardModelRegistry().history()}
-
-
-class N8nTriggerRequest(BaseModel):
-    min_examples: int = 20
-    epochs: int = 1
 
 
 @app.post("/api/train/trigger-n8n")
 def trigger_n8n(req: N8nTriggerRequest):
     try:
-        result = _notify_n8n("manual", req.min_examples, req.epochs)
+        return _notify_n8n("manual", req.min_examples, req.epochs)
     except RuntimeError as e:
         raise HTTPException(400, str(e))
     except Exception as e:  # noqa: BLE001
         raise HTTPException(502, f"Échec de l'appel au webhook n8n : {e}")
-    return result
 
 
 @app.get("/api/train/status/{job_id}")
 def train_status(job_id: str):
-    job = _train_jobs.get(job_id)
+    job = S["jobs"].get(job_id)
     if job is None:
         raise HTTPException(404, "Job introuvable.")
     return job
@@ -761,88 +522,48 @@ def train_status(job_id: str):
 
 @app.get("/api/train/jobs")
 def train_jobs():
-    return {"jobs": [{"job_id": jid, **job} for jid, job in reversed(list(_train_jobs.items()))]}
+    return {"jobs": [{"job_id": jid, **job} for jid, job in reversed(list(S["jobs"].items()))]}
 
 
 @app.get("/api/train/stats")
-def train_stats():
-    store = get_store()
-    total = store.conn.execute("SELECT COUNT(*) AS n FROM corrections").fetchone()["n"]
-    demo = store.conn.execute(
-        "SELECT COUNT(*) AS n FROM corrections WHERE validator_role = 'seed_demo_data'"
-    ).fetchone()["n"]
-    validated_rows = store.validated_corrections()
-    n_validated = len(validated_rows)
-    n_validated_real = sum(1 for r in validated_rows if r["validator_role"] != "seed_demo_data")
-    store.close()
+def train_stats(store: FeedbackStore = Depends(get_store)):
+    validated = store.validated_corrections()
     return {
-        "total_corrections": total,
-        "demo_corrections": demo,
-        "validated_corrections": n_validated,
-        "validated_corrections_real": n_validated_real,
+        "total_corrections": store.scalar("SELECT COUNT(*) FROM corrections"),
+        "demo_corrections": store.scalar(
+            "SELECT COUNT(*) FROM corrections WHERE validator_role = 'seed_demo_data'"),
+        "validated_corrections": len(validated),
+        "validated_corrections_real": sum(1 for r in validated if r["validator_role"] != "seed_demo_data"),
+        "usable_training_pairs": count_usable_pairs(store),
         "auto_train_threshold": AUTO_TRAIN_MIN_EXAMPLES,
         "auto_train_via_n8n": AUTO_TRAIN_VIA_N8N,
         "n8n_configured": bool(N8N_WEBHOOK_URL),
     }
 
 
-@app.get("/api/dataset/export")
-def dataset_export(min_examples: int = 1, x_import_token: str | None = Header(default=None)):
-    _check_external_token(x_import_token)
-    from dataset_builder import build_preference_dataset, training_columns
-    store = get_store()
-    try:
-        examples = build_preference_dataset(store, min_examples=min_examples)
-    except ValueError as e:
-        store.close()
-        raise HTTPException(400, str(e))
-    store.close()
-    return {
-        "n_examples": len(examples),
-        "base_model": LLM_MODEL,
-        "examples": training_columns(examples),
-    }
+# --------------------------------------------------------------------------- #
+# Modèles / dataset
+# --------------------------------------------------------------------------- #
 
-
-@app.post("/api/models/import")
-async def import_model(
-    file: UploadFile = File(...),
-    base_model: str = Form(default=""),
-    n_training_pairs: int = Form(default=0),
-    dataset_version: int = Form(default=0),
-    method: str = Form(default="dpo"),
-    x_import_token: str | None = Header(default=None),
-):
-    _check_external_token(x_import_token)
-    import zipfile
-    import io
-    from datetime import datetime, timezone
-    from dpo_train import ModelVersion
-
+@app.post("/api/models/compare")
+def compare_models(req: CompareRequest, store: FeedbackStore = Depends(get_store)):
     registry = ModelRegistry()
-    version = registry.next_version()
-    out_dir = os.path.join(BASE_DIR, "models", f"v{version}")
-    os.makedirs(out_dir, exist_ok=True)
-
-    content = await file.read()
+    by_version = {v["version"]: v for v in registry.history()}
+    selected = [by_version[v] for v in req.versions if v in by_version]
+    if len(selected) < 2:
+        raise HTTPException(400, "Sélectionnez au moins deux versions valides à comparer.")
     try:
-        with zipfile.ZipFile(io.BytesIO(content)) as zf:
-            zf.extractall(out_dir)
-    except zipfile.BadZipFile:
-        raise HTTPException(400, "Le fichier envoyé n'est pas une archive .zip valide.")
-
-    mv = ModelVersion(
-        version=version,
-        base_model=base_model or LLM_MODEL,
-        created_at=datetime.now(timezone.utc).isoformat(),
-        dataset_version=dataset_version,
-        n_training_pairs=n_training_pairs,
-        path=out_dir,
-        status="staged",
-        method=method,
-    )
-    registry.register(mv)
-    return {"version": version, "path": out_dir, "status": "staged"}
+        result = compare_model_versions(store, S["index"], selected, base_model=LLM_MODEL,
+                                        n_questions=req.n_questions)
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(500, f"Échec de la comparaison : {e}")
+    for r in result["results"]:
+        registry.set_eval_summary(r["version"], {
+            "mean_similarity": r["mean_similarity"], "win_rate": r["win_rate"],
+            "n_questions": r["n_questions"], "pref_acc": r["pref_acc"], "margin": r["margin"],
+            "split": result["split"], "compared_against": req.versions,
+        })
+    return result
 
 
 @app.get("/api/models/history")
@@ -850,23 +571,53 @@ def models_history():
     return {"history": ModelRegistry().history()}
 
 
+@app.get("/api/reward-model/history")
+def reward_model_history():
+    return {"history": RewardModelRegistry().history()}
+
+
 @app.post("/api/promote/{version}")
 def promote(version: int):
-    ModelRegistry().promote(version)
-    return {
-        "version": version,
-        "status": "active",
-        "note": "Redémarrez le serveur API (uvicorn) pour que le modèle promu soit "
-                "effectivement chargé en mémoire — la promotion met à jour registry.json "
-                "mais ne recharge pas le modèle déjà en cours d'exécution.",
-    }
+    try:
+        ModelRegistry().promote(version)
+    except ValueError as e:
+        raise HTTPException(404, str(e))
+    return {"version": version, "status": "active",
+            "note": "Redémarrez l'API (uvicorn) pour charger le modèle promu en mémoire."}
 
 
-@app.get("/api/health")
-def health():
-    return {
-        "status": "ok",
-        "articles_dir": ARTICLES_DIR,
-        "top_k": TOP_K,
-        "loaded_model_path": _state.get("loaded_model_path", "?"),
-    }
+@app.get("/api/dataset/export")
+def dataset_export(min_examples: int = 1, x_import_token: str | None = Header(default=None),
+                   store: FeedbackStore = Depends(get_store)):
+    _check_external_token(x_import_token)
+    try:
+        examples = build_preference_dataset(store, S["index"], S["llm"].tokenizer,
+                                            min_examples=min_examples, top_k=TOP_K)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"n_examples": len(examples), "base_model": LLM_MODEL, "examples": training_columns(examples)}
+
+
+@app.post("/api/models/import")
+async def import_model(
+    file: UploadFile = File(...), base_model: str = Form(default=""),
+    n_training_pairs: int = Form(default=0), dataset_version: int = Form(default=0),
+    method: str = Form(default="dpo"), x_import_token: str | None = Header(default=None),
+):
+    _check_external_token(x_import_token)
+    registry = ModelRegistry()
+    version = registry.next_version()
+    out_dir = os.path.join(BASE_DIR, "models", f"v{version}")
+    os.makedirs(out_dir, exist_ok=True)
+    try:
+        with zipfile.ZipFile(io.BytesIO(await file.read())) as zf:
+            zf.extractall(out_dir)
+    except zipfile.BadZipFile:
+        raise HTTPException(400, "Le fichier envoyé n'est pas une archive .zip valide.")
+
+    registry.register(ModelVersion(
+        version=version, base_model=base_model or LLM_MODEL,
+        created_at=datetime.now(timezone.utc).isoformat(), dataset_version=dataset_version,
+        n_training_pairs=n_training_pairs, path=out_dir, status="staged", method=method,
+    ))
+    return {"version": version, "path": out_dir, "status": "staged"}
