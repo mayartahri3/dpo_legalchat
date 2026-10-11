@@ -29,7 +29,7 @@ class DPOTrainingPipeline:
                   min_examples: int = 20, epochs: int = 1, learning_rate: float = 5e-5,
                   top_k: int = 3, fast_test: bool = False,
                   per_device_train_batch_size: int = 1,
-                  gradient_accumulation_steps: int = 4) -> ModelVersion:
+                  gradient_accumulation_steps: int = 4, max_length: int = 1536) -> ModelVersion:
         """Toujours entraîné depuis le modèle de BASE sur l'ensemble des corrections
         validées (pas d'empilement d'adaptateurs sur la version active).
 
@@ -56,8 +56,8 @@ class DPOTrainingPipeline:
             per_device_train_batch_size=1 if fast_test else per_device_train_batch_size,
             gradient_accumulation_steps=1 if fast_test else gradient_accumulation_steps,
             max_steps=3 if fast_test else -1,
-            max_length=256 if fast_test else 768,
-            max_prompt_length=128 if fast_test else 384,   # ignoré par les trl récents
+            max_length=max_length,
+            max_prompt_length=max_length // 2,  # ignoré par les trl récents
             beta=0.1, logging_steps=1, save_strategy="no", report_to=[],
             use_cpu=not has_cuda, bf16=has_bf16, fp16=False,
             gradient_checkpointing=True, gradient_checkpointing_kwargs={"use_reentrant": False},

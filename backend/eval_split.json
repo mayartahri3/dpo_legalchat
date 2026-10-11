@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "test_frac": 0.25,
+  "n_questions_total": 17,
+  "test_questions": [
+    "Je suis un chef d'entreprise et je souhaite que mes actions de mécénat soient reconnues comme des contributions à la responsabilité sociétale des entreprises (RSE). Quelles actions sont désormais éligibles",
+    "Mon cousin est militaire et il craint d'être poursuivi pour désertion. Il sert actuellement dans une armée alliée. Est-il exposé aux mêmes peines que s'il était dans l'armée tunisienne ?",
+    "Quel comportement est formellement interdit aux médecins vétérinaires exerçant dans la fonction publique en ce qui concerne les honoraires ou traitements attachés à une fonction, et quelles sont les conséquences en cas de violation de cette règle ?",
+    "Quelles sont les sanctions pénales prévues pour toute personne qui produit, diffuse ou détient intentionnellement des données informatiques à contenu pornographique mettant en scène un enfant ? Existe-t-il des circonstances particulières prévues par le texte ?"
+  ]
+}

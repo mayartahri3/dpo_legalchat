@@ -28,7 +28,8 @@ class GRPOTrainingPipeline:
     def run_cycle(self, store: FeedbackStore, index, min_examples: int = 20, epochs: int = 1,
                   learning_rate: float = 1e-5, top_k: int = 3, num_generations: int = 2,
                   fast_test: bool = False, per_device_train_batch_size: int = 1,
-                  max_completion_length: int = 200) -> ModelVersion:
+                  max_completion_length: int = 200,
+                  max_prompt_length: int = 1024) -> ModelVersion:
         from datasets import Dataset
         from trl import GRPOConfig, GRPOTrainer
 
@@ -56,6 +57,7 @@ class GRPOTrainingPipeline:
             per_device_train_batch_size=batch, num_generations=n_gen,
             generation_batch_size=batch * n_gen,   # doit être un multiple de num_generations
             max_completion_length=128 if fast_test else max_completion_length,
+            max_prompt_length=max_prompt_length,
             max_steps=3 if fast_test else -1,
             logging_steps=1, save_strategy="no", report_to=[], use_cpu=not has_cuda, bf16=has_bf16,
             gradient_checkpointing=True, model_init_kwargs={"torch_dtype": dtype},

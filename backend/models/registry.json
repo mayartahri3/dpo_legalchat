@@ -30,5 +30,52 @@
     "status": "active",
     "method": "grpo",
     "eval_summary": {}
+  },
+  {
+    "version": 4,
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "created_at": "2026-08-12T20:32:57.114885+00:00",
+    "dataset_version": 1,
+    "n_training_pairs": 20,
+    "path": "models\\v4",
+    "status": "staged",
+    "method": "dpo",
+    "eval_summary": {}
+  },
+  {
+    "version": 5,
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "created_at": "2026-10-11T13:29:44.721227+00:00",
+    "dataset_version": 1,
+    "n_training_pairs": 20,
+    "path": "models\\v5",
+    "status": "staged",
+    "method": "dpo",
+    "eval_summary": {
+      "mean_similarity": 0.41709816344082357,
+      "win_rate": 0.8,
+      "n_questions": 5,
+      "pref_acc": 1.0,
+      "margin": 2.2912464141845703,
+      "split": "test"
+    }
+  },
+  {
+    "version": 6,
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "created_at": "2026-10-11T13:49:35.443061+00:00",
+    "dataset_version": 0,
+    "n_training_pairs": 20,
+    "path": "models\\v6",
+    "status": "staged",
+    "method": "grpo",
+    "eval_summary": {
+      "mean_similarity": 0.3910843372344971,
+      "win_rate": 0.0,
+      "n_questions": 5,
+      "pref_acc": 0.2,
+      "margin": -0.0269989013671875,
+      "split": "test"
+    }
   }
 ]

@@ -1,109 +1,83 @@
-# E-Tafakna — Interface web (React) + backend RAG existant
+# E-Tafakna: Legal RAG Chatbot with a Feedback Loop
 
-Ce dossier ajoute une **interface web** au-dessus de ton pipeline existant.
-**Aucun fichier `.py` fourni n'a été modifié** : `minirag.py`, `feedback_store.py`,
-`validation.py`, `dataset_builder.py`, `dpo_train.py`, `dashboard.py` et
-`legal_rag_app.py` sont copiés tels quels dans `backend/`. Le seul ajout est
-`backend/api.py`, une fine couche FastAPI qui appelle exactement les mêmes
-fonctions/classes que `legal_rag_app.py` (mêmes imports, même logique
-`can_propose_correction`, mêmes `STYLE_SYSTEM_PROMPTS`, même `ValidationModule`,
-etc.), simplement exposées en HTTP au lieu de boucles `input()`.
+A chatbot that answers questions about Tunisian law using the relevant law articles, and improves from expert feedback.
+
+**How it works:** question → retrieve articles → local LLM answers with citations → users give feedback → lawyers propose corrections → experts validate → validated corrections fine-tune the model (DPO / GRPO) → new models are tested on a frozen test set before promotion.
+
+## Project structure
 
 ```
-etafakna/
-├── backend/
-│   ├── minirag.py            (inchangé)
-│   ├── feedback_store.py     (inchangé)
-│   ├── validation.py         (inchangé)
-│   ├── dataset_builder.py    (inchangé)
-│   ├── dpo_train.py          (inchangé)
-│   ├── dashboard.py          (inchangé)
-│   ├── legal_rag_app.py      (inchangé, CLI toujours fonctionnel en parallèle)
-│   ├── api.py                (NOUVEAU — wrapper HTTP)
-│   ├── requirements.txt       (+ fastapi/uvicorn)
-│   └── articles/             (⚠️ à remplacer — voir ci-dessous)
-└── frontend/                  (React + Vite, style repris de la maquette)
+backend/     FastAPI API, retrieval, validation, training and evaluation scripts
+frontend/    React (Vite) web interface
 ```
 
-## ⚠️ Étape obligatoire : brancher ton vrai dossier `legaldata`
+Main backend files:
 
-`backend/articles/` ne contient que **l'unique fichier JSON d'exemple** que tu
-as partagé (`00a56862-...json`), pour que le projet démarre. Il n'a pas été
-question de recréer tes articles — remplace ce dossier par ton vrai dossier
-`legaldata` complet avant de lancer l'API :
+| File | What it does |
+|---|---|
+| `api.py` | The API (chat, feedback, review, training, models) |
+| `minirag.py` | Retrieval (FAISS) and answer generation |
+| `feedback_store.py` | SQLite database for feedback and corrections |
+| `validation.py` | Scores and routes corrections to experts |
+| `dataset_builder.py` | Builds the training pairs and the train/test split |
+| `dpo_train.py`, `grpo_train.py`, `reward_model.py` | Training methods |
+| `eval_metrics.py` | Evaluation of model versions on the test set |
+| `export_for_colab.py`, `colab_train.py`, `import_colab_model.py` | Train on Google Colab, import results locally |
 
-```bash
-rm -rf backend/articles
-cp -r /chemin/vers/ton/legaldata backend/articles
-# ou : export ARTICLES_DIR=/chemin/vers/ton/legaldata (voir variables d'env plus bas)
-```
+## Run it locally
 
-`minirag.load_articles()` lit tous les `*.json` de ce dossier exactement comme
-avant — aucun changement de format attendu, tes fichiers ont déjà la bonne
-structure (`embedding_text`, `content_french`, `article_number`, etc.).
-
-## Lancer le backend
+**Backend**
 
 ```bash
 cd backend
-python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-
-
-
+# put the law article .json files in backend/articles/
 uvicorn api:app --reload --port 8000
 ```
 
-Le premier démarrage télécharge les poids du modèle d'embedding et du LLM
-(accès réseau Hugging Face requis, comme pour `python legal_rag_app.py chat`
-avant). Une fois démarré : `http://localhost:8000/api/health`.
+Settings are in `backend/.env` (articles folder, models, `TOP_K`, ...).
 
-Le CLI d'origine reste utilisable en parallèle si besoin :
-`python legal_rag_app.py --data ./articles chat`.
-
-## Lancer le frontend
+**Frontend**
 
 ```bash
 cd frontend
 npm install
-cp .env.example .env     # VITE_API_URL=http://localhost:8000
 npm run dev
 ```
 
-Ouvre `http://localhost:5173`.
+The API address is set in `frontend/.env` (`VITE_API_URL=http://localhost:8000`).
 
-## Ce que couvre l'interface
+## Train on Google Colab
 
-| Écran | Route API | Section cahier des charges |
-|---|---|---|
-| Sélecteur de profil (sidebar) | — | §4 remplace `ask_profile()` du CLI |
-| Chat — avocat_verifie/juriste_interne : une réponse + correction | `POST /api/chat`, `/api/feedback`, `/api/correction` | §5.1, §5.2 |
-| Chat — citoyen/anonyme : choix A/B pédagogique vs technique | `POST /api/chat`, `/api/style-preference`, `/api/feedback` | §5.5 |
-| Validation experte (file d'attente) | `GET /api/review/pending`, `POST /api/review/decide` | §5.3, §4 |
-| Tableau de bord | `GET /api/dashboard` | §5.6 |
+1. **Local:** freeze the test set once, then export the data.
+   ```bash
+   cd backend
+   python eval_metrics.py --make-split
+   python export_for_colab.py
+   ```
+2. **Colab (GPU runtime):** upload `feedback_export.zip` and the backend `.py` files, install the dependencies, then run:
+   ```bash
+   python colab_train.py --export-zip feedback_export.zip --method all --epochs 3
+   ```
+   Download `trained_model_export.zip` when it finishes.
+3. **Local:** import the models.
+   ```bash
+   python -m zipfile -e trained_model_export.zip trained_model_export_colab
+   python import_colab_model.py --export-dir ./trained_model_export_colab
+   ```
 
-`POST /api/train` et `/api/promote/{version}` exposent aussi le cycle DPO
-(`dpo_train.py`) si tu veux les déclencher depuis un outil externe (ex.
-Postman/curl) — pas encore reliés à un écran dédié dans cette première
-version de l'UI, volontairement, pour rester focalisé sur la boucle
-question → réponse → feedback → correction → validation.
+Tip: use `--fast-test` first to check that everything runs.
 
-## Vérifications faites avant livraison
+## Evaluate and promote
 
-- `backend/api.py` s'importe sans dépendre de `sentence-transformers`/`torch`
-  au chargement (comme `minirag.py` d'origine : les imports lourds sont dans
-  les constructeurs `EmbeddingIndex`/`LocalLLM`, appelés seulement au
-  démarrage réel du serveur).
-- Toutes les routes ont été testées avec un index/LLM factices (même
-  principe que ton `test_pipeline.py`) : `/chat` (single + choice),
-  `/feedback`, `/correction` (y compris le 403 pour un profil `citoyen`),
-  `/style-preference`, `/review/pending`, `/dashboard`.
-- `npm run build` du frontend passe sans erreur.
+```bash
+python eval_metrics.py --split test --write-registry
+```
 
-**Note indépendante (non corrigée, hors périmètre de cette tâche)** : ton
-`test_pipeline.py` fourni attend un `ValueError` autour de
-`store.add_correction(...)` pour un profil `citoyen`, mais
-`feedback_store.py` lève un `PermissionError` — le test plantera tel quel.
-`api.py` gère bien `PermissionError` (→ HTTP 403), donc l'API n'est pas
-affectée ; à corriger dans `test_pipeline.py` si tu veux que ce fichier
-passe de nouveau.
+This compares each version with the base model on questions it never saw. Then promote a version in the **Entraînement** page of the UI and restart the API.
+
+## Notes
+
+- Only lawyers and internal jurists can propose corrections; citizens choose between two answer styles.
+- PPO is not used (the installed `trl` no longer includes it).
+- With few validated corrections the test set is small, so treat results as indicative.

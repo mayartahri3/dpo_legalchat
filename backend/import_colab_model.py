@@ -9,7 +9,7 @@ et le `method` (dpo/ppo/grpo) est préservé.
 """
 
 from __future__ import annotations
-
+import os
 import argparse
 import json
 import shutil
@@ -19,7 +19,7 @@ from pathlib import Path
 from reward_model import RewardModelRegistry, RewardModelVersion
 from train_common import ModelRegistry, ModelVersion
 
-
+HERE = Path(__file__).resolve().parent 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -41,7 +41,11 @@ def _import_all(export_dir: Path, sub: str, local_root: str, registry, build_ent
         registry.register(build_entry(version, e, str(dst)))
         imported.append(version)
         print(f"✓ Importé : v{version} <- {src} ({e['n_training_pairs']} paires)")
+        if not imported:
+                raise RuntimeError(f"Rien importé depuis {export_dir / sub} : aucun dossier de poids trouvé.")
     return imported
+    
+    
 
 
 def main() -> None:
@@ -51,7 +55,9 @@ def main() -> None:
     ap.add_argument("--reward-models-root", default="reward_models")
     args = ap.parse_args()
 
-    export_dir = Path(args.export_dir)
+    export_dir = Path(args.export_dir).resolve()   # avant le chdir
+    os.chdir(HERE)                                  # models/ = backend/models, d'où qu'on lance
+    print(f"Registry local : {(HERE / args.models_root).resolve()}")
     has_models = (export_dir / "models" / "registry.json").exists()
     has_reward = (export_dir / "reward_models" / "registry.json").exists()
     if not (has_models or has_reward):

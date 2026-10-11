@@ -101,13 +101,13 @@ def register_trained(registry: ModelRegistry, *, base_model: str, version: int, 
 # --------------------------------------------------------------------------- #
 
 def resolve_training_dtype():
-    """(dtype, has_cuda, has_bf16). fp32 sur CPU, bf16/fp16 sur GPU (poids 2x plus légers)."""
+    """(dtype, has_cuda, has_bf16). fp32 sur CPU ; bf16 seulement sur GPU Ampere+ (cc >= 8) ;
+    fp16 sinon (T4 : is_bf16_supported() y renvoie True par émulation, lent et cassé avec les kernels trl)."""
     import torch
     if not torch.cuda.is_available():
         return torch.float32, False, False
-    has_bf16 = torch.cuda.is_bf16_supported()
+    has_bf16 = torch.cuda.get_device_capability()[0] >= 8
     return (torch.bfloat16 if has_bf16 else torch.float16), True, has_bf16
-
 
 def print_gpu_mem(tag: str) -> None:
     import torch
